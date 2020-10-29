@@ -45,3 +45,32 @@ Migrating to RolifyCreateRoles (20201029101215)
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."name" = $1 AND "roles"."resource_type" IS NULL AND "roles"."resource_id" IS NULL ORDER BY "roles"."id" ASC LIMIT $2[0m  [["name", "admin"], ["LIMIT", 1]]
+  [1m[36mRole Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND "roles"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anyemail@address.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "somethingemail@address.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tttemail@address.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "tttemail@address.com"], ["encrypted_password", "$2a$12$TrTSaM8v31fCbm9m4kN1FuMAgWYKTpViwTNYtZv8oSdf4D7S.86o2"], ["created_at", "2020-10-29 11:39:06.710165"], ["updated_at", "2020-10-29 11:39:06.710165"]]
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."name" = $1 AND "roles"."resource_type" IS NULL AND "roles"."resource_id" IS NULL ORDER BY "roles"."id" ASC LIMIT $2[0m  [["name", "user"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Create (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "user"], ["created_at", "2020-10-29 11:39:21.685060"], ["updated_at", "2020-10-29 11:39:21.685060"]]
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND "roles"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mRole Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND "roles"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser::HABTM_Roles Create (0.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 2], ["role_id", 2]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 2]]
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'user') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 2]]
