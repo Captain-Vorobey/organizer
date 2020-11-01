@@ -74,3 +74,616 @@ Migrating to RolifyCreateRoles (20201029101215)
   [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 2]]
   [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND (((roles.name = 'user') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 2]]
+Started GET "/" for ::1 at 2020-10-30 17:19:47 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.3ms | Allocations: 407)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 2491)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:19:51 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 7.5ms | Allocations: 5229)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/vorob/Desktop/organizer-master/organizer/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 1444ms
+Built at: 10/30/2020 5:19:53 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 2508ms (Views: 2505.7ms | ActiveRecord: 1.6ms | Allocations: 19674)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:19:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 2.3ms | Allocations: 2095)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 5424)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:19:55 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cinzvR3BcaA0dAVwSjZJjSmSCmFgIvY41j3jRhEcV2BjPz6eMdw9CpopkN+bN19LE1ivsS539grsxL2dTn6adg==", "username"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1305)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.username does not exist
+LINE 1: SELECT "users".* FROM "users" WHERE "users"."username" = $1 ...
+                                            ^
+):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for ::1 at 2020-10-30 17:21:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cinzvR3BcaA0dAVwSjZJjSmSCmFgIvY41j3jRhEcV2BjPz6eMdw9CpopkN+bN19LE1ivsS539grsxL2dTn6adg==", "username"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms | Allocations: 1634)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:21:31 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 3.2ms | Allocations: 2075)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 6295)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:21:32 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GneLYqlPWupqKQMclcA9kr0gx2OFIpewde58xwm+IqgLYUZBhVIWQMR0lrNEwStUh+pis8t3l4JPFyIcVtzvvg==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1028)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:21:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.5ms | Allocations: 334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3605)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:21:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"B2FNLZDhoXp3J0gzhxrWVlRFvFVst55xlVVDfrzakiYWd4AOvPzt0Nl63ZxWG8CQbo8ZhSLinkOvrB2l47hfMA==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 921)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:21:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.6ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3600)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:21:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"RExTW+/Wh/O6fyUCHTOe6glFPDvQRq/46oqHbvl3OhZVWp54w8vLWRQisK3MMogsM4+Z654Tr8rQc9m1phX3AA==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms | Allocations: 901)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:21:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.5ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3615)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:21:33 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"p4oJFl5fMdK8MP7wNoDBQPQXE4gnUJ9GteQC7W+UhgK2nMQ1ckJ9eBJta1/ngdeGzt22WGkFn3SPHVw2MPZLFA==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 906)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:21:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.4ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3602)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:21:39 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.0ms | Allocations: 2616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 5903)
+
+
+Started GET "/users/new" for ::1 at 2020-10-30 17:21:41 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 15.3ms | Allocations: 7549)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 19.8ms | ActiveRecord: 1.6ms | Allocations: 15587)
+
+
+Started POST "/users" for ::1 at 2020-10-30 17:21:42 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"BAEnjJtuRI5SQ9TAf8x5FgLi1ChhGkvQMdsRFa8bz6wVF+qvt3MIJPweQW+uzW/QOChx+C9PS+ILIk/O8HkCug==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (11.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "vorobyov_egor@bk.ru"], ["encrypted_password", "$2a$12$Szq1/w8/3/SYJb9BVPT5POhJ7xXhTplJ64l3G2eKccC3dfzc0JpW6"], ["created_at", "2020-10-30 14:21:42.679643"], ["updated_at", "2020-10-30 14:21:42.679643"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 292ms (ActiveRecord: 21.4ms | Allocations: 4707)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:21:42 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 6.4ms | Allocations: 4626)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 5087)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User:0x00005641b1fe6138>):
+    1: %h1 Welcome
+    2: - if logged_in?
+    3:   %h1
+    4:     You are Logged In, #{current_user.username}
+    5: = button_to "Login", '/login', method: :get
+    6: = button_to "Sign Up", '/users/new', method: :get
+  
+app/views/sessions/welcome.haml:4
+Started GET "/welcome" for ::1 at 2020-10-30 17:22:29 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.9ms | Allocations: 2975)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 7123)
+
+
+Started GET "/users/new" for ::1 at 2020-10-30 17:22:30 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 2.3ms | Allocations: 2782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 6633)
+
+
+Started POST "/users" for ::1 at 2020-10-30 17:22:31 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"vUCWL/32xDapVfwAnPyaOnUsCULUTufNqtAnjhP9L1WsVlsM0euInAcIaa9N/Yz8T+askpob5/+QKXlVTJ/iQw==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 229ms (ActiveRecord: 0.8ms | Allocations: 3970)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:22:31 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.6ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 4142)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:22:32 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 1.8ms | Allocations: 2058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 5352)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:22:34 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+AKq/l1lDC9bX0oYS9vmnuFwY3dKR/D6SrmdEU9L1MHpFGfdcXhAhfUC37ea2vBY27rGpwQS8MhwQMPKECkZ1w==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms | Allocations: 3736)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00005641b237cbf8>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/welcome" for ::1 at 2020-10-30 17:23:20 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.8ms | Allocations: 1297)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.4ms | Allocations: 4740)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:23:22 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.7ms | Allocations: 334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3604)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:23:24 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"84IsE36z24oB0H4wjEnDIAQw07nbx98zBPy8kQ1tgN/ilOEwUq6XIK+N659dSNXmPvp2aZWS3wE+BeJKUg9NyQ==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.6ms | Allocations: 7677)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00005641b16757e8>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/users/new" for ::1 at 2020-10-30 17:23:27 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 1.2ms | Allocations: 795)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4254)
+
+
+Started POST "/users" for ::1 at 2020-10-30 17:23:28 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"YhoHvCs43nGxcQct1LCImdAaKsRBGqGLSnEAYJdCXCBzDMqfByWS2x8skoIFsZ5f6tCPFA9PoblwiF67yCCRNg==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 234ms (ActiveRecord: 0.6ms | Allocations: 4098)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:23:28 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.4ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 4120)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:23:30 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.7ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3611)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:23:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+3jzL3zPbXSbV0taS6WB+fRh+/NbPJBia0nEyRSy5LPqbj4MUNIh3jUK3vWapJc/zqteIxVpkFBRsJoSS9AppQ==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3710)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00005641b2016090>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-10-30 17:23:47 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+3jzL3zPbXSbV0taS6WB+fRh+/NbPJBia0nEyRSy5LPqbj4MUNIh3jUK3vWapJc/zqteIxVpkFBRsJoSS9AppQ==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.9ms | Allocations: 5651)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/login" for ::1 at 2020-10-30 17:23:49 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.6ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3780)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:23:51 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xdhfro5XMf8rzyVjm3VXq0rEuPX83K45v8E2OGeOrvPUzpKNokp9VYWSsMxKdEFtcA4dJbKJrguFOGjjOOxj5Q==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 1238)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-10-30 17:23:59 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xdhfro5XMf8rzyVjm3VXq0rEuPX83K45v8E2OGeOrvPUzpKNokp9VYWSsMxKdEFtcA4dJbKJrguFOGjjOOxj5Q==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.4ms | Allocations: 8135)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x00005641b26c6e08>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/users/new" for ::1 at 2020-10-30 17:24:20 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 1.2ms | Allocations: 800)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 5.2ms | ActiveRecord: 3.7ms | Allocations: 8502)
+
+
+Started GET "/" for ::1 at 2020-10-30 17:25:21 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 295)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 1794)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:25:24 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 8.3ms | Allocations: 4955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 2.3ms | Allocations: 10675)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:25:25 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 1.7ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 5399)
+
+
+Started GET "/login" for ::1 at 2020-10-30 17:35:42 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 2.7ms | Allocations: 3611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 10041)
+
+
+Started POST "/login" for ::1 at 2020-10-30 17:35:45 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"T7/fZins+wHHXJ7hHCWPFTqItIhj2GnfrzUWWpnXrFheqRJFBfG3q2kBC07NJJnTAEIRWC2Nae2VzEiBxrVhTg==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.3ms | Allocations: 8946)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x000055ab20669060>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/welcome" for ::1 at 2020-10-30 17:35:48 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.4ms | Allocations: 2697)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 6014)
+
+
+Started GET "/users/new" for ::1 at 2020-10-30 17:35:49 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 5.2ms | Allocations: 4985)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 8916)
+
+
+Started POST "/users" for ::1 at 2020-10-30 17:35:51 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OyLuIzlcthOoEE0rCpYkPwZQ/U6/+T3Nk+akR4W+MBUqNCMAFUH6uQZN2ITblzL5PJpYnvGsPf+pH/qc2tz9Aw==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 238ms (ActiveRecord: 0.6ms | Allocations: 4420)
+
+
+Started GET "/welcome" for ::1 at 2020-10-30 17:35:52 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.7ms | Allocations: 860)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 4139)
+
+
+Started GET "/" for ::1 at 2020-11-01 18:42:34 +0300
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 38.9ms | Allocations: 295)
+Completed 200 OK in 92ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 1644)
+
+
+Started GET "/welcome" for ::1 at 2020-11-01 18:42:39 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (69.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 202.5ms | Allocations: 4955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 285ms (Views: 138.8ms | ActiveRecord: 144.2ms | Allocations: 15516)
+
+
+Started GET "/login" for ::1 at 2020-11-01 18:42:40 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 18.8ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 5530)
+
+
+Started POST "/login" for ::1 at 2020-11-01 18:42:42 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XHK4WElIOrdln6Ui6tqNeaQvAuQzWOTQtBDe4zK8FhG9yltSvUJUOZqSDb7eZfyIRQcLJq4EmMiFP79hXD7ZCg==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 68.3ms | Allocations: 7978)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x000055b835828f50>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/users/new" for ::1 at 2020-11-01 18:42:45 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 96.2ms | Allocations: 5454)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 110.9ms | ActiveRecord: 0.0ms | Allocations: 9526)
+
+
+Started POST "/users" for ::1 at 2020-11-01 18:42:46 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Hzg5EtVDoCvh/20B63DK1kGB7CD7z7yRcCV+mb5ll2j+gNoYIUnOpR7yxZ3fz7snoKnl4maTwIlBCh8b0OdYcw==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 270ms (ActiveRecord: 0.7ms | Allocations: 4394)
+
+
+Started GET "/welcome" for ::1 at 2020-11-01 18:42:46 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.6ms | Allocations: 871)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 4264)
+
+
+Started GET "/users/new" for ::1 at 2020-11-01 18:42:48 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 4.7ms | Allocations: 737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 4153)
+
+
+Started POST "/users" for ::1 at 2020-11-01 18:42:49 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"uD4L7L8JznVkJXjTNBp1HSIvb26TifI2zyfspL5rksZZhujmSwOg+5so0E8ApQTswwdmrA7Vji7+CI0m0Old3Q==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 252ms (ActiveRecord: 0.7ms | Allocations: 3876)
+
+
+Started GET "/welcome" for ::1 at 2020-11-01 18:42:49 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.5ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 4237)
+
+
+Started GET "/login" for ::1 at 2020-11-01 18:42:50 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 1.0ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3734)
+
+
+Started POST "/login" for ::1 at 2020-11-01 18:42:52 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"qW1SC3GWVjwc0zZVRMKaha8p3P/ALEzNvbrGECv09y5I1bEBhZw4suPenslwfet0TgHVPV1wMNWMlaeSRXY4NQ==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 3663)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<User:0x000055b8356eaf80>
+Did you mean?  authenticatable_salt):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/" for ::1 at 2020-11-01 18:48:48 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.9ms | Allocations: 295)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 1744)
+
+
