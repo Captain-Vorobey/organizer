@@ -1973,3 +1973,2362 @@ Processing by SessionsController#welcome as HTML
 Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 4587)
 
 
+Started GET "/welcome" for ::1 at 2020-11-02 21:09:41 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/welcome" for ::1 at 2020-11-02 21:09:43 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6713659216411901985)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateServices (20201102180518)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6713659216411901985)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6713659216411901985)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RolifyCreateRoles (20201029101215)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.1ms)[0m  [1m[35mDROP INDEX  "index_users_roles_on_user_id_and_role_id"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP INDEX  "index_roles_on_name_and_resource_type_and_resource_id"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "users_roles"[0m
+  [1m[35m (50.4ms)[0m  [1m[35mDROP TABLE "roles"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201029101215"]]
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6713659216411901985)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-11-02 21:14:23 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/welcome" for ::1 at 2020-11-02 21:14:37 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-02 21:14:42 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6713659216411901985)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RolifyCreateRoles (20201029101215)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (252.2ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "resource_type" character varying, "resource_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (44.4ms)[0m  [1m[35mCREATE  INDEX  "index_roles_on_resource_type_and_resource_id" ON "roles"  ("resource_type", "resource_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "users_roles" ("user_id" bigint, "role_id" bigint)[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_roles_on_user_id" ON "users_roles"  ("user_id")[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_roles_on_role_id" ON "users_roles"  ("role_id")[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE  INDEX  "index_roles_on_name_and_resource_type_and_resource_id" ON "roles"  ("name", "resource_type", "resource_id")[0m
+  [1m[35m (27.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_roles_on_user_id_and_role_id" ON "users_roles"  ("user_id", "role_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201029101215"]]
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateServices (20201102181411)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (75.8ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201102181411"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (19.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6713659216411901985)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-11-02 21:15:04 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.8ms | Allocations: 295)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 1756)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:15:07 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 20.9ms | Allocations: 9906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 224ms (Views: 217.8ms | ActiveRecord: 5.4ms | Allocations: 29153)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:15:09 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.6ms | Allocations: 1251)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4633)
+
+
+Started GET "/login" for ::1 at 2020-11-02 21:15:11 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 4.1ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5514)
+
+
+Started POST "/login" for ::1 at 2020-11-02 21:15:12 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"4JaCrmiv054goHCP2Be7HhF2V+WVM6axNxNqBctAGSR/QZBt2fg5z2D39RNiTr8BVHc9R9acN881kkkCD9D0ww==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1036)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:15:12 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.3ms | Allocations: 1236)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 4630)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 21:15:14 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 7.6ms | Allocations: 4977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 9009)
+
+
+Started POST "/users" for ::1 at 2020-11-02 21:15:14 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"aHDdefBK2ZnO556FbB0AfVx7HcMvIfSmtKuN85w3LWf3p8+6QR0zyI6wGxnWRARiGXp3YWyOZdi2Kq70WKfAgA==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 240ms (ActiveRecord: 0.6ms | Allocations: 4290)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:15:15 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.0ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 4257)
+
+
+Started GET "/login" for ::1 at 2020-11-02 21:15:15 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 2.1ms | Allocations: 334)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 3713)
+
+
+Started POST "/login" for ::1 at 2020-11-02 21:15:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"bGkpU6HGegARkPGh5I142aXNlfN6XMSp9nGsWCJAfx7zvjuQEJGQUVHHdD1e1HzG4Mz/UTnzVdf08I9f5tCS+Q==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:15:18 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.7ms | Allocations: 1234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 4623)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:15:31 +0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:15
+  Rendered services/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.8ms | Allocations: 6097)
+
+
+Started GET "/services/new" for ::1 at 2020-11-02 21:15:32 +0300
+Processing by ServicesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering services/new.html.erb within layouts/application
+  Rendered services/_form.html.erb (Duration: 2.3ms | Allocations: 1171)
+  Rendered services/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1510)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 2.1ms | Allocations: 8017)
+
+
+Started POST "/services" for ::1 at 2020-11-02 21:17:08 +0300
+Processing by ServicesController#create as HTML
+  Parameters: {"authenticity_token"=>"toJJYiGgIm55VITRTiZ/TQr/o5bAhsncwR3TGXGS5TVLDpgxCHaldwUHkAbgGS4+uK6JxbltNkgBhGO7c/RyTQ==", "service"=>{"name"=>"Fast Food", "description"=>"We can give you our products so fast that you will not notice how time has passed"}, "commit"=>"Create Service"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/services_controller.rb:30:in `block in create'
+  [1m[36mService Create (17.4ms)[0m  [1m[32mINSERT INTO "services" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fast Food"], ["description", "We can give you our products so fast that you will not notice how time has passed"], ["created_at", "2020-11-02 18:17:08.789743"], ["updated_at", "2020-11-02 18:17:08.789743"]]
+  ↳ app/controllers/services_controller.rb:30:in `block in create'
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/services_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/services/1
+Completed 302 Found in 49ms (ActiveRecord: 39.9ms | Allocations: 3486)
+
+
+Started GET "/services/1" for ::1 at 2020-11-02 21:17:08 +0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mService Load (0.2ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:67:in `set_service'
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 256)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 5075)
+
+
+Started GET "/services/1/edit" for ::1 at 2020-11-02 21:17:12 +0300
+Processing by ServicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:67:in `set_service'
+  Rendering services/edit.html.erb within layouts/application
+  Rendered services/_form.html.erb (Duration: 2.4ms | Allocations: 782)
+  Rendered services/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 5711)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:17:14 +0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.3ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:15
+  Rendered services/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.6ms | Allocations: 4774)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:22:33 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:15
+  Rendered services/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3916)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 17.2ms | ActiveRecord: 6.9ms | Allocations: 17185)
+
+
+Started GET "/" for ::1 at 2020-11-02 21:23:53 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.3ms | Allocations: 295)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1736)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:23:59 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 16.3ms | Allocations: 9721)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 3.9ms | Allocations: 16617)
+
+
+Started GET "/login" for ::1 at 2020-11-02 21:24:03 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 3.0ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5525)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:25:06 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.0ms | Allocations: 882)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 4180)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:25:18 +0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Redirected to http://localhost:3000/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1078)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:25:18 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.4ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 4216)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:25:22 +0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Redirected to http://localhost:3000/welcome
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1009)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:25:22 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.2ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 4240)
+
+
+Started GET "/login" for ::1 at 2020-11-02 21:25:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.9ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3714)
+
+
+Started POST "/login" for ::1 at 2020-11-02 21:25:31 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"wO95gzAF+ZmWj0t8XJlBJutqAHOVpKE1ynpw8vHrDQUVWNsaY8iho2t4gOKCUaQxqox/qd5o7Mep6svvPar+xg==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1018)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:25:31 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 9.1ms | Allocations: 1234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 4626)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:25:35 +0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:15
+  Rendered services/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3799)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 2.7ms | Allocations: 8641)
+
+
+Started GET "/login" for ::1 at 2020-11-02 21:26:54 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 0.6ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3727)
+
+
+Started POST "/login" for ::1 at 2020-11-02 21:38:55 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jP10Lc8opgXskRD4p2xUh3DHgdmF94X5HtnwEWGyY8RZSta0nOX+PxFm22Z5pLGQMSH+A847yAt9SUsMrfOQBw==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms | Allocations: 991)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:38:55 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.2ms | Allocations: 1238)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.2ms | Allocations: 13165)
+
+
+Started GET "/services" for ::1 at 2020-11-02 21:39:02 +0300
+Processing by ServicesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendering services/index.html.erb within layouts/application
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services"[0m
+  ↳ app/views/services/index.html.erb:15
+  Rendered services/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.2ms | Allocations: 4798)
+
+
+Started GET "/services/1" for ::1 at 2020-11-02 21:39:15 +0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:67:in `set_service'
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 255)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 5054)
+
+
+Started GET "/services/1" for ::1 at 2020-11-02 21:39:57 +0300
+Processing by ServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mService Load (0.6ms)[0m  [1m[34mSELECT "services".* FROM "services" WHERE "services"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/services_controller.rb:67:in `set_service'
+  Rendering services/show.html.erb within layouts/application
+  Rendered services/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 1.1ms | Allocations: 4671)
+
+
+Started GET "/" for ::1 at 2020-11-02 21:57:44 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.4ms | Allocations: 295)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 1740)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 21:57:51 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 19.8ms | Allocations: 9702)
+[Webpacker] Compiling...
+Started GET "/welcome" for ::1 at 2020-11-02 21:57:53 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.6ms | Allocations: 1363)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: a6da0e452cfbd0f0e1b5
+Version: webpack 4.44.2
+Time: 3438ms
+Built at: 11/02/2020 9:57:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d9574c40293d49e0963e.js    663 KiB  application  [emitted] [immutable]  application
+js/application-d9574c40293d49e0963e.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d9574c40293d49e0963e.js js/application-d9574c40293d49e0963e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+Completed 200 OK in 4542ms (Views: 4536.7ms | ActiveRecord: 4.0ms | Allocations: 20883)
+
+
+[Webpacker] Compilation failed:
+Hash: a6da0e452cfbd0f0e1b5
+Version: webpack 4.44.2
+Time: 2576ms
+Built at: 11/02/2020 9:57:56 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d9574c40293d49e0963e.js    663 KiB  application  [emitted] [immutable]  application
+js/application-d9574c40293d49e0963e.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d9574c40293d49e0963e.js js/application-d9574c40293d49e0963e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 807 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+Completed 200 OK in 3671ms (Views: 3669.8ms | ActiveRecord: 0.5ms | Allocations: 6384)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:00:11 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 7.3ms | Allocations: 2969)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.6ms | Allocations: 5970)
+
+
+Started GET "/login" for ::1 at 2020-11-02 22:00:13 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 3.2ms | Allocations: 2093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4266)
+
+
+Started POST "/login" for ::1 at 2020-11-02 22:00:14 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"SZumGjFG/bLo64F/kNQtUwyqlqBB8/vOsLGntOdAXQpbK5u29pPkZjQdby5ojN9J76B/E68U9KrfFqrdLlGSQA==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1061)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:00:14 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.3ms | Allocations: 1235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 3363)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 22:00:16 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 8.4ms | Allocations: 4977)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 7742)
+
+
+Started POST "/users" for ::1 at 2020-11-02 22:00:16 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"aeO76Bk5dW7orQvDDRjHl+fA3oo6tQsD9VU/arV7j7lF3lCVhD1mIdpwaLk92/O/qNxuPmOw5HqnR2QSTro0Ew==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 232ms (ActiveRecord: 0.7ms | Allocations: 4339)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:00:17 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.8ms | Allocations: 869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 2988)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 22:01:12 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 7.0ms | Allocations: 2783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 5854)
+
+
+Started POST "/users" for ::1 at 2020-11-02 22:01:13 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"LSGP/UAKq9kM0tWaHQOIiSnTahctu0CkMarKObntt6EBHGSA3Q64lj4PtuAtwLyhZs/ao3S+r91juJFBQiwMCw==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 232ms (ActiveRecord: 0.6ms | Allocations: 3865)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:01:13 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.7ms | Allocations: 2594)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 5243)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 22:01:14 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 2.0ms | Allocations: 746)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+Started POST "/users" for ::1 at 2020-11-02 22:01:15 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"UJRU/6iEpGvm11EaV4scCBXny1KTcU0uVXp1ILqD/Ux8qb+CNYC3JNQKMmBnSCggWvt75sp0olcHaC5YQUJG5g==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 248ms (ActiveRecord: 0.6ms | Allocations: 3862)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:01:15 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.0ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 2980)
+
+
+Started GET "/login" for ::1 at 2020-11-02 22:01:16 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 4.4ms | Allocations: 2057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 4201)
+
+
+Started POST "/login" for ::1 at 2020-11-02 22:01:17 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"2tn5LzTtVznju48yjzBsAvjkFpBlesNAs/IjAPlQRhrIacSD8zhO7T9NYWN3aJ4YG+7/I4udzCTcVS5pMEGJUA==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 911)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:01:17 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.0ms | Allocations: 1235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 3359)
+
+
+Started GET "/login" for ::1 at 2020-11-02 22:01:21 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 1.3ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2459)
+
+
+Started POST "/login" for ::1 at 2020-11-02 22:01:23 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"4s+puSm4JPm4sctKeOuzZP1SicJky9y3eUAjUy7fW3Pwf5QV7m09LWRHJRuAs0F+HlhgcYos09MW5y46586UOQ==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 902)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:01:23 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.8ms | Allocations: 1233)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 3348)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 22:01:24 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 2.0ms | Allocations: 746)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2898)
+
+
+Started POST "/users" for ::1 at 2020-11-02 22:01:24 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"+4iGa9eLqR+hahJTZOJneo3iCaK31nrGj9F8IWe4qxHXtW0WSo+6UJO3cSlUIVNSwv65Fu7Tlb/dwydZnHkQuw==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 232ms (ActiveRecord: 0.8ms | Allocations: 3869)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:01:25 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.1ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 2985)
+
+
+Started GET "/login" for ::1 at 2020-11-02 22:02:31 +0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.haml within layouts/application
+  Rendered sessions/new.haml within layouts/application (Duration: 2.5ms | Allocations: 2058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 5098)
+
+
+Started POST "/login" for ::1 at 2020-11-02 22:02:32 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HIB3JwNCqSnJjgXhauDLchsdxLwcX+kz7kB/yY22zBkOMEqLxJew/RV467CSuDlo+BctD/K45leB53KgRKcDUw==", "email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 906)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:02:32 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 5.9ms | Allocations: 2972)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 5106)
+
+
+Started GET "/users/new" for ::1 at 2020-11-02 22:02:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.haml within layouts/application
+  Rendered users/new.haml within layouts/application (Duration: 4.9ms | Allocations: 2782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5490)
+
+
+Started POST "/users" for ::1 at 2020-11-02 22:02:35 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"mMgq1djFbgFe1Tw+NGG+NJgdAgZE60C0ZojKI8e2AM+09cGoRcF9TmwIX0QEoooc1wGysh3ur800mpFbPHe7ZQ==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/welcome
+Completed 302 Found in 232ms (ActiveRecord: 0.7ms | Allocations: 3868)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:02:35 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.7ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 2984)
+
+
+Started GET "/users" for ::1 at 2020-11-02 22:03:12 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/create" for ::1 at 2020-11-02 22:03:22 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/welcome" for ::1 at 2020-11-02 22:03:53 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 36.7ms | Allocations: 53023)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.4ms | Allocations: 56049)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:05:16 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.4ms | Allocations: 858)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 686409cc004c562a7ce3
+Version: webpack 4.44.2
+Time: 898ms
+Built at: 11/02/2020 10:05:18 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c1c593981f89689e4699.js    663 KiB  application  [emitted] [immutable]  application
+js/application-c1c593981f89689e4699.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c1c593981f89689e4699.js js/application-c1c593981f89689e4699.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 830 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-22
+
+Completed 200 OK in 1848ms (Views: 1846.5ms | ActiveRecord: 0.3ms | Allocations: 4126)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:05:20 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.3ms | Allocations: 859)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 3013)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:06:27 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.0ms | Allocations: 857)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 1f2772aa1f9bbb813147
+Version: webpack 4.44.2
+Time: 868ms
+Built at: 11/02/2020 10:06:29 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1f838b5729e5a3595690.js    663 KiB  application  [emitted] [immutable]  application
+js/application-1f838b5729e5a3595690.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1f838b5729e5a3595690.js js/application-1f838b5729e5a3595690.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 866 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 16:0-22
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-35
+
+Completed 200 OK in 1852ms (Views: 1850.7ms | ActiveRecord: 0.4ms | Allocations: 4137)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:06:47 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 36.4ms | Allocations: 55414)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 39.4ms | ActiveRecord: 1.2ms | Allocations: 59031)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:06:49 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.1ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 2988)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:12:09 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 43.6ms | Allocations: 55414)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 92b344bc8bbea0f0b9ae
+Version: webpack 4.44.2
+Time: 817ms
+Built at: 11/02/2020 10:12:11 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b2b283d3586473b0cddf.js    663 KiB  application  [emitted] [immutable]  application
+js/application-b2b283d3586473b0cddf.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b2b283d3586473b0cddf.js js/application-b2b283d3586473b0cddf.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 866 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 16:0-22
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-35
+
+Completed 200 OK in 1893ms (Views: 1885.9ms | ActiveRecord: 1.9ms | Allocations: 60207)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:12:16 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 8.8ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 3003)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:14:21 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 44.3ms | Allocations: 55421)
+[Webpacker] Compiling...
+Started GET "/welcome" for ::1 at 2020-11-02 22:14:24 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.7ms | Allocations: 989)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 1f2772aa1f9bbb813147
+Version: webpack 4.44.2
+Time: 3375ms
+Built at: 11/02/2020 10:14:26 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1f838b5729e5a3595690.js    663 KiB  application  [emitted] [immutable]  application
+js/application-1f838b5729e5a3595690.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1f838b5729e5a3595690.js js/application-1f838b5729e5a3595690.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 866 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 16:0-22
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-35
+
+Completed 200 OK in 4382ms (Views: 4376.7ms | ActiveRecord: 1.6ms | Allocations: 66378)
+
+
+[Webpacker] Compilation failed:
+Hash: 1f2772aa1f9bbb813147
+Version: webpack 4.44.2
+Time: 1018ms
+Built at: 11/02/2020 10:14:26 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1f838b5729e5a3595690.js    663 KiB  application  [emitted] [immutable]  application
+js/application-1f838b5729e5a3595690.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1f838b5729e5a3595690.js js/application-1f838b5729e5a3595690.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 866 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-36
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 16:0-22
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-35
+
+Completed 200 OK in 2116ms (Views: 2114.6ms | ActiveRecord: 0.7ms | Allocations: 6279)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:14:30 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.4ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 3006)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:15:16 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.2ms | Allocations: 857)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 8aa73829a36be07602cc
+Version: webpack 4.44.2
+Time: 898ms
+Built at: 11/02/2020 10:15:18 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-fcbea39482cf5f70e79e.js    663 KiB  application  [emitted] [immutable]  application
+js/application-fcbea39482cf5f70e79e.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-fcbea39482cf5f70e79e.js js/application-fcbea39482cf5f70e79e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 829 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-22
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 14:0-35
+
+Completed 200 OK in 1883ms (Views: 1882.4ms | ActiveRecord: 0.3ms | Allocations: 4132)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:15:18 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.1ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 2976)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:16:13 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.5ms | Allocations: 874)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 0a748ced6635cbafd61c
+Version: webpack 4.44.2
+Time: 931ms
+Built at: 11/02/2020 10:16:15 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-4632a84a02f24ef6d6c8.js    663 KiB  application  [emitted] [immutable]  application
+js/application-4632a84a02f24ef6d6c8.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-4632a84a02f24ef6d6c8.js js/application-4632a84a02f24ef6d6c8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 877 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '../stylesheets/application' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-37
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 19:0-23
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 17:0-36
+
+Completed 200 OK in 1959ms (Views: 1958.3ms | ActiveRecord: 0.3ms | Allocations: 4157)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:16:19 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.3ms | Allocations: 863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 2992)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:16:38 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.4ms | Allocations: 874)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b2ef6b21ad4fbeb63976
+Version: webpack 4.44.2
+Time: 866ms
+Built at: 11/02/2020 10:16:40 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0feacda9e5cc88e4d424.js    663 KiB  application  [emitted] [immutable]  application
+js/application-0feacda9e5cc88e4d424.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0feacda9e5cc88e4d424.js js/application-0feacda9e5cc88e4d424.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 837 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 17:0-23
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve '~bootstrap/scss/bootstrap' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-36
+
+Completed 200 OK in 1787ms (Views: 1786.1ms | ActiveRecord: 0.3ms | Allocations: 4164)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:16:53 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.3ms | Allocations: 857)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 66a703193bc8a8da03ac
+Version: webpack 4.44.2
+Time: 915ms
+Built at: 11/02/2020 10:16:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d681bff5e18f5fcbc097.js    663 KiB  application  [emitted] [immutable]  application
+js/application-d681bff5e18f5fcbc097.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d681bff5e18f5fcbc097.js js/application-d681bff5e18f5fcbc097.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 798 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module not found: Error: Can't resolve 'compass/css3' in '/home/vorob/Desktop/test/organizer/organizer/app/javascript/packs'
+ @ ./app/javascript/packs/application.js 15:0-23
+
+Completed 200 OK in 1838ms (Views: 1837.1ms | ActiveRecord: 0.2ms | Allocations: 4136)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:17:17 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.8ms | Allocations: 857)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/vorob/Desktop/test/organizer/organizer/public/packs
+[Webpacker] Hash: bf37f09facbdde5d4133
+Version: webpack 4.44.2
+Time: 941ms
+Built at: 11/02/2020 10:17:19 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bc3824045d1f6166f146.js    663 KiB  application  [emitted] [immutable]  application
+js/application-bc3824045d1f6166f146.js.map    776 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bc3824045d1f6166f146.js js/application-bc3824045d1f6166f146.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 772 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+Completed 200 OK in 1830ms (Views: 1828.9ms | ActiveRecord: 0.2ms | Allocations: 4210)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:19:11 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.2ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 2977)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:19:13 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.1ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 2997)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:19:15 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.2ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 2982)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:26:10 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 43.0ms | Allocations: 55423)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+
+/home/vorob/Desktop/test/organizer/organizer/node_modules/webpack-cli/bin/cli.js:93
+				throw err;
+				^
+YAMLException: duplicated mapping key at line 20, column 3:
+      extract_css: false
+      ^
+    at generateError (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:167:10)
+    at throwError (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:173:9)
+    at storeMappingPair (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:335:7)
+    at readBlockMapping (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1098:9)
+    at composeNode (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readBlockMapping (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1089:11)
+    at composeNode (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readDocument (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1525:3)
+    at loadDocuments (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1588:5)
+    at load (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1614:19)
+    at safeLoad (/home/vorob/Desktop/test/organizer/organizer/node_modules/js-yaml/lib/js-yaml/loader.js:1637:10)
+    at Object.<anonymous> (/home/vorob/Desktop/test/organizer/organizer/node_modules/@rails/webpacker/package/env.js:11:16)
+    at Module._compile (/home/vorob/Desktop/test/organizer/organizer/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)
+    at Module.load (internal/modules/cjs/loader.js:940:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:781:14)
+    at Module.require (internal/modules/cjs/loader.js:964:19)
+    at require (/home/vorob/Desktop/test/organizer/organizer/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/vorob/Desktop/test/organizer/organizer/node_modules/@rails/webpacker/package/config.js:6:22)
+    at Module._compile (/home/vorob/Desktop/test/organizer/organizer/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)
+    at Module.load (internal/modules/cjs/loader.js:940:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:781:14)
+    at Module.require (internal/modules/cjs/loader.js:964:19)
+    at require (/home/vorob/Desktop/test/organizer/organizer/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at Object.<anonymous> (/home/vorob/Desktop/test/organizer/organizer/node_modules/@rails/webpacker/package/rules/babel.js:3:72)
+    at Module._compile (/home/vorob/Desktop/test/organizer/organizer/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1096:10)
+    at Module.load (internal/modules/cjs/loader.js:940:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:781:14) {
+  reason: 'duplicated mapping key',
+  mark: Mark {
+    name: null,
+    buffer: '# Note: You must restart bin/webpack-dev-server for changes to take effect\n' +
+      '\n' +
+      'default: &default\n' +
+      '  source_path: app/javascript\n' +
+      '  source_entry_path: packs\n' +
+      '  public_root_path: public\n' +
+      '  public_output_path: packs\n' +
+      '  cache_path: tmp/cache/webpacker\n' +
+      '  webpack_compile_output: true\n' +
+      '  extract_css: true\n' +
+      '\n' +
+      '  # Additional paths webpack should lookup modules\n' +
+      "  # ['app/assets', 'engine/foo/app/assets']\n" +
+      '  additional_paths: []\n' +
+      '\n' +
+      '  # Reload manifest.json on all requests so we reload latest compiled packs\n' +
+      '  cache_manifest: false\n' +
+      '\n' +
+      '  # Extract and emit a css file\n' +
+      '  extract_css: false\n' +
+      '\n' +
+      '  static_assets_extensions:\n' +
+      '    - .jpg\n' +
+      '    - .jpeg\n' +
+      '    - .png\n' +
+      '    - .gif\n' +
+      '    - .tiff\n' +
+      '    - .ico\n' +
+      '    - .svg\n' +
+      '    - .eot\n' +
+      '    - .otf\n' +
+      '    - .ttf\n' +
+      '    - .woff\n' +
+      '    - .woff2\n' +
+      '\n' +
+      '  extensions:\n' +
+      '    - .mjs\n' +
+      '    - .js\n' +
+      '    - .sass\n' +
+      '    - .scss\n' +
+      '    - .css\n' +
+      '    - .module.sass\n' +
+      '    - .module.scss\n' +
+      '    - .module.css\n' +
+      '    - .png\n' +
+      '    - .svg\n' +
+      '    - .gif\n' +
+      '    - .jpeg\n' +
+      '    - .jpg\n' +
+      '\n' +
+      'development:\n' +
+      '  <<: *default\n' +
+      '  compile: true\n' +
+      '\n' +
+      '  # Reference: https://webpack.js.org/configuration/dev-server/\n' +
+      '  dev_server:\n' +
+      '    https: false\n' +
+      '    host: localhost\n' +
+      '    port: 3035\n' +
+      '    public: localhost:3035\n' +
+      '    hmr: false\n' +
+      '    # Inline should be set to true if using HMR\n' +
+      '    inline: true\n' +
+      '    overlay: true\n' +
+      '    compress: true\n' +
+      '    disable_host_check: true\n' +
+      '    use_local_ip: false\n' +
+      '    quiet: false\n' +
+      '    pretty: false\n' +
+      '    headers:\n' +
+      "      'Access-Control-Allow-Origin': '*'\n" +
+      '    watch_options:\n' +
+      "      ignored: '**/node_modules/**'\n" +
+      '\n' +
+      '\n' +
+      'test:\n' +
+      '  <<: *default\n' +
+      '  compile: true\n' +
+      '\n' +
+      '  # Compile test packs to a separate directory\n' +
+      '  public_output_path: packs-test\n' +
+      '\n' +
+      'production:\n' +
+      '  <<: *default\n' +
+      '\n' +
+      '  # Production depends on precompilation of packs prior to booting for performance.\n' +
+      '  compile: false\n' +
+      '\n' +
+      '  # Extract and emit a css file\n' +
+      '  extract_css: true\n' +
+      '\n' +
+      '  # Cache manifest.json for performance\n' +
+      '  cache_manifest: true\n' +
+      '\x00',
+    position: 546,
+    line: 19,
+    column: 2
+  }
+}
+
+Completed 200 OK in 897ms (Views: 891.2ms | ActiveRecord: 1.7ms | Allocations: 60254)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:26:14 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.1ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 3016)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:26:16 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.7ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 3014)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 22:28:27 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 46.2ms | Allocations: 55423)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: fa74e84e739b320a3fee
+Version: webpack 4.44.2
+Time: 2062ms
+Built at: 11/02/2020 10:28:30 PM
+                                     Asset       Size       Chunks                         Chunk Names
+                   css/styles-0a57f24c.css    177 KiB       styles  [emitted] [immutable]  styles
+               css/styles-0a57f24c.css.map    388 KiB       styles  [emitted] [dev]        styles
+    js/application-0c9e3663dfb92bceb7c7.js    356 KiB  application  [emitted] [immutable]  application
+js/application-0c9e3663dfb92bceb7c7.js.map    410 KiB  application  [emitted] [dev]        application
+         js/styles-cd18b85ac8f054ff1870.js   3.94 KiB       styles  [emitted] [immutable]  styles
+     js/styles-cd18b85ac8f054ff1870.js.map   3.61 KiB       styles  [emitted] [dev]        styles
+                             manifest.json  914 bytes               [emitted]              
+Entrypoint application = js/application-0c9e3663dfb92bceb7c7.js js/application-0c9e3663dfb92bceb7c7.js.map
+Entrypoint styles = css/styles-0a57f24c.css js/styles-cd18b85ac8f054ff1870.js css/styles-0a57f24c.css.map js/styles-cd18b85ac8f054ff1870.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.08 KiB {application} [built]
+[./app/javascript/packs/styles.scss] 39 bytes {styles} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+ERROR in ./node_modules/jquery/dist/jquery.js
+Module build failed (from ./node_modules/expose-loader/dist/cjs.js):
+ValidationError: Invalid options object. Expose Loader has been initialized using an options object that does not match the API schema.
+ - options misses the property 'exposes'. Should be:
+   non-empty string | object { globalName, moduleLocalName?, override? } | [non-empty string | object { globalName, moduleLocalName?, override? }, ...] (should not have fewer than 1 item)
+    at validate (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/node_modules/schema-utils/dist/validate.js:104:11)
+    at Object.loader (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/dist/index.js:24:29)
+ @ ./app/javascript/packs/application.js 15:0-23 17:0-1 18:2-3 22:2-3
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!app/javascript/packs/styles.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/styles.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/styles.scss 667 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3031ms (Views: 3025.5ms | ActiveRecord: 1.5ms | Allocations: 61804)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:00:28 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 75.0ms | Allocations: 55427)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 81.4ms | ActiveRecord: 1.5ms | Allocations: 60621)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:01:50 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.3ms | Allocations: 875)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: c239f679b2bbe46a5a0d
+Version: webpack 4.44.2
+Time: 2108ms
+Built at: 11/02/2020 11:01:53 PM
+                                     Asset       Size       Chunks                         Chunk Names
+                   css/styles-0a57f24c.css    177 KiB       styles  [emitted] [immutable]  styles
+               css/styles-0a57f24c.css.map    388 KiB       styles  [emitted] [dev]        styles
+    js/application-9c6d4a74ddb38a195993.js    355 KiB  application  [emitted] [immutable]  application
+js/application-9c6d4a74ddb38a195993.js.map    409 KiB  application  [emitted] [dev]        application
+         js/styles-cd18b85ac8f054ff1870.js   3.94 KiB       styles  [emitted] [immutable]  styles
+     js/styles-cd18b85ac8f054ff1870.js.map   3.61 KiB       styles  [emitted] [dev]        styles
+                             manifest.json  914 bytes               [emitted]              
+Entrypoint application = js/application-9c6d4a74ddb38a195993.js js/application-9c6d4a74ddb38a195993.js.map
+Entrypoint styles = css/styles-0a57f24c.css js/styles-cd18b85ac8f054ff1870.js css/styles-0a57f24c.css.map js/styles-cd18b85ac8f054ff1870.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.04 KiB {application} [built]
+[./app/javascript/packs/styles.scss] 39 bytes {styles} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+ERROR in ./node_modules/jquery/dist/jquery.js
+Module build failed (from ./node_modules/expose-loader/dist/cjs.js):
+ValidationError: Invalid options object. Expose Loader has been initialized using an options object that does not match the API schema.
+ - options misses the property 'exposes'. Should be:
+   non-empty string | object { globalName, moduleLocalName?, override? } | [non-empty string | object { globalName, moduleLocalName?, override? }, ...] (should not have fewer than 1 item)
+    at validate (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/node_modules/schema-utils/dist/validate.js:104:11)
+    at Object.loader (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/dist/index.js:24:29)
+ @ ./app/javascript/packs/application.js 15:0-23 16:0-1 17:2-3 21:2-3
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!app/javascript/packs/styles.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/styles.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/styles.scss 667 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3126ms (Views: 3124.5ms | ActiveRecord: 0.4ms | Allocations: 5752)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:02:02 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.2ms | Allocations: 874)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: fa74e84e739b320a3fee
+Version: webpack 4.44.2
+Time: 2254ms
+Built at: 11/02/2020 11:02:05 PM
+                                     Asset       Size       Chunks                         Chunk Names
+                   css/styles-0a57f24c.css    177 KiB       styles  [emitted] [immutable]  styles
+               css/styles-0a57f24c.css.map    388 KiB       styles  [emitted] [dev]        styles
+    js/application-0c9e3663dfb92bceb7c7.js    356 KiB  application  [emitted] [immutable]  application
+js/application-0c9e3663dfb92bceb7c7.js.map    410 KiB  application  [emitted] [dev]        application
+         js/styles-cd18b85ac8f054ff1870.js   3.94 KiB       styles  [emitted] [immutable]  styles
+     js/styles-cd18b85ac8f054ff1870.js.map   3.61 KiB       styles  [emitted] [dev]        styles
+                             manifest.json  914 bytes               [emitted]              
+Entrypoint application = js/application-0c9e3663dfb92bceb7c7.js js/application-0c9e3663dfb92bceb7c7.js.map
+Entrypoint styles = css/styles-0a57f24c.css js/styles-cd18b85ac8f054ff1870.js css/styles-0a57f24c.css.map js/styles-cd18b85ac8f054ff1870.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.08 KiB {application} [built]
+[./app/javascript/packs/styles.scss] 39 bytes {styles} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+ERROR in ./node_modules/jquery/dist/jquery.js
+Module build failed (from ./node_modules/expose-loader/dist/cjs.js):
+ValidationError: Invalid options object. Expose Loader has been initialized using an options object that does not match the API schema.
+ - options misses the property 'exposes'. Should be:
+   non-empty string | object { globalName, moduleLocalName?, override? } | [non-empty string | object { globalName, moduleLocalName?, override? }, ...] (should not have fewer than 1 item)
+    at validate (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/node_modules/schema-utils/dist/validate.js:104:11)
+    at Object.loader (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/dist/index.js:24:29)
+ @ ./app/javascript/packs/application.js 15:0-23 17:0-1 18:2-3 22:2-3
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!app/javascript/packs/styles.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/styles.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/styles.scss 667 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3286ms (Views: 3285.2ms | ActiveRecord: 0.2ms | Allocations: 5722)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:02:10 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.6ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 4547)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:02:12 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.5ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 4536)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:02:26 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.0ms | Allocations: 857)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 0867849c35abcb0607f2
+Version: webpack 4.44.2
+Time: 2132ms
+Built at: 11/02/2020 11:02:29 PM
+                                     Asset       Size       Chunks                         Chunk Names
+                   css/styles-0a57f24c.css    177 KiB       styles  [emitted] [immutable]  styles
+               css/styles-0a57f24c.css.map    388 KiB       styles  [emitted] [dev]        styles
+    js/application-eb11607c4c609e1377e5.js    356 KiB  application  [emitted] [immutable]  application
+js/application-eb11607c4c609e1377e5.js.map    410 KiB  application  [emitted] [dev]        application
+         js/styles-cd18b85ac8f054ff1870.js   3.94 KiB       styles  [emitted] [immutable]  styles
+     js/styles-cd18b85ac8f054ff1870.js.map   3.61 KiB       styles  [emitted] [dev]        styles
+                             manifest.json  914 bytes               [emitted]              
+Entrypoint application = js/application-eb11607c4c609e1377e5.js js/application-eb11607c4c609e1377e5.js.map
+Entrypoint styles = css/styles-0a57f24c.css js/styles-cd18b85ac8f054ff1870.js css/styles-0a57f24c.css.map js/styles-cd18b85ac8f054ff1870.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.08 KiB {application} [built]
+[./app/javascript/packs/styles.scss] 39 bytes {styles} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+ERROR in ./node_modules/jquery/dist/jquery.js
+Module build failed (from ./node_modules/expose-loader/dist/cjs.js):
+ValidationError: Invalid options object. Expose Loader has been initialized using an options object that does not match the API schema.
+ - options misses the property 'exposes'. Should be:
+   non-empty string | object { globalName, moduleLocalName?, override? } | [non-empty string | object { globalName, moduleLocalName?, override? }, ...] (should not have fewer than 1 item)
+    at validate (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/node_modules/schema-utils/dist/validate.js:104:11)
+    at Object.loader (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/dist/index.js:24:29)
+ @ ./app/javascript/packs/application.js 14:0-23 16:0-1 17:2-3 21:2-3
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!app/javascript/packs/styles.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/styles.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/styles.scss 667 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3157ms (Views: 3155.7ms | ActiveRecord: 0.3ms | Allocations: 5702)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:02:56 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.8ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 4560)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:04:29 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 49.2ms | Allocations: 55422)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 0867849c35abcb0607f2
+Version: webpack 4.44.2
+Time: 2248ms
+Built at: 11/02/2020 11:04:32 PM
+                                     Asset       Size       Chunks                         Chunk Names
+                   css/styles-0a57f24c.css    177 KiB       styles  [emitted] [immutable]  styles
+               css/styles-0a57f24c.css.map    388 KiB       styles  [emitted] [dev]        styles
+    js/application-eb11607c4c609e1377e5.js    356 KiB  application  [emitted] [immutable]  application
+js/application-eb11607c4c609e1377e5.js.map    410 KiB  application  [emitted] [dev]        application
+         js/styles-cd18b85ac8f054ff1870.js   3.94 KiB       styles  [emitted] [immutable]  styles
+     js/styles-cd18b85ac8f054ff1870.js.map   3.61 KiB       styles  [emitted] [dev]        styles
+                             manifest.json  914 bytes               [emitted]              
+Entrypoint application = js/application-eb11607c4c609e1377e5.js js/application-eb11607c4c609e1377e5.js.map
+Entrypoint styles = css/styles-0a57f24c.css js/styles-cd18b85ac8f054ff1870.js css/styles-0a57f24c.css.map js/styles-cd18b85ac8f054ff1870.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.08 KiB {application} [built]
+[./app/javascript/packs/styles.scss] 39 bytes {styles} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+ERROR in ./node_modules/jquery/dist/jquery.js
+Module build failed (from ./node_modules/expose-loader/dist/cjs.js):
+ValidationError: Invalid options object. Expose Loader has been initialized using an options object that does not match the API schema.
+ - options misses the property 'exposes'. Should be:
+   non-empty string | object { globalName, moduleLocalName?, override? } | [non-empty string | object { globalName, moduleLocalName?, override? }, ...] (should not have fewer than 1 item)
+    at validate (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/node_modules/schema-utils/dist/validate.js:104:11)
+    at Object.loader (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/dist/index.js:24:29)
+ @ ./app/javascript/packs/application.js 14:0-23 16:0-1 17:2-3 21:2-3
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!app/javascript/packs/styles.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/styles.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/styles.scss 667 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3360ms (Views: 3354.3ms | ActiveRecord: 2.0ms | Allocations: 61811)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:04:52 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 74.4ms | Allocations: 55429)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 78.9ms | ActiveRecord: 1.5ms | Allocations: 60612)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:07:31 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 98.7ms | Allocations: 55428)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 0867849c35abcb0607f2
+Version: webpack 4.44.2
+Time: 2231ms
+Built at: 11/02/2020 11:07:34 PM
+                                     Asset       Size       Chunks                         Chunk Names
+                   css/styles-0a57f24c.css    177 KiB       styles  [emitted] [immutable]  styles
+               css/styles-0a57f24c.css.map    388 KiB       styles  [emitted] [dev]        styles
+    js/application-eb11607c4c609e1377e5.js    356 KiB  application  [emitted] [immutable]  application
+js/application-eb11607c4c609e1377e5.js.map    410 KiB  application  [emitted] [dev]        application
+         js/styles-cd18b85ac8f054ff1870.js   3.94 KiB       styles  [emitted] [immutable]  styles
+     js/styles-cd18b85ac8f054ff1870.js.map   3.61 KiB       styles  [emitted] [dev]        styles
+                             manifest.json  914 bytes               [emitted]              
+Entrypoint application = js/application-eb11607c4c609e1377e5.js js/application-eb11607c4c609e1377e5.js.map
+Entrypoint styles = css/styles-0a57f24c.css js/styles-cd18b85ac8f054ff1870.js css/styles-0a57f24c.css.map js/styles-cd18b85ac8f054ff1870.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.08 KiB {application} [built]
+[./app/javascript/packs/styles.scss] 39 bytes {styles} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+ERROR in ./node_modules/jquery/dist/jquery.js
+Module build failed (from ./node_modules/expose-loader/dist/cjs.js):
+ValidationError: Invalid options object. Expose Loader has been initialized using an options object that does not match the API schema.
+ - options misses the property 'exposes'. Should be:
+   non-empty string | object { globalName, moduleLocalName?, override? } | [non-empty string | object { globalName, moduleLocalName?, override? }, ...] (should not have fewer than 1 item)
+    at validate (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/node_modules/schema-utils/dist/validate.js:104:11)
+    at Object.loader (/home/vorob/Desktop/test/organizer/organizer/node_modules/expose-loader/dist/index.js:24:29)
+ @ ./app/javascript/packs/application.js 14:0-23 16:0-1 17:2-3 21:2-3
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--6-1!node_modules/postcss-loader/src/index.js??ref--6-2!node_modules/sass-loader/dist/cjs.js??ref--6-3!app/javascript/packs/styles.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/packs/styles.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/packs/styles.scss 667 KiB {mini-css-extract-plugin} [built]
+        + 1 hidden module
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3353ms (Views: 3345.5ms | ActiveRecord: 2.5ms | Allocations: 61814)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:09:07 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 88.4ms | Allocations: 55429)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 94.9ms | ActiveRecord: 1.7ms | Allocations: 60617)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:09:11 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.8ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 4558)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:05 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 49.6ms | Allocations: 55423)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 1.6ms | Allocations: 60601)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:34 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.6ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 4481)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:37 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.1ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4564)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:50 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.9ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 4561)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:51 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.0ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 4541)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:52 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 5.9ms | Allocations: 863)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 1.0ms | Allocations: 4546)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:56 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.8ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 4558)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:10:59 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.8ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 4538)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:11 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 49.4ms | Allocations: 55427)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 54.1ms | ActiveRecord: 2.4ms | Allocations: 60617)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:14 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.6ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 4556)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:54 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.6ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 4562)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:55 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 1.4ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 4538)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:56 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.7ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 4545)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:57 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 2.9ms | Allocations: 880)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms | Allocations: 4565)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:14:58 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 3.7ms | Allocations: 857)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 4538)
+
+
+Started GET "/" for ::1 at 2020-11-02 23:15:08 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.2ms | Allocations: 295)
+Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1745)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:15:14 +0300
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 46.9ms | Allocations: 55468)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 2.2ms | Allocations: 58972)
+
+
+Started GET "/welcome" for ::1 at 2020-11-02 23:15:34 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#welcome as HTML
+  Rendering sessions/welcome.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered sessions/welcome.haml within layouts/application (Duration: 49.3ms | Allocations: 55420)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 2.0ms | Allocations: 60604)
+
+
