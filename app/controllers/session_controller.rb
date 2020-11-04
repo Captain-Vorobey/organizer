@@ -1,6 +1,6 @@
-class SessionsController < ApplicationController
-  skip_before_action :authorized, only: %i[new create welcome]
-  def new; end
+class SessionController < ApplicationController
+  def new
+  end
 
   def login; end
 
@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticatable_salt
       session[:user_id] = @user.id
-      redirect_to '/welcome'
+      redirect_to '/services'
     else
-      redirect_to '/login'
+      redirect_to '/sign_in'
     end 
   end
 
