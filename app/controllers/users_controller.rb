@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-    before_filter :authenticate_user!
+     skip_before_action :authorized, only: %i[new create]
 
-    def new
+      def new
         @user = User.new
       end
     

@@ -1,4 +1,7 @@
 class SessionController < ApplicationController
+  skip_before_action :authorized, only: %i[new create services]
+  skip_before_filter :verify_authenticity_token, :only => :create
+
   def new
   end
 
@@ -6,7 +9,7 @@ class SessionController < ApplicationController
 
   def create
     @user = User.find_by(email: params[:email])
-    if @user && @user.authenticatable_salt
+    if @user&.@user.authenticatable_salt
       session[:user_id] = @user.id
       redirect_to '/services'
     else
