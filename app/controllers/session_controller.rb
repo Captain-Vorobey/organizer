@@ -11,7 +11,7 @@ class SessionController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user&.@user.authenticatable_salt
       session[:user_id] = @user.id
-      redirect_to '/services'
+      redirect_to '/'
     else
       redirect_to '/sign_in'
     end 
