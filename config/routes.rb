@@ -1,15 +1,4 @@
 Rails.application.routes.draw do
-  get 'services', to: 'sessions#services'
-
-  get 'session/new'
-
-  get 'session/create'
-
-  get 'home/index'
-
-  root 'home#index'
-
-  resources :services
-
   devise_for :users
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
