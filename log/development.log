@@ -6666,3 +6666,63 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 876)
 
 
+Started GET "/" for ::1 at 2020-11-05 15:24:49 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.2ms | Allocations: 295)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 1776)
+
+
+Started GET "/" for ::1 at 2020-11-05 15:24:59 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.7ms | Allocations: 411)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1288)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-05 15:25:04 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 3.9ms | Allocations: 9222)
+
+
+Started GET "/" for ::1 at 2020-11-05 15:25:04 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 426)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-11-05 15:25:13 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 596)
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3096)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 26628)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-11-05 15:25:15 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"umOJLtgz23CNlq2Ikanf7StVci6ZfS32DvQRSrr0uCNMia+Jvo6k6PXEWVuc44gI41sWlro1/o/VLUvhoBBViw==", "user"=>{"email"=>"vorobyov_egor@bk.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vorobyov_egor@bk.ru"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 238ms (ActiveRecord: 0.4ms | Allocations: 4658)
+
+
+Started GET "/" for ::1 at 2020-11-05 15:25:15 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 425)
+
+
+Started GET "/" for ::1 at 2020-11-05 15:26:23 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
