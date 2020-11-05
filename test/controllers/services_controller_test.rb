@@ -5,17 +5,17 @@ class ServicesControllerTest < ActionDispatch::IntegrationTest
     @service = services(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get services_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_service_url
     assert_response :success
   end
 
-  test "should create service" do
+  test 'should create service' do
     assert_difference('Service.count') do
       post services_url, params: { service: { description: @service.description, name: @service.name } }
     end
@@ -23,22 +23,22 @@ class ServicesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to service_url(Service.last)
   end
 
-  test "should show service" do
+  test 'should show service' do
     get service_url(@service)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_service_url(@service)
     assert_response :success
   end
 
-  test "should update service" do
+  test 'should update service' do
     patch service_url(@service), params: { service: { description: @service.description, name: @service.name } }
     assert_redirected_to service_url(@service)
   end
 
-  test "should destroy service" do
+  test 'should destroy service' do
     assert_difference('Service.count', -1) do
       delete service_url(@service)
     end

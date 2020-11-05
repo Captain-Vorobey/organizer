@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get 'services', to: 'sessions#services'
 
   get 'session/new'
