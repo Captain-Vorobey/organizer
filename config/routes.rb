@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get 'session/create'
 
+  get 'home/index'
+
+  root 'home#index'
+
   resources :services
 
   devise_for :users
