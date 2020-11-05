@@ -5141,6 +5141,35 @@ Processing by Devise::RegistrationsController#create as HTML
 Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 8189)
 
 
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2020-11-05 11:50:25 +0300
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 25.1ms | Allocations: 295)
+Completed 200 OK in 86ms (Views: 43.1ms | ActiveRecord: 0.0ms | Allocations: 1641)
+
+
+Started GET "/" for ::1 at 2020-11-05 11:58:21 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+=======
 Started GET "/" for ::1 at 2020-11-05 12:28:04 +0300
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Rails::WelcomeController#index as HTML
@@ -5197,6 +5226,7 @@ Started GET "/" for ::1 at 2020-11-05 12:30:55 +0300
 ActionController::RoutingError (No route matches [GET] "/"):
   
 actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
 web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
@@ -5226,9 +5256,33 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4172005931883408780)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHomes (20201105085651)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (346.1ms)[0m  [1m[35mCREATE TABLE "homes" ("id" bigserial primary key, "index" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201105085651"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (30.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4172005931883408780)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-11-05 11:58:56 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 295)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 1642)
+
+
+Started GET "/home/new" for ::1 at 2020-11-05 11:58:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home/new"):
+=======
 Started GET "/" for ::1 at 2020-11-05 12:31:00 +0300
   
 ActionController::RoutingError (No route matches [GET] "/"):
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
   
 actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
@@ -5260,6 +5314,13 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/home" for ::1 at 2020-11-05 11:59:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/" for ::1 at 2020-11-05 12:33:02 +0300
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by HomeController#index as HTML
@@ -5314,6 +5375,7 @@ actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
 web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
@@ -5343,6 +5405,54 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/homes" for ::1 at 2020-11-05 11:59:04 +0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.5ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:14
+  Rendered homes/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 362ms (Views: 358.0ms | ActiveRecord: 2.3ms | Allocations: 28706)
+
+
+Started GET "/homes/new" for ::1 at 2020-11-05 11:59:07 +0300
+Processing by HomesController#new as HTML
+  Rendering homes/new.html.erb within layouts/application
+  Rendered homes/_form.html.erb (Duration: 1.8ms | Allocations: 1886)
+  Rendered homes/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2199)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2733)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: home, local: true) do |form| %>
+    2:   <% if home.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(home.errors.count, "error") %> prohibited this home from being saved:</h2>
+    5: 
+  
+app/views/homes/_form.html.erb:2
+app/views/homes/_form.html.erb:1
+app/views/homes/new.html.erb:3
+Started GET "/homes" for ::1 at 2020-11-05 11:59:09 +0300
+Processing by HomesController#index as HTML
+  Rendering homes/index.html.erb within layouts/application
+  [1m[36mHome Load (0.4ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+  ↳ app/views/homes/index.html.erb:14
+  Rendered homes/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 670)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 4233)
+
+
+Started GET "/homes" for ::1 at 2020-11-05 12:02:35 +0300
+Processing by HomesController#index as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 2404)
+
+
+  
+ActionController::MissingExactTemplate (HomesController#index is missing a template for request formats: text/html):
+=======
 Started GET "/" for ::1 at 2020-11-05 12:36:56 +0300
 Processing by HomeController#index as HTML
 Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 688)
@@ -5350,6 +5460,7 @@ Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 688)
 
   
 ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
   
 actionpack (6.0.3.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
 actionpack (6.0.3.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
@@ -5425,9 +5536,15 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/home" for ::1 at 2020-11-05 12:04:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+=======
 Started GET "/home/new" for ::1 at 2020-11-05 12:37:01 +0300
   
 ActionController::RoutingError (No route matches [GET] "/home/new"):
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
   
 actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
 web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
@@ -5459,7 +5576,11 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/home" for ::1 at 2020-11-05 12:04:47 +0300
+=======
 Started GET "/home" for ::1 at 2020-11-05 12:37:04 +0300
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
   
 ActionController::RoutingError (No route matches [GET] "/home"):
   
@@ -5493,7 +5614,11 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/home" for ::1 at 2020-11-05 12:04:54 +0300
+=======
 Started GET "/home" for ::1 at 2020-11-05 12:37:50 +0300
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
   
 ActionController::RoutingError (No route matches [GET] "/home"):
   
@@ -5527,6 +5652,25 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/home" for ::1 at 2020-11-05 12:05:33 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/home" for ::1 at 2020-11-05 12:21:05 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for ::1 at 2020-11-05 12:21:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+=======
 Started GET "/home" for ::1 at 2020-11-05 12:37:51 +0300
   
 ActionController::RoutingError (No route matches [GET] "/home"):
@@ -5614,6 +5758,7 @@ actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
 actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
 web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
 web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
 web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
@@ -5643,6 +5788,27 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/users/sign_in" for ::1 at 2020-11-05 12:22:34 +0300
+  
+NoMethodError (undefined method `to' for #<ActionDispatch::Routing::Mapper:0x00007f95b84b17e8>):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for ::1 at 2020-11-05 12:22:38 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for ::1 at 2020-11-05 12:23:18 +0300
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/home" for ::1 at 2020-11-05 12:23:25 +0300
+=======
 Started GET "/" for ::1 at 2020-11-05 12:39:20 +0300
   
 NoMethodError (undefined method `to' for #<ActionDispatch::Routing::Mapper:0x00007f454450be60>):
@@ -5718,6 +5884,7 @@ puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
 Started GET "/home" for ::1 at 2020-11-05 12:40:26 +0300
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
   
 ActionController::RoutingError (No route matches [GET] "/home"):
   
@@ -5751,6 +5918,8 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
 Started GET "/home" for ::1 at 2020-11-05 12:40:28 +0300
   
 ActionController::RoutingError (No route matches [GET] "/home"):
@@ -6431,3 +6600,4 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+>>>>>>> d45a4ca61dc2f5b067a544460aaacc3a76825cc3
