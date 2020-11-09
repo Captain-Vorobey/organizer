@@ -29,6 +29,12 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'cancancan', '~> 3.1'
 gem 'rolify', '~> 5.3'
 
+gem 'devise-bootstrap-views', '~> 1.1'
+
+gem 'activerecord-session_store', '~> 1.1', '>= 1.1.3'
+gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth-github', '~> 1.4'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

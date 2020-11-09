@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '493805bdd7f736f767d58dd095a08d0b050580d2aa0f6264884d31d11e18dbb4768e9968a97e5bd730016ef6b265430ba06a2e9c731c9d7c31f5e7a44dd804e7'
+  # config.secret_key = '87084bf4c733a59acc6a6b049719b33c379e4a3553b370380b8e1b1687cb567911222724eaeb4c5c5f098a1e53ec122f412bc9da89e2f5574df41ad9bb242d3f'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'faa136beefae38a0a6f4720f173f747fa5b4bf483c27eefe6b8ef18e61042730be4be0b39c01085890037d78f983b0042e6a7a295662b76e07c37f2f501b79c0'
+  # config.pepper = '4c1ff3ce73b6ac157b7fdaf3fd466a6f5e2ff0e15b191f5dacdcd267439587ffb4bcdccfa27464038879d6a598d8095590f236ee986ab9fbabd64aa99efdde84'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -271,7 +271,13 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+
+  # Rails.application.config.middleware.use OmniAuth::Builder do
+  #  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: 'user,public_repo'
+  # end
+
+  config.omniauth :github, Rails.application.credentials.dig(:github, :github_client_id),
+                  Rails.application.credentials.dig(:github, :github_client_secret), scope: 'user,public_repo'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -294,7 +300,7 @@ Devise.setup do |config|
   #
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
-  # config.omniauth_path_prefix = '/my_engine/users/auth'
+  config.omniauth_path_prefix = '/my_engine/users/auth'
 
   # ==> Turbolinks configuration
   # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:
