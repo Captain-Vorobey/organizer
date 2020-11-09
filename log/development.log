@@ -7912,3 +7912,22 @@ Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3642)
 
 =======
 >>>>>>> master
+Started GET "/users/sign_in" for ::1 at 2020-11-09 16:42:18 +0300
+Started GET "/users/sign_in" for ::1 at 2020-11-09 16:43:07 +0300
+Started GET "/users/sign_in" for ::1 at 2020-11-09 16:45:40 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 3.7ms | Allocations: 10696)
+
+
+Started GET "/" for ::1 at 2020-11-09 16:45:40 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms | Allocations: 28916)
+
+
