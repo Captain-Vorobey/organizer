@@ -6860,3 +6860,29 @@ Completed 200 OK in 1615ms (Views: 1464.4ms | ActiveRecord: 101.5ms | Allocation
 
 Started GET "/my_engine/users/auth/github" for ::1 at 2020-11-10 10:25:43 +0300
 Started GET "/my_engine/users/auth/github" for ::1 at 2020-11-10 10:25:44 +0300
+Started GET "/" for ::1 at 2020-11-10 18:30:08 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/vorob/.rvm/gems/ruby-2.7.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 839)
+  Rendered /home/vorob/.rvm/gems/ruby-2.7.0/gems/devise-bootstrap-views-1.1.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 106.2ms | Allocations: 9507)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/vorob/Desktop/organizer/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 1342ms
+Built at: 11/10/2020 6:30:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 2637ms (Views: 2620.5ms | ActiveRecord: 2.7ms | Allocations: 49815)
+
+
