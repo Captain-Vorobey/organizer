@@ -12,10 +12,6 @@ Rails.application.routes.draw do
     end
   end
 
-  delete '/logout' => 'sessions#destroy'
-  get '/logout' => 'sessions#destroy'
-  resources :sessions
-
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth' }
   get '/auth/:provider/callback', to: 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
