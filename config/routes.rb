@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'home/index'
 
   devise_scope :user do
@@ -10,6 +11,10 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
+
+  delete '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy'
+  resources :sessions
 
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth' }
   get '/auth/:provider/callback', to: 'home#index'

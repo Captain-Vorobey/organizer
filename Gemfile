@@ -35,6 +35,10 @@ gem 'devise-bootstrap-views', '~> 1.1'
 gem 'activerecord-session_store', '~> 1.1', '>= 1.1.3'
 gem 'omniauth', '~> 1.9', '>= 1.9.1'
 gem 'omniauth-github', '~> 1.4'
+gem 'haml', '~> 5.2'
+gem 'bootstrap', '~> 4.5', '>= 4.5.3'
+gem 'bootstrap-forms', '~> 0.0.4'
+gem 'html2haml'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

@@ -1,0 +1,20 @@
+.nav.text-white{style: "background-color: #ffc107;"}
+  .nav-item
+    .nav-link.active Home
+  .nav-item
+    .nav-link Profile
+  .nav-item
+    .nav-link{href: "#"} 
+    = link_to "Log out", logout_path, method: "delete"
+
+
+-@services.each do |service|
+  %ul.list-group{ style: "display: inline-block;"}
+    %li{class: "list-group-item", style: "width: 300px;"}
+      .card
+        .card-header
+          Service
+        .card-body
+          .card-title=service.name
+          .card-text=service.description
+          %a.card-link{ href: "/services/#{service.id}"} Learn more
