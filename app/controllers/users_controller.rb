@@ -5,10 +5,5 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
-    @user = User.create(params.require(:user).permit(:email,
-                                                     :password))
-    session[:user_id] = @user.id
-    redirect_to '/home'
-  end
+  def create; end
 end
