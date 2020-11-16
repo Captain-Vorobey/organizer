@@ -32,7 +32,8 @@ gem 'rolify', '~> 5.3'
 
 gem 'activerecord-session_store', '~> 1.1', '>= 1.1.3'
 gem 'omniauth', '~> 1.9', '>= 1.9.1'
-gem 'omniauth-github'
+gem 'omniauth-github', '~> 1.4'
+gem 'omniauth-facebook', '~> 8.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
