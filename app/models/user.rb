@@ -6,11 +6,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def self.find_or_create_from_auth_hash(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-      user.provider = auth["provider"]
+    where(provider: auth.provider, uid: auth.uid, email: auth.info.email).first_or_create! do |user|
+      user.provider = auth&.provider
       user.uid = auth["uid"]
-      user.email = auth["email"]
-      user.password = auth["password"]
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      user.save!
     end
   end
 end
