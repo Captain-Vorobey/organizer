@@ -9,9 +9,8 @@ class User < ApplicationRecord
     where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.password = '123456789'
-      user.email = 'vorobey1@mail.ru'
-      user.save!
+      user.email = auth["email"]
+      user.password = auth["password"]
     end
   end
 end
