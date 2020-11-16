@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_or_create_from_auth_hash(auth_hash)
     sign_in @user
-    redirect_to '/'
+    redirect_to 'home/index'
   end
 
   protected
