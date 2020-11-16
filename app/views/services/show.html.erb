@@ -1,0 +1,34 @@
+<div class="main text-muted">
+  <h3 class="font-weight-bold">
+    <%= @movie.name %>
+  </h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div alt="<%= @movie.name %>" class="img movie-img"></div>
+      </div>
+      <div class="col-8">
+        <div class="embed-responsive-embed-responsive-16by9">
+          <iframe class="allowfullscreen embed-responsive-item movie-clip"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group list-group-flush attributes-list">
+          <div class="list-group-item">
+            <%= @movie.director&.full_name %>
+          </div>
+          <div class="list-group-item">
+            <%= @movie.category&.name %>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="text-justify">
+          <%= @movie.description  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
