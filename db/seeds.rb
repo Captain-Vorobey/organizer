@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Address.destroy_all
+
+10.times do 
+    Address.create(street: Faker::Address.street_name,
+                    city: Faker::Address.city,
+                    houseNumber: Faker::Address.building_number)
+end
+

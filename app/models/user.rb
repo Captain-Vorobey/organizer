@@ -13,4 +13,6 @@ class User < ApplicationRecord
       user.password = auth["password"]
     end
   end
+
+  has_many :orders
 end
