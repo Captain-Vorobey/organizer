@@ -3,9 +3,9 @@
 one:
   street: MyString
   city: MyString
-  houseNumber: 1
+  houseNumber: MyString
 
 two:
   street: MyString
   city: MyString
-  houseNumber: 1
+  houseNumber: MyString

@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  announcement: MyString
+  description: MyString
 
 two:
   name: MyString
-  announcement: MyString
+  description: MyString

@@ -104,6 +104,8 @@ GEM
     erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (2.14.0)
+      i18n (>= 1.6, < 2)
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
@@ -250,6 +252,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     sexp_processor (4.15.1)
+    simple_form (5.0.3)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -307,6 +312,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   devise (~> 4.7, >= 4.7.3)
   dotenv-rails
+  faker (~> 2.14)
   haml (~> 5.2)
   html2haml (~> 2.2)
   jbuilder (~> 2.7)
@@ -323,6 +329,7 @@ DEPENDENCIES
   rubocop (~> 1.2)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form (~> 5.0, >= 5.0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
