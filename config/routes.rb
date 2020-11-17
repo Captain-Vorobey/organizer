@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get 'users/profile', as: 'user_root'
+  get '/about', to: 'users#about', as: :about_us
 
   devise_for :users
   resources :services

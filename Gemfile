@@ -45,6 +45,8 @@ gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 
 gem 'bootstrap-forms', '~> 0.0.4'
 
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
 gem 'faker', '~> 2.14'

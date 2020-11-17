@@ -3,6 +3,9 @@ class UsersController < ApplicationController
 
   def profile; end
 
+  def about
+  end
+
   def new
     @user = User.new
   end

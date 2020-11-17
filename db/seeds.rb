@@ -8,9 +8,15 @@
 
 Address.destroy_all
 
+rnd = Random.new
+
 10.times do 
-    Address.create(street: Faker::Address.street_name,
-                    city: Faker::Address.city,
-                    houseNumber: Faker::Address.building_number)
+    User.create(email: Faker::Internet.email,
+                password: '123qweasd')
+end
+
+10.times do 
+    Service.create(name: 'Some service',
+                    description: 'And its description')
 end
 
