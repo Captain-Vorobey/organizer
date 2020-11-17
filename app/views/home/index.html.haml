@@ -1,0 +1,12 @@
+- @services.each do |service|
+  %ul.list-group{:style => "display: inline-block;"}
+    %li.list-group-item{:style => "width: 300px;"}
+      .card
+        .card-header
+          Service
+        .card-body
+          .card-title
+            = service.name
+          .card-text
+            = service.description
+          %a.card-link{:href => "/services/#{service.id}"} Learn more

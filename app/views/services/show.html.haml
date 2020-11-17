@@ -1,0 +1,13 @@
+.main.text-muted
+  %h3.font-weight-bold
+    = @service.name
+  .container
+    .row
+      .col-4
+        .img.service-img{:alt => "#{@service.name}"}
+      .col-8
+        .embed-responsive-embed-responsive-16by9
+          %iframe.allowfullscreen.embed-responsive-item.service-clip
+    .col-8
+      .text-justify
+        = @service.description
