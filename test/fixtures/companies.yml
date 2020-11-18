@@ -3,7 +3,13 @@
 one:
   name: MyString
   description: MyString
+  avatar: MyString
+  service: one
+  address: one
 
 two:
   name: MyString
   description: MyString
+  avatar: MyString
+  service: two
+  address: two

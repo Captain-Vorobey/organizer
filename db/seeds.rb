@@ -11,12 +11,23 @@ Address.destroy_all
 rnd = Random.new
 
 10.times do 
-    User.create(email: Faker::Internet.email,
-                password: '123qweasd')
+    Comment.create(text: "You givee fine service")
 end
 
 10.times do 
-    Service.create(name: 'Some service',
-                    description: 'And its description')
+    User.create(email: Faker::Internet.email,
+                password: '123qweasd').add_role :admin
 end
 
+10.times do
+    Address.create(city: Faker::Address.city,
+                    street: Faker::Address.street_name,
+                    houseNumber: Faker::Address.building_number)
+end
+
+10.times do 
+    Service.create(name: "Some service",
+        description: "And its description",
+        avatar: "lisica",
+        comment_id: Comment.find(rand(Comment.minimum(:id)..Comment.maximum(:id))))
+end

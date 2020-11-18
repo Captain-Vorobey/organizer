@@ -2,8 +2,10 @@
 
 one:
   name: MyString
-  description: MyString
+  user: one
+  service: one
 
 two:
   name: MyString
-  description: MyString
+  user: two
+  service: two
