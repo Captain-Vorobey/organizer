@@ -8,7 +8,8 @@
 
 10.times do 
     User.create(email: Faker::Internet.email,
-                password: '123qweasd')
+                password: '123qweasd',
+                uid: Faker::Internet.uuid)
 end
 
 company = Company.create(name: 'Amazon')
@@ -18,9 +19,9 @@ address = Address.new(city: 'Borisov', addressable: company)
 company = Company.create(name: 'Amazon', address_id: 1)
 
 10.times do 
-    Service.create(name: 'Some service',
-                    description: 'And its description',
-                    avatar: 'lisica.png', company_id: 1)
+    Service.create(name: 'New service',
+                    description: Faker::Food.description,
+                    avatar: Faker::Fillmurray.image, company_id: 1)
 end
 
 10.times do
