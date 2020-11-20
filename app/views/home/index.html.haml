@@ -15,27 +15,10 @@
         .row.justify-content-center.text-center
           .col-md-10.col-lg-8
             .header-section
-            %h1 Elastic search for services
-            = form_for :search_services, url: root_path, method: :get do |form|
-              = form.text_field :query, value: params[:search_services].presence && params[:search_services][:query]
-              = form.submit 'Search'
-              - unless @services.nil?
-                - if @services.empty?
-                  %h2 No services found matching your query.
-                - else
-                %h2 Search results
-                %table{:style => "width: 100%;"}
-                  %thead
-                    %tr
-                      %th Name
-                      %th Description
-                  %tbody
-                    - @services.each do |service|
-                      %tr
-                        %td= service.name
-                        %td= service.description
-                        %td= link_to 'View', service_path(service.id)
-                  %tbody
+              %h1 Elastic search for services
+              = form_for :search_services, url: search_services_path, method: :get do |form|
+                = form.text_field :query, value: params[:search_services].presence && params[:search_services][:query]
+                = form.submit 'Search'
                 .row
                   / Start Single Service
                   .col-md-6.col-lg-4
@@ -52,4 +35,3 @@
                           %i.fas.fa-arrow-circle-right>
                           %a.card-link{:href => "/services/#{service.id}"} Read More
                   / / End Single Service
-                  link_to 'View', service_path(service.id)
