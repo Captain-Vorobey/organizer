@@ -1,5 +1,4 @@
 class Company < ApplicationRecord
-  belongs_to :address, as: :addressable
-  has_many :services
-  has_one :address
+    has_many :service
+    has_one :address, :as => :addressable
 end

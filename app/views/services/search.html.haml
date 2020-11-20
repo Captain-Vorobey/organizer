@@ -1,0 +1,21 @@
+%h1 Elastic search for services
+= form_for :search_services, url: search_services_path, method: :get do |form|
+  = form.text_field :query, value: params[:search_services].presence && params[:search_services][:query]
+  = form.submit 'Search'
+- unless @services.nil?
+  - if @services.empty?
+    %h2 No services found matching your query.
+  - else
+    %h2 Search results
+    %table{:style => "width: 100%;"}
+      %thead
+        %tr
+          %th Name
+          %th Description
+      %tbody
+        - @services.each do |service|
+          %tr
+            %td= service.name
+            %td= service.description
+            %td= link_to 'View', service_path(service.id)
+      %tbody

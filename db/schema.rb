@@ -10,35 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_093522) do
+ActiveRecord::Schema.define(version: 2020_11_18_211016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
-    t.string "street"
     t.string "city"
-    t.string "houseNumber"
+    t.string "street"
+    t.integer "houseNumber"
+    t.string "addressable_type"
+    t.bigint "addressable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
   end
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.bigint "address_id", null: false
-    t.bigint "service_id", null: false
+    t.string "avatar"
+    t.bigint "address_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["address_id"], name: "index_companies_on_address_id"
-    t.index ["service_id"], name: "index_companies_on_service_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -54,8 +57,11 @@ ActiveRecord::Schema.define(version: 2020_11_17_093522) do
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "avatar"
+    t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_services_on_company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,5 +87,6 @@ ActiveRecord::Schema.define(version: 2020_11_17_093522) do
   end
 
   add_foreign_key "companies", "addresses"
-  add_foreign_key "companies", "services"
+  add_foreign_key "orders", "users"
+  add_foreign_key "services", "companies"
 end

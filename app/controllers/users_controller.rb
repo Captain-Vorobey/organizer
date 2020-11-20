@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   def about
   end
 
+  def company; end
+
   def new
     @user = User.new
   end

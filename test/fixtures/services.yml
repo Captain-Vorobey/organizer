@@ -3,11 +3,11 @@
 one:
   name: MyString
   description: MyString
-  user_id: 1
-  order_id: 1
+  avatar: MyString
+  company: one
 
 two:
   name: MyString
   description: MyString
-  user_id: 1
-  order_id: 1
+  avatar: MyString
+  company: two
