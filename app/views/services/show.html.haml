@@ -3,11 +3,11 @@
   .container
     .row
       .col-4
-        .img{ src: 'lisica.png', alt: @service.name }
+        .img
           = image_tag 'lisica.png'
       .col-8
         %div.embed-responsive-embed-responsive-16by9
-          %iframe{ src: "" } 
+          %iframe
     .row
       .col-4
         %br
@@ -20,9 +20,8 @@
             = @service.description
           %li
             .attribute-name.yellow Go to basket
-            = link_to 'Company', '/company'
       .col-8
         %br
         .text-justify= @service.description
         %br
-            
+          = link_to 'Link to Company', '/company'
