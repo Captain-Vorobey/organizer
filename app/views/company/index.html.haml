@@ -1,14 +1,6 @@
 !!!
-%html{:lang => "en"}
+%html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    / Theme Made By www.w3schools.com - No Copyright
-    %title Bootstrap Theme Company Page
-    %meta{:charset => "utf-8"}/
-    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
-    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css", :rel => "stylesheet"}/
-    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}
-    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"}
     :css
       .jumbotron {
         background-color: #f4511e;
@@ -38,16 +30,6 @@
   %body
     .jumbotron.text-center
       %h1=@company.name
-    / Container (About Section)
-    .container-fluid.bg-green
-      .row
-        .col-sm-8
-          %h2=@company.description
-          %h4 Lorem ipsum..
-          %p Lorem ipsum..
-          %button.btn.btn-default.btn-lg Get in Touch
-        .col-sm-4
-          %span.glyphicon.glyphicon-signal.logo
     .container-fluid.text-center.bg-grey
       %h2 SERVICES
       %h4 What we offer
@@ -55,8 +37,9 @@
       .row
         .col-sm-4
           %span.glyphicon.glyphicon-off.logo-small
-          %h4 POWER
-          %p Lorem ipsum dolor sit amet..
+          %p
+          - @services.each do |service|
+            = service.name
         .col-sm-4
           %span.glyphicon.glyphicon-heart.logo-small
           %h4 LOVE

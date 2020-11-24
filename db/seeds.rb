@@ -6,25 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+# -----------
+ # There are not working seeds
+# -----------
+
 10.times do 
     User.create(email: Faker::Internet.email,
                 password: '123qweasd',
                 uid: Faker::Internet.uuid)
 end
 
-company = Company.create(name: 'Amazon')
+company = Company.create(name: Faker::Company.name, avatar: Faker::Company.logo, description: 'here is description of company')
 
-address = Address.new(city: 'Borisov', addressable: company)
+address = Address.new(city: 'Minsk', addressable: company)
 
-company = Company.create(name: 'Amazon', address_id: 1)
+company
+company.address_id = 2
 
-10.times do 
+
+2.times do 
     Service.create(name: 'New service',
                     description: Faker::Food.description,
                     avatar: Faker::Fillmurray.image, company_id: 1)
 end
 
-10.times do
+2.times do
     Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number)
 end
 

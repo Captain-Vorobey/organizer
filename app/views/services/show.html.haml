@@ -1,24 +1,27 @@
-.container.bg-yellow
+.container
+%body.all-color
   %h3.font-weight-bold= @service.name
   .container
-    .row
-      .col-4
-        .img{ src: @service.avatar, alt: @service.name }
-      .col-8
-        %div.embed-responsive-embed-responsive-16by9
-          %img{ src: @service.avatar, alt: @service.name }
-    .row
-      .col-4
-        %br
-        %ul.attributes-list
-          %li
-            .attribute-name Owner
-            = @service.company
-          %li
-            .attribute-name Description
-            = @service.description
-      .col-8
-        %br
-        .text-justify= @service.description
-        %br
-          = link_to 'Link to Company', '/company'
+    %body
+      .row.attributes-list
+        .col-4
+          .img{ src: @service.avatar, alt: @service.name }
+        .col-8
+          %div.embed-responsive-embed-responsive-16by9
+            %img{ src: @service.avatar, alt: @service.name }
+      .row
+        .col-4
+          %br
+          %ul.attributes-list
+            %li
+              .attribute-name Company
+              = link_to "#{@service.company&.name}", company_path(@service.company), class: 'attribute-link'
+            %li
+              .attribute-name Description
+              = @service.description
+        .col-8
+          %br
+          .text-justify= @service.company.description
+          %br
+            - if has_role?(:admin)
+              = link_to 'Destroy', @service, method: :delete

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'users/profile', as: 'user_root'
   get '/about', to: 'users#about'
-  get '/company', to: 'company#index'
+  get '/companies/:id', to: 'company#index'
 
   devise_for :users
 
