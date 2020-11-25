@@ -6,34 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
 # -----------
- # There are not working seeds
+# There are not working seeds
 # -----------
 
-10.times do 
-    User.create(email: Faker::Internet.email,
-                password: '123qweasd',
-                uid: Faker::Internet.uuid)
+10.times do
+  Service.create(name: 'New service',
+                 description: Faker::Food.description,
+                 avatar: Faker::Fillmurray.image, company_id: 1)
 end
 
-company = Company.create(name: Faker::Company.name, avatar: Faker::Company.logo, description: 'here is description of company')
-
-address = Address.new(city: 'Minsk', addressable: company)
-
-company
-company.address_id = 2
-
-
-2.times do 
-    Service.create(name: 'New service',
-                    description: Faker::Food.description,
-                    avatar: Faker::Fillmurray.image, company_id: 1)
-end
-
-2.times do
-    Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number)
-end
-
-#Company.create(name: 'Amazon', description: 'We cooking the most delicious burgers', avatar: 'logo.jpeg', services: services, address: Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number))
+# Company.create(name: 'Amazon', description: 'We cooking the most delicious burgers', avatar: 'logo.jpeg', services: services, address: Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number))

@@ -36,8 +36,8 @@ gem 'omniauth', '~> 1.9', '>= 1.9.1'
 
 gem 'omniauth-github', '~> 1.4'
 
-gem 'omniauth-facebook', '~> 8.0'
 gem 'html2haml', '~> 2.2'
+gem 'omniauth-facebook', '~> 8.0'
 
 gem 'haml', '~> 5.2'
 
@@ -45,7 +45,7 @@ gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 
 gem 'bootstrap-forms', '~> 0.0.4'
 
-#gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
@@ -67,7 +67,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
   gem 'pry', '~> 0.13.1'
-
 end
 
 group :development do
@@ -77,7 +76,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
 end
 
 group :test do
@@ -91,5 +89,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem "omniauth-rails_csrf_protection", "~> 0.1.2"
-
+gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
