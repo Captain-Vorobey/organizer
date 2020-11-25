@@ -3,13 +3,11 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  get 'users/profile', as: 'user_root' # It will be deleted, but now needed because isn't working another route
-
   get '/about', to: 'home#about'
 
   get '/companies/:id', to: 'company#index'
 
-  get '/users/:id', to: 'user#profile' # I must refactor it else
+  get '/users/:id', to: 'users#show', as: 'user'
 
   devise_for :users
 
