@@ -1,6 +1,4 @@
 class ServicesController < ApplicationController
-  before_action :show, :search
-
   def show
     @service ||= Service.find(params[:id])
   end
