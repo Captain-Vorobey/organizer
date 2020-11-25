@@ -1,5 +1,5 @@
 class Service < ApplicationRecord
-  include MyElastickSearch
+  include Search
 
   belongs_to :company
   has_many :orders

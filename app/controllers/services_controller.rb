@@ -1,11 +1,16 @@
 class ServicesController < ApplicationController
-  def show
-    @service ||= Service.find(params[:id])
-  end
+  before_action :set_service, only: [:show, :destroy]
+  
+  def show; end
 
   def destroy
-    @service = Service.find(params[:id])
     @service.destroy
+  end
+
+  private
+
+  def set_service
+    @service = Service.find(params[:id])
   end
 
   def search

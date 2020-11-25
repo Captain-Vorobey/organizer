@@ -1,4 +1,4 @@
-module MyElastickSearch
+module Search
   extend ActiveSupport::Concern
 
   include Elasticsearch::Model
