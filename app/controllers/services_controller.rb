@@ -1,14 +1,14 @@
 class ServicesController < ApplicationController
-  def destroy
-    @service = Service.find(params[:id])
-    @service.destroy
-  end
+  before_action :show, :search
 
   def show
     @service ||= Service.find(params[:id])
   end
 
-  before_action :show, :search
+  def destroy
+    @service = Service.find(params[:id])
+    @service.destroy
+  end
 
   def search
     query = params[:search_services].presence && params[:search_services][:query]
