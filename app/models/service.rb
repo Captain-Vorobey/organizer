@@ -1,5 +1,5 @@
 class Service < ApplicationRecord
-  include Search
+  include Searchable
 
   belongs_to :company
   has_many :orders
