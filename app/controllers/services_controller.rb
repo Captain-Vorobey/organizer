@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :destroy]
+  before_action :set_service, :set_order, only: [:show, :destroy]
   
   def show; end
 
@@ -11,6 +11,10 @@ class ServicesController < ApplicationController
 
   def set_service
     @service = Service.find(params[:id])
+  end
+
+  def set_order
+    @order = Order.find(params[:id])
   end
 
   def search

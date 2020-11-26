@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'order/create'
+  get 'order/update'
+  get 'order/destroy'
+  get 'basket/show'
   get 'home/index'
 
   root to: 'home#index'
@@ -6,6 +10,8 @@ Rails.application.routes.draw do
   devise_for :users
   
   get '/about', to: 'home#about'
+
+  get '/basket', to: 'basket#show'
 
   get '/companies/:id', to: 'company#index'
 
@@ -20,6 +26,7 @@ Rails.application.routes.draw do
   end
 
   resources :companies
+  resources :orders
 
   get '/auth/:provider/callback', to: 'sessions#create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
