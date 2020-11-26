@@ -14,7 +14,7 @@ class ServicesController < ApplicationController
   end
 
   def set_order
-    @order = Order.find(params[:id])
+    @orders = Order.all
   end
 
   def search
