@@ -1,0 +1,20 @@
+.navbar{class: "navbar-expand-lg navbar-dark bg-dark text-white"}
+  %a.navbar-brand{:href => root_path}
+    = image_tag 'logo.jpeg', alt: 'service-portal', height: '50px', width: '50px'
+    Service-portal
+  %button.navbar-toggler{"aria-controls" => "navbarText", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#collapse-target", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarText.collapse.navbar-collapse
+  .navbar-nav.mr-auto
+    .nav-item
+      = link_to 'Home', root_path, class: 'nav-link'
+    .nav-item
+      = link_to 'Profile', user_path(current_user.id), class: 'nav-link'
+    .nav-item
+      = link_to 'About Us', '/about', class: 'nav-link'
+  - if current_user
+    .nav-item
+      = link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link'
+  - else
+    .nav-item
+      = link_to 'Log in', user_session_path, class: 'nav-link'

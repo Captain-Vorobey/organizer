@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  skip_before_action :authorized, only: %i[new create]
+  before_action :authenticate_user!
+
+  def show
+    @user ||= User.find(params[:id])
+  end
 
   def new
     @user = User.new
