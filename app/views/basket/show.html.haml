@@ -11,12 +11,3 @@
     %br
       - if has_role?(:admin || :customer)
         = link_to 'Destroy', @order, method: :delete
-
-- @orders.each do |item|
-  %h3= item.service.name
-  = form_with model: item do |f|
-    = f.hidden_field :service_id, value: item.service.id
-    = f.submit "Update Cart"
-    = link_to "Remove Items", item, method: :delete, remote: true
-  %h2
-    Subtotal: #{item.service_id}

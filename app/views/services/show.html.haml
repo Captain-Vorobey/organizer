@@ -22,9 +22,8 @@
         .col-8
           %br
           .text-justify= @service.company.description
-          %span
-          = form_for :create_order do |f|
-            = f.submit "Add To Basket", @orders.push(Order.create(name: 'Your order', user_id: current_user.id, service_id: @service.id))
           %br
             - if has_role?(:admin)
               = link_to 'Destroy', @service, method: :delete
+          %br 
+            = link_to 'Make order', "/services/#{@service.id}/orders/new"

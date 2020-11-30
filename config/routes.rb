@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'order/create'
   get 'order/update'
   get 'order/destroy'
+  get 'order/show'
+  get 'order/new'
   get 'basket/show'
   get 'home/index'
 
@@ -17,9 +19,13 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show', as: 'user'
 
-  
+  get '/services/:id/orders/new', to: 'order#new'
+
+  post '/services/:id/orders/new', to: 'order#create'
 
   resources :services do
+    resource :order
+
     collection do
       get :search
     end
