@@ -37,6 +37,7 @@ gem 'omniauth', '~> 1.9', '>= 1.9.1'
 gem 'omniauth-github', '~> 1.4'
 
 gem 'html2haml', '~> 2.2'
+
 gem 'omniauth-facebook', '~> 8.0'
 
 gem 'haml', '~> 5.2'
@@ -58,6 +59,8 @@ gem 'elasticsearch-xpack', '~> 7.10'
 gem 'elasticsearch-model', '~> 7.1', '>= 7.1.1'
 
 gem 'elasticsearch-rails', '~> 7.1', '>= 7.1.1'
+
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

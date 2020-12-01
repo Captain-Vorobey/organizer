@@ -14,13 +14,11 @@
             .row.mt-2
               .col-md-6
                 = form_for :new do |f|
-                  = text_field :order, :name
+                  = f.text_field :name
                   = f.submit "Create"
+                  = f.submit "Reserve"
             .row.mt-3
               .col-md-12
                 %label.labels Service you have chosen
             .mt-5.text-center
               = link_to 'Check Basket', '/basket', class: 'nav-link'
-            %span
-              = form_for :create do |f|
-                = f.submit "Reserve", method: :create
