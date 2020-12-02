@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'order/create'
-  get 'order/update'
-  get 'order/destroy'
-  get 'order/show'
-  get 'order/new'
-  get 'basket/show'
-  get 'home/index'
-
   root to: 'home#index'
   
   devise_for :users

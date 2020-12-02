@@ -1,5 +1,5 @@
 class BasketController < ApplicationController
   def show
-    @orders = Order.all
+    @orders = current_user.orders
   end
 end
