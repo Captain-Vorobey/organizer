@@ -4,12 +4,12 @@ class OrderController < ApplicationController
   def new; end
 
   def create
-    @order = Order.create(name: order_params[:order][:name], service: Service.find(order_params[:id]), user: User.find(current_user.id))
-  end
-
-  private
-
-  def order_params
-    params.permit(:id, order: {})
-  end
+    service = Service.find(params[id])
+    allowed_params = order_params.merge(service: service, user: current_user)
+   @order = Order.create(allowed_params)
+ end
+ private
+ def order_params
+   params.require(:order).permit(:name)
+ end
 end

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/services/:id/orders/new', to: 'order#new'
 
-  post '/services/:id/orders/new', to: 'order#create'
+  post '/services/:service_id/orders/new', to: 'order#create'
 
   resources :services do
     resource :order
