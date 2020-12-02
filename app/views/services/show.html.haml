@@ -27,3 +27,13 @@
               = link_to 'Destroy', @service, method: :delete
           %br 
             = link_to 'Make order', "/services/#{@service.id}/orders/new"
+          %section.section.comments
+            .container
+              %h2.subtitle.is-5
+                %strong= @service.comments.count
+                Comments
+              = render @service.comments  
+              .comment-form
+                %hr/
+                %h3.subtitle.is-3 Leave a reply
+                = render 'comments/form'

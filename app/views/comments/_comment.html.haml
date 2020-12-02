@@ -1,0 +1,11 @@
+.box
+  %article.media
+    .media-content
+      .content
+        %p
+          %strong
+            = comment.name
+            \:
+          = comment.comment
+    = link_to 'Delete', [comment.service, comment],                                     
+      method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } 

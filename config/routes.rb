@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   resources :services do
     resource :order
+    resources :comments
 
     collection do
       get :search
