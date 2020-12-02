@@ -1,19 +1,18 @@
 require 'test_helper'
 
 class OrderControllerTest < ActionDispatch::IntegrationTest
-  test "should get create" do
+  test 'should get create' do
     get order_create_url
     assert_response :success
   end
 
-  test "should get update" do
+  test 'should get update' do
     get order_update_url
     assert_response :success
   end
 
-  test "should get destroy" do
+  test 'should get destroy' do
     get order_destroy_url
     assert_response :success
   end
-
 end

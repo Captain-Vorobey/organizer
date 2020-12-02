@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :destroy]
-  
+  before_action :set_service, only: %i[show destroy]
+
   def show; end
 
   def destroy

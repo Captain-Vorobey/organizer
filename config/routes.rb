@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  
+
   devise_for :users
-  
+
   get '/about', to: 'home#about'
 
   get '/basket', to: 'basket#show'
