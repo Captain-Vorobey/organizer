@@ -1,19 +1,23 @@
 Rails.application.routes.draw do
-  get 'home/index'
-
   root to: 'home#index'
-  
+
   devise_for :users
-  
+
   get '/about', to: 'home#about'
+
+  get '/basket', to: 'basket#show'
 
   get '/companies/:id', to: 'company#index'
 
   get '/users/:id', to: 'users#show', as: 'user'
 
-  
+  get '/services/:id/orders/new', to: 'order#new'
+
+  post '/services/:service_id/orders/new', to: 'order#create'
 
   resources :services do
+    resource :order
+
     collection do
       get :search
     end

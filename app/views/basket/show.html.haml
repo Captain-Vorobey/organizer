@@ -1,0 +1,13 @@
+%h1 Basket#show
+%p Find me in app/views/basket/show.html.erb
+
+.row
+  .col-md-6.col-lg-4
+  - @orders.each do |order|
+    .part-1
+      %i.fab.fa-500px
+      %h3.title 
+        = order.name
+    %br
+      - if has_role?(:admin || :customer)
+        = link_to 'Destroy', @order, method: :delete

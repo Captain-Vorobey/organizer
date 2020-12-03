@@ -37,6 +37,7 @@ gem 'omniauth', '~> 1.9', '>= 1.9.1'
 gem 'omniauth-github', '~> 1.4'
 
 gem 'html2haml', '~> 2.2'
+
 gem 'omniauth-facebook', '~> 8.0'
 
 gem 'haml', '~> 5.2'
