@@ -6,10 +6,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-	service = set_service
+    service = set_service
     comment = service.comments.find(params[:id])
     comment.destroy
-    redirect_to service_path(set_service)
+    redirect_to service_path(service)
   end
 
   private
