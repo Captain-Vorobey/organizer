@@ -60,8 +60,6 @@ gem 'elasticsearch-model', '~> 7.1', '>= 7.1.1'
 
 gem 'elasticsearch-rails', '~> 7.1', '>= 7.1.1'
 
-gem 'simple_form', '~> 5.0', '>= 5.0.3'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

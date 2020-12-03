@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'order/create'
-  get 'order/update'
-  get 'order/destroy'
-  get 'order/show'
-  get 'order/new'
-  get 'basket/show'
-  get 'home/index'
-
   root to: 'home#index'
 
   devise_for :users
@@ -21,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/services/:id/orders/new', to: 'order#new'
 
-  post '/services/:id/orders/new', to: 'order#create'
+  post '/services/:service_id/orders/new', to: 'order#create'
 
   resources :services do
     resource :order
@@ -33,7 +25,6 @@ Rails.application.routes.draw do
   end
 
   resources :companies
-  resources :orders
 
   get '/auth/:provider/callback', to: 'sessions#create'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
