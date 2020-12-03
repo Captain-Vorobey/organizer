@@ -10,10 +10,7 @@
 # There are not working seeds
 # -----------
 
-10.times do
-  Service.create(name: 'New service',
-                 description: Faker::Food.description,
-                 avatar: Faker::Fillmurray.image, company_id: 1)
-end
+admin = User.create(email: "sparrow@mail.ru", password: "urser123", name: "Captain Sparrow")
+#user = User.create(email: "user@mail.ru", password: "user123")
 
 # Company.create(name: 'Amazon', description: 'We cooking the most delicious burgers', avatar: 'logo.jpeg', services: services, address: Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number))
