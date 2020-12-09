@@ -1,0 +1,5 @@
+= month_calendar events: timeslots do |date, timeslots|
+  = date
+  - timeslots.each do |timeslot|
+    %div
+      = link_to timeslot.name, timeslot, class: "link"

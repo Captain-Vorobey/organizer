@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_201_118_211_016) do
+ActiveRecord::Schema.define(version: 20_201_209_123_226) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20_201_118_211_016) do
     t.index %w[addressable_type addressable_id], name: 'index_addresses_on_addressable_type_and_addressable_id'
   end
 
+  create_table 'comments', force: :cascade do |t|
+    t.text 'body'
+    t.bigint 'user_id', null: false
+    t.bigint 'company_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['company_id'], name: 'index_comments_on_company_id'
+    t.index ['user_id'], name: 'index_comments_on_user_id'
+  end
+
   create_table 'companies', force: :cascade do |t|
     t.string 'name'
     t.string 'description'
@@ -35,12 +45,22 @@ ActiveRecord::Schema.define(version: 20_201_118_211_016) do
     t.index ['address_id'], name: 'index_companies_on_address_id'
   end
 
+  create_table 'messages', force: :cascade do |t|
+    t.text 'body'
+    t.bigint 'user_id', null: false
+    t.bigint 'company_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['company_id'], name: 'index_messages_on_company_id'
+    t.index ['user_id'], name: 'index_messages_on_user_id'
+  end
+
   create_table 'orders', force: :cascade do |t|
     t.string 'name'
     t.bigint 'user_id', null: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
-    t.bigint 'service_id', null: false
+    t.bigint 'service_id'
     t.index ['user_id'], name: 'index_orders_on_user_id'
   end
 
@@ -64,6 +84,16 @@ ActiveRecord::Schema.define(version: 20_201_118_211_016) do
     t.index ['company_id'], name: 'index_services_on_company_id'
   end
 
+  create_table 'timeslots', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'start_time'
+    t.datetime 'end_time'
+    t.bigint 'user_id', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['user_id'], name: 'index_timeslots_on_user_id'
+  end
+
   create_table 'users', force: :cascade do |t|
     t.string 'email', default: '', null: false
     t.string 'encrypted_password', default: '', null: false
@@ -74,6 +104,9 @@ ActiveRecord::Schema.define(version: 20_201_118_211_016) do
     t.datetime 'updated_at', precision: 6, null: false
     t.string 'provider'
     t.string 'uid'
+    t.string 'name'
+    t.bigint 'address_id'
+    t.index ['address_id'], name: 'index_users_on_address_id'
     t.index ['email'], name: 'index_users_on_email', unique: true
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
@@ -86,7 +119,13 @@ ActiveRecord::Schema.define(version: 20_201_118_211_016) do
     t.index ['user_id'], name: 'index_users_roles_on_user_id'
   end
 
+  add_foreign_key 'comments', 'companies'
+  add_foreign_key 'comments', 'users'
   add_foreign_key 'companies', 'addresses'
+  add_foreign_key 'messages', 'companies'
+  add_foreign_key 'messages', 'users'
   add_foreign_key 'orders', 'users'
   add_foreign_key 'services', 'companies'
+  add_foreign_key 'timeslots', 'users'
+  add_foreign_key 'users', 'addresses'
 end

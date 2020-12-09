@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   post '/services/:service_id/orders/new', to: 'order#create'
 
+  resources :timeslots
+
   resources :services do
     resource :order
 
