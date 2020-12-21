@@ -11,15 +11,20 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show', as: 'user'
 
-  get '/services/:id/orders/new', to: 'order#new'
+  get '/services/:id/orders/new', to: 'orders#new'
 
-  post '/services/:service_id/orders/new', to: 'order#create'
+  post '/services/:service_id/orders/new', to: 'orders#create', as: :service_order
 
-  resources :timeslots
+  get '/services/:id/time_limits/new', to: 'time_limits#new'
+
+  post '/services/:service_id/time_limits/new', to: 'time_limits#create'
+
+  resources :orders
+  resources :time_limits
 
   resources :services do
     resource :order
-
+    
     collection do
       get :search
     end

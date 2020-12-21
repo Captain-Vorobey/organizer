@@ -3,7 +3,8 @@ class Service < ApplicationRecord
 
   belongs_to :company
   has_many :orders
+  has_many :timeslots
   has_many :users, through: :orders
-
+  has_one :time_limit
   resourcify
 end

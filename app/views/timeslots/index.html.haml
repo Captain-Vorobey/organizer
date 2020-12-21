@@ -1,5 +1,0 @@
-.container.m-auto.my-4
-  - unless current_user.timeslots.any?
-    = render "timeslots_cta"
-  - else
-    = render "timeslots_landing", timeslots: @timeslots

@@ -1,0 +1,5 @@
+.container.m-auto.my-4
+  - unless current_user.orders.any?
+    = render "orders_cta"
+  - else
+    = render "orders_landing", orders: @orders
