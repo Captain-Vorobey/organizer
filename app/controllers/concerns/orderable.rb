@@ -16,9 +16,6 @@ module Orderable
     st = time_limit.start_time.to_datetime.to_i
     en = time_limit.end_time.to_datetime.to_i
 
-    sttt = time_limit.start_time.to_datetime.hour
-    ennn = time_limit.end_time.to_datetime.hour
-
     st_hour = time_limit.start_time.to_a
     en_hour = time_limit.end_time.to_a
 
