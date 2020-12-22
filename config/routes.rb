@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   resources :services do
     resource :order
-    
+
     collection do
       get :search
     end

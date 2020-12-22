@@ -27,7 +27,7 @@
               - if has_role?(:admin)
                 = link_to 'Destroy', @service, method: :delete
             %br
-              = link_to 'Make order', service_order_path(@service), method: :create
+              = link_to 'Make order', "/services/#{@service.id}/orders/new"
             %br 
               - if has_role?(:admin)
                 = link_to 'Create limit for service', "/services/#{@service.id}/time_limits/new"
