@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_service, :set_order, only: [:show]
+  before_action :set_service, :set_order, only: [:show, :edit, :destroy]
 
   include Orderable
 
@@ -17,7 +17,9 @@ class OrdersController < ApplicationController
     @order.service = Service.find(params[:id])
   end
 
-  def edit; end
+  def edit
+    @beginArray = get_begin_time   
+  end
 
   def create
     allowed_params = order_params

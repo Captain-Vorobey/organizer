@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @order.name
+%p
+  %strong Start time:
+  = @order.start_time
+%p
+  %strong End time:
+  = @order.start_time + $duration
+%p
+  %strong User:
+  = @order.user_id
+= link_to 'Edit', edit_order_path(@order)
+|
+= link_to 'Back', orders_path

@@ -1,0 +1,24 @@
+%h3.pt-5.mb-4 Payment
+.mb-6.relative.mt-2
+  %label.label{:for => "card-element"}
+    Enter credit or debit card. All sessions cost $199 USD.
+  #card-element.input
+    / a Stripe Element will be inserted here.
+  / used to display Element errors
+  #card-errors{:role => "alert"}
+- if current_user.stripe_id.present?
+  .bg-grey-lightest.p-5.border.border-grey-light.rounded.mb-6
+    %h4 Previously used card
+    .flex.flex-wrap.items-center.justify-between.my-4
+      .w-full.lg:w-auto.mb-6.lg:mb-0
+        %p.label Card Brand
+        %p= current_user.card_brand
+      .w-full.lg:w-auto.mb-6.lg:mb-0
+        %p.label Last 4 Digits
+        %p= current_user.card_last4
+      .w-full.lg:w-auto.mb-6.lg:mb-0
+        %p.label Exp. Month
+        %p= current_user.card_exp_month
+      .w-full.lg:w-auto
+        %p.label Exp. Year
+        %p= current_user.card_exp_year
