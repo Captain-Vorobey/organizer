@@ -10,22 +10,21 @@
 # There are not working seeds
 # -----------
 
+user = User.create(email: "admin@mail.ru", password: "admin123", name: "Dima").add_role :admin
+
 address = Address.create(city: "Minsk", 
                         street: "Platonova", 
                         houseNumber: 444, 
                         addressable_type: "Company")
 
-company = Company.create(name: "Amazon", description: "Something here", address_id: address.id)
+company = Company.create(name: "2English", description: "We offer you English courses", address_id: address.id)
 
-3.time do 
-  TimeLimit.create(start_time: "2020-12-10 10:00:00", 
-                   end_time: "2020-12-30 18:00:00", user_id: current_user.id, length: "2020-12-19 00:30:00")
-end
+time_limit = TimeLimit.create(start_time: "2020-12-10 10:00:00", 
+                 end_time: "2020-12-30 18:00:00", user_id: 1, length: 45)
 
-3.times do
-  Service.create(name: 'Some service',
-                 description: Faker::Food.description,
-                 avatar: Faker::Fillmurray.image, company_id: 1)
+services = 3.times do
+  Service.create(name: 'Service',
+                 description: Faker::Food.description, company_id: company.id, time_limit_id: time_limit.id)
 end
 
 # Company.create(name: 'Amazon', description: 'We cooking the most delicious burgers', avatar: 'logo.jpeg', services: services, address: Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number))
