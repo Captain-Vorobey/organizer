@@ -9,7 +9,6 @@ class TimeLimitsController < ApplicationController
 
   def new
     @time_limit = TimeLimit.new
-    @time_limit.service = set_service
   end
 
   def edit; end

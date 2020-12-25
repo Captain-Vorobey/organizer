@@ -13,8 +13,7 @@
 address = Address.create(city: "Minsk", 
                         street: "Platonova", 
                         houseNumber: 444, 
-                        addressable_type: "Company",
-                        addressable_id: 1)
+                        addressable_type: "Company")
 
 company = Company.create(name: "Amazon", description: "Something here", address_id: address.id)
 

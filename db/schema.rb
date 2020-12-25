@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_20_145529) do
+ActiveRecord::Schema.define(version: 2020_12_25_122138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,13 +86,15 @@ ActiveRecord::Schema.define(version: 2020_12_20_145529) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "time_limit_id"
     t.index ["company_id"], name: "index_services_on_company_id"
+    t.index ["time_limit_id"], name: "index_services_on_time_limit_id"
   end
 
   create_table "time_limits", force: :cascade do |t|
     t.datetime "start_time"
     t.datetime "end_time"
     t.bigint "user_id", null: false
-    t.datetime "length"
+    t.bigint "service_id"
+    t.integer "length"
     t.index ["user_id"], name: "index_time_limits_on_user_id"
   end
 
@@ -144,6 +146,7 @@ ActiveRecord::Schema.define(version: 2020_12_20_145529) do
   add_foreign_key "orders", "services"
   add_foreign_key "orders", "users"
   add_foreign_key "services", "companies"
+  add_foreign_key "services", "time_limits"
   add_foreign_key "time_limits", "users"
   add_foreign_key "timeslots", "users"
   add_foreign_key "users", "addresses"

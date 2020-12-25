@@ -4,7 +4,7 @@
   .form-inputs
     = f.input :name
     = f.select :start_time, @beginArray
-    = f.label "Duration of your order is #{@time.length.hour} hour : #{@time.length.min} min"
+    = f.label "Duration of your order is #{@time.length / 60} hour : #{@time.length % 60} min"
     = f.association :user
     = f.association :service
     = f.button :submit, 'Create time'

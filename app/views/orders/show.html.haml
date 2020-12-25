@@ -7,10 +7,9 @@
   = @order.start_time
 %p
   %strong End time:
-  = @order.start_time + $duration
+  = @order.start_time + @length
 %p
   %strong User:
   = @order.user_id
-= link_to 'Edit', edit_order_path(@order)
-|
+
 = link_to 'Back', orders_path

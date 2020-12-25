@@ -19,6 +19,9 @@ Rails.application.routes.draw do
 
   post '/services/:service_id/time_limits/new', to: 'time_limits#create'
 
+  resources :start_time
+  post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
+
   resources :orders
   resources :time_limits
 

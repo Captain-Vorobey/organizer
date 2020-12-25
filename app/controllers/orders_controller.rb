@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_service, :set_order, only: [:show, :edit, :destroy]
+  before_action :set_order, only: [:show]
+  
 
   include Orderable
 
@@ -8,53 +9,40 @@ class OrdersController < ApplicationController
     @orders = current_user.orders.all
   end
 
-  def show; end
+  def show
+    @length = @order.service.time_limit.length * 60
+  end
 
   def new
     @beginArray = get_begin_time
     @order = Order.new
-    $duration = get_length
+    @order.user_id = current_user.id
     @order.service = Service.find(params[:id])
-  end
-
-  def edit
-    @beginArray = get_begin_time   
   end
 
   def create
     allowed_params = order_params
     @order = Order.new(allowed_params)
-    @order.user_id = current_user.id
-
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new, location: @order }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
-    respond_to do |format|
-      if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
-        format.json { render :show, status: :ok, location: @order }
-      else
-        format.html { render :edit }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+    @order = start_time_validate(@order)
+    
+    if @order.start_time == nil
+      flash.alert = "This time is already taken for this service. Please choose a different time"
+    else
+      respond_to do |format|
+        if @order.save
+          format.html { redirect_to @order, notice: 'Order was successfully created.' }
+          format.json { render :show, status: :created, location: @order }
+        else
+          format.html { render :new, location: @order }
+          format.json { render json: @order.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
 
   def destroy
-    @order.destroy
-    respond_to do |format|
-      format.html { redirect_to order_url, notice: 'Order was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    set_order.destroy
+    flash.alert = 'Order was successfully destroyed.' 
   end
 
   private
@@ -64,11 +52,11 @@ class OrdersController < ApplicationController
   end
 
   def set_service
-    @service ||= Service.find(set_order.service_id)
+    @service ||= set_order.service
   end
 
   def set_time_limit
-    @time_limit = TimeLimit.find(Service.find(params[:id]).time_limit_id)
+    @time_limit = Service.find(params[:id]).time_limit
   end
 
   def order_params
