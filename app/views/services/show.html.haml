@@ -19,7 +19,7 @@
                 = link_to "#{@service.company&.name}", company_path(@service.company), class: 'attribute-link'
               %li
                 .attribute-name Description
-                = @service.description
+                .text-justify= @service.description
           .col-8
             %br
             .text-justify= @service.company.description
@@ -31,3 +31,4 @@
             %br 
               - if has_role?(:admin)
                 = link_to 'Create limit for service', "/services/#{@service.id}/time_limits/new"
+              

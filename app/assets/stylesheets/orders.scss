@@ -1,3 +1,25 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.blue {
+  padding: 250px;
+}
+
+.black {
+  background-color: #c5c5c5;;
+  padding: 270px;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 40px;
+  color: #6f6f71;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
