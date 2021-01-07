@@ -1,47 +1,15 @@
-!!!
-%html
-  %head
-    :css
-      .jumbotron {
-        background-color: #f4511e;
-        color: #fff;
-        padding: 100px 25px;
-      }
-      .container-fluid {
-        padding: 60px 50px;
-      }
-      .bg-grey {
-        background-color: #f6f6f6;
-      }
-      .logo-small {
-        color: #f4511e;
-        font-size: 50px;
-      }
-      .logo {
-        color: #f4511e;
-        font-size: 200px;
-      }
-      @media screen and (max-width: 768px) {
-        .col-sm-4 {
-          text-align: center;
-          margin: 25px 0;
-        }
-      }
-  %body
-    .jumbotron.text-center
-      %h1=@company.name
-    .container-fluid.text-center.bg-grey
-      %h2 SERVICES
-      %h4 What we offer
-      %br/
-      .row
-        .col-sm-4
-          %span.glyphicon.glyphicon-off.logo-small
-          %p
-          - @services.each do |service|
-            .col-sm-4
-              %h4=service.name
-              %p=service.description
-              %a{:href => "#"}
-                %i.fas.fa-arrow-circle-right>
-                %a.card-link{:href => "/services/#{service.id}"} Read More
+%body
+  .container-fluid.text-center
+    %h1=@company.name
+    %p=@company.description
+  .container-fluid.text-center.black
+    %h2.title SERVICES
+    %h4.title What we offer
+    %br/
+    - @services.each do |service|
+      .text-center
+        %h4=service.name
+        %p.description=service.description
+        %a{:href => "#"}
+        %i.fas.fa-arrow-circle-right>
+        %a.card-link{:href => "/services/#{service.id}"} Read More

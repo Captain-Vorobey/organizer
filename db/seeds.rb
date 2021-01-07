@@ -10,10 +10,21 @@
 # There are not working seeds
 # -----------
 
-10.times do
-  Service.create(name: 'New service',
-                 description: Faker::Food.description,
-                 avatar: Faker::Fillmurray.image, company_id: 1)
-end
+user = User.create(email: "dima@mail.ru", password: "admin123", name: "Dima").add_role :admin
 
-# Company.create(name: 'Amazon', description: 'We cooking the most delicious burgers', avatar: 'logo.jpeg', services: services, address: Address.create(city: Faker::Address.city, street: Faker::Address.street_name, houseNumber: Faker::Address.building_number))
+address = Address.create(city: "Minsk", 
+                        street: "Platonova", 
+                        houseNumber: 444, 
+                        addressable_type: "Company")
+
+company = Company.create(name: "2English", description: "We offer you English courses", address_id: address.id)
+
+time_limit = TimeLimit.create(start_time: "2020-12-10 10:00:00", 
+                 end_time: "2020-12-30 18:00:00", user_id: 1, length: 45)
+
+3.times do
+  Service.create(name: 'Service',
+                 description: Faker::Food.description, 
+                 company_id: company.id, 
+                 time_limit_id: time_limit.id)
+end

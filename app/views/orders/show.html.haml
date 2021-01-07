@@ -1,0 +1,16 @@
+.black.text-center
+  %p.title#notice= notice
+  %p.title
+    %strong Name:
+    = @order.name
+  %p.title
+    %strong Start time:
+    = @order.start_time
+  %p.title
+    %strong End time:
+    = @order.start_time + @length
+  %p.title
+    %strong User:
+    = @order.user_id
+  
+  = link_to 'Back', orders_path
