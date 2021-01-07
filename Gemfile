@@ -46,7 +46,7 @@ gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 
 gem 'bootstrap-forms', '~> 0.0.4'
 
-# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 
@@ -59,6 +59,12 @@ gem 'elasticsearch-xpack', '~> 7.10'
 gem 'elasticsearch-model', '~> 7.1', '>= 7.1.1'
 
 gem 'elasticsearch-rails', '~> 7.1', '>= 7.1.1'
+
+gem 'simple_calendar', '~> 2.4', '>= 2.4.1'
+
+gem 'stripe', '~> 5.28'
+
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

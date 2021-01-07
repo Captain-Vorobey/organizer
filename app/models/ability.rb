@@ -10,7 +10,7 @@ class Ability
     elsif user.has_role? :customer
       can :read, :all
     elsif user.has_role? :owner
-      can :crud, :all
+      can :crud, Service, Company
     end
   end
 end
