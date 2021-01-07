@@ -4,8 +4,12 @@ one:
   city: MyString
   street: MyString
   houseNumber: 1
+  addressable_type: MyString
+  addressable_id: 1
 
 two:
   city: MyString
   street: MyString
   houseNumber: 1
+  addressable_type: MyString
+  addressable_id: 1

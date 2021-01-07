@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_order, only: [:show]
-  
 
   include Orderable
 
@@ -24,9 +23,9 @@ class OrdersController < ApplicationController
     allowed_params = order_params
     @order = Order.new(allowed_params)
     @order = start_time_validate(@order)
-    
-    if @order.start_time == nil
-      flash.alert = "This time is already taken for this service. Please choose a different time"
+
+    if @order.start_time.nil?
+      flash.alert = 'This time is already taken for this service. Please choose a different time'
     else
       respond_to do |format|
         if @order.save
@@ -42,7 +41,7 @@ class OrdersController < ApplicationController
 
   def destroy
     set_order.destroy
-    flash.alert = 'Order was successfully destroyed.' 
+    flash.alert = 'Order was successfully destroyed.'
   end
 
   private

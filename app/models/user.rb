@@ -16,4 +16,5 @@ class User < ApplicationRecord
 
   has_many :orders
   has_many :services, through: :orders
+  has_one :address, as: :addressable
 end

@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show', as: 'user'
 
+  post '/users/:id', to: 'users#show'
+
+  post '/users/:id', to: 'users#show'
+
   get '/services/:id/orders/new', to: 'orders#new'
 
   post '/services/:service_id/orders/new', to: 'orders#create', as: :service_order
@@ -22,6 +26,10 @@ Rails.application.routes.draw do
   resources :start_time
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
+  resources :users  
+  resources :users, controller: 'user' do
+    resources :addresses, except: [:index], controller: 'user/addresses'
+  end
   resources :orders
   resources :time_limits
 
