@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/basket', to: 'basket#show'
 
-  get '/companies/:id', to: 'company#index'
+  get '/companies/:id', to: 'companies#show'
 
   get '/users/:id', to: 'users#show', as: 'user'
 

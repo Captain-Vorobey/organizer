@@ -7,6 +7,9 @@ class ServicesController < ApplicationController
     @service.destroy
   end
 
+  def create 
+  end
+
   private
 
   def set_service
