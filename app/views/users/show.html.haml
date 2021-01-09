@@ -5,7 +5,7 @@
         .d-flex.flex-column.align-items-center.text-center.p-3.py-5
           %img.rounded-circle.mt-5{:src => "sparrow.jpeg"}/
           = image_tag 'sparrow.jpeg'
-          %span.font-weight-bold Egor
+          %span.font-weight-bold=@user.name
           %span.text-black-50=@user.email
           %span
       .col-md-5
@@ -13,15 +13,21 @@
           .d-flex.justify-content-between.align-items-center.mb-3
             %h4.text-right Profile Settings
           .row.mt-2
-            .col-md-6
-              %label.labels Name
-              %input.form-control{:placeholder => "first name", :type => "text", :value => ""}/
-            .col-md-6
-              %label.labels Surname
-              %input.form-control{:placeholder => "surname", :type => "text", :value => ""}/
+          = simple_form_for(@user) do |f|
+            .col-md-6.title
+              = f.input :name, :placeholder => "Введите ваше имя"
+            .col-md-6.title
+              = f.input :surname, :placeholder => "Введите вашу фамилию"
+              = f.button :submit, 'Update profile'
           .row.mt-3
-            .col-md-12
-              %label.labels Address
-              %input.form-control{:placeholder => "enter address", :type => "text", :value => ""}/
+          = simple_form_for([@user, @address]) do |f|
+            = f.error_notification
+            = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+            .col-md-6.title
+              = f.input :city, :placeholder => "Your city"
+            .col-md-6.title
+              = f.input :street, :placeholder => "Your street"
+              = f.input :houseNumber, :placeholder => "Your house number"
+              = f.button :submit, 'Update profile'
           .mt-5.text-center
             = link_to 'Check Basket', '/basket', class: 'nav-link'
