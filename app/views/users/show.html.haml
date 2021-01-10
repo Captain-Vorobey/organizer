@@ -19,17 +19,8 @@
             .col-md-6.title
               = f.input :surname, :placeholder => "Введите вашу фамилию"
               = f.button :submit, 'Update profile'
-          .row.mt-3
-          = simple_form_for([@user, @address]) do |f|
-            = f.error_notification
-            = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-            .col-md-6.title
-              = f.input :city, :placeholder => "Your city"
-            .col-md-6.title
-              = f.input :street, :placeholder => "Your street"
-              = f.input :houseNumber, :placeholder => "Your house number"
-              = f.button :submit, 'Update profile'
           .mt-5.text-center
             = link_to 'Check Basket', '/basket', class: 'nav-link'
-            = link_to 'Create your company', '/companies', class: 'nav-link'
-            = link_to 'Create your service', '/services', class: 'nav-link'
+            - if has_role?(:admin) || has_role?(:owner)
+              = link_to 'Create your company', "/users/#{@user.id}/companies/new", class: 'nav-link'
+              = link_to 'Create your service', "/users/#{@user.id}/services/new", class: 'nav-link'

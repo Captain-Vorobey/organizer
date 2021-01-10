@@ -1,0 +1,9 @@
+= simple_form_for(@service) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  .form-inputs.title
+    = f.input :name, :placeholder => "Введите название вашего сервиса"
+    = f.input :description, :placeholder => "Распишите, чем вы занимаетесь"
+    = f.association :company
+    = f.button :submit, 'Create service'
+      

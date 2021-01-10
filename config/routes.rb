@@ -1,19 +1,21 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
 
   get '/about', to: 'home#about'
 
   get '/basket', to: 'basket#show'
 
-  get '/companies/:id', to: 'companies#show'
-
   get '/users/:id', to: 'users#show', as: 'user'
 
-  post '/users/:id', to: 'users#show'
+  get '/users/:id/companies/new', to: 'companies#new'
 
-  post '/users/:id', to: 'users#show'
+  post '/users/:id/companies/new', to: 'companies#create', as: :user_company
+
+  get '/users/:id/services/new', to: 'services#new'
+
+  post '/users/:id/services/new', to: 'services#create', as: :user_services
 
   get '/services/:id/orders/new', to: 'orders#new'
 
@@ -26,7 +28,7 @@ Rails.application.routes.draw do
   resources :start_time
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
-  resources :users  
+  resources :users
   resources :users, controller: 'user' do
     resources :addresses, except: [:index], controller: 'user/addresses'
   end

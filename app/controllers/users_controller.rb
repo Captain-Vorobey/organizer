@@ -4,9 +4,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    p 'qqqqqqqqqqqqqq'
+    p @user.role_ids
+    p 'qqqqqqqqqqqqqq'
     @address = @user.address
   end
-  
+
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -21,7 +24,7 @@ class UsersController < ApplicationController
 
   def add_address
     @address = Address.new(address_params)
-    @address.addressable_type = "User"
+    @address.addressable_type = 'User'
     @address.addressable_id = current_user.id
     @address.save
     @address
@@ -32,13 +35,11 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    @user = User.new(user_params)
+    @user.add_role params[:role_ids]
   end
 
-  def create
-    @address = Address.new(address_params)
-    @address.save
-  end
+  def create; end
 
   private
 
@@ -51,6 +52,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :surname, :address_id)
+    # params.require(:user).permit(:name, :surname, :address_id, input_roles: [])
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end

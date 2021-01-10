@@ -13,3 +13,6 @@
         %a{:href => "#"}
         %i.fas.fa-arrow-circle-right>
         %a.card-link{:href => "/services/#{service.id}"} Read More
+        %br
+          - if has_role?(:admin) || (has_role?(:owner) && @company.user_id == @user.id)
+            = link_to 'Destroy', @company, method: :delete
