@@ -24,11 +24,11 @@
             %br
             .text-justify= @service.company.description
             %br
-              - if has_role?(:admin)
+              - if has_role?(:admin) || (has_role?(:owner) && @service.user_id == @user.id)
                 = link_to 'Destroy', @service, method: :delete
             %br
               = link_to 'Make order', "/services/#{@service.id}/orders/new"
             %br 
-              - if has_role?(:admin)
+              - if has_role?(:admin) || (has_role?(:owner) && @service.user_id == @user.id)
                 = link_to 'Create limit for service', "/services/#{@service.id}/time_limits/new"
               
