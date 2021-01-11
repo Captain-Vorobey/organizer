@@ -11,6 +11,6 @@
     = @order.start_time + @length
   %p.title
     %strong User:
-    = @order.user_id
+    = @order.user.name
   
   = link_to 'Back', orders_path

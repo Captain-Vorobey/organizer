@@ -17,6 +17,7 @@ class ServicesController < ApplicationController
   def create
     allowed_params = service_params
     @service = Service.new(allowed_params)
+    @service.user_id = current_user.id
 
     respond_to do |format|
       if @service.save
@@ -32,7 +33,7 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:name, :description, :company_id)
+    params.require(:service).permit(:name, :description, :company_id, :user_id)
   end
 
   def set_service
