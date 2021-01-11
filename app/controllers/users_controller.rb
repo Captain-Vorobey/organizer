@@ -4,9 +4,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    p 'qqqqqqqqqqqqqq'
-    p @user.role_ids
-    p 'qqqqqqqqqqqqqq'
     @address = @user.address
   end
 
@@ -36,7 +33,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new(user_params)
-    @user.add_role params[:role_ids]
   end
 
   def create; end
@@ -52,7 +48,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    # params.require(:user).permit(:name, :surname, :address_id, input_roles: [])
     params.require(:user).permit(:name, :surname, :address_id, :email, :password, :password_confirmation)
   end
 end
