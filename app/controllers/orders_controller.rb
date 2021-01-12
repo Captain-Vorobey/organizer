@@ -13,8 +13,9 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @beginArray = get_begin_time
     @order = Order.new
+    @order.service = Service.find(params[:id])
+    @beginArray = get_begin_time
     @order.user_id = current_user.id
     @order.service = Service.find(params[:id])
   end
