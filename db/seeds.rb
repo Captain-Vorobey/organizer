@@ -20,9 +20,12 @@ address = Address.create(city: 'Minsk',
 company = Company.create(name: '2English', description: 'We offer you English courses', address_id: address.id)
 
 time_limit = TimeLimit.create(start_time: '2020-12-10 10:00:00',
-                              end_time: '2020-12-30 18:00:00', user_id: 1, length: 45)
+                              end_time: '2020-12-30 18:00:00', user_id: user.id, length: 45)
 
-service = Service.create(name: 'Some Service',
+service = Service.create(name: 'Test Service',
                  description: Faker::Food.description,
                  company_id: company.id,
-                 time_limit_id: time_limit.id)
+                 time_limit_id: time_limit.id,
+                 user_id: user.id)
+
+time_limit.service_id = service.id
