@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   get '/about', to: 'home#about'
 
-  get '/basket', to: 'basket#show'
-
   get '/users/:id', to: 'users#show', as: 'user'
 
   get '/users/:id/companies/new', to: 'companies#new'
@@ -29,9 +27,6 @@ Rails.application.routes.draw do
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
   resources :users
-  resources :users, controller: 'user' do
-    resources :addresses, except: [:index], controller: 'user/addresses'
-  end
   resources :orders
   resources :time_limits
 

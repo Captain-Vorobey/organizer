@@ -52,10 +52,6 @@ class TimeLimitsController < ApplicationController
 
   private
 
-  def set_service
-    @service ||= Service.find(params[:id])
-  end
-
   def set_time_limit
     @time_limit = TimeLimit.find(params[:id])
   end

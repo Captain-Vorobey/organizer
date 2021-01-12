@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @address = @user.address
   end
 
   def update
@@ -19,18 +18,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_address
-    @address = Address.new(address_params)
-    @address.addressable_type = 'User'
-    @address.addressable_id = current_user.id
-    @address.save
-    @address
-  end
-
-  def create_address
-    @address = Address.new
-  end
-
   def new
     @user = User.new(user_params)
   end
@@ -43,11 +30,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def set_address
-    @address = Address.find(params[:id])
-  end
-
   def user_params
-    params.require(:user).permit(:name, :surname, :address_id, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :surname, :email, :password, :password_confirmation)
   end
 end

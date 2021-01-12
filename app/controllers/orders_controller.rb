@@ -50,10 +50,6 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def set_service
-    @service ||= set_order.service
-  end
-
   def set_time_limit
     @time_limit = Service.find(params[:id]).time_limit
   end

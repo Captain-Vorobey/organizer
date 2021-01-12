@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
 
   def show
     @user = current_user
-    @company = Company.find(@service.company_id)
+    @company = Company.find(set_service.company_id)
   end
 
   def destroy
@@ -32,12 +32,12 @@ class ServicesController < ApplicationController
 
   private
 
-  def service_params
-    params.require(:service).permit(:name, :description, :company_id, :user_id)
-  end
-
   def set_service
     @service = Service.find(params[:id])
+  end
+
+  def service_params
+    params.require(:service).permit(:name, :description, :company_id, :user_id)
   end
 
   def search
