@@ -16,7 +16,10 @@
               = f.input :password_confirmation, required: true, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
           .field
             .control.title
-              = f.input :roles, as: :radio_buttons, collection: Role.all, value_method: :name, required: true
+              = f.input :roles, as: :radio_buttons, collection: [Role.first], value_method: :name, required: true
+              = f.label "Customer can only buy products from services which we offer to you"
+              = f.input :roles, as: :radio_buttons, collection: [Role.last], value_method: :name, required: true
+              = f.label "Owner can create own service and company which gives an opportunity sell some products to customers"
           .field
             .control.title
               = f.button :submit, "Sign up", class:"button is-outlined is-medium"

@@ -24,3 +24,5 @@
             - if has_role?(:admin) || has_role?(:owner)
               = link_to 'Create your company', "/users/#{@user.id}/companies/new", class: 'nav-link'
               = link_to 'Create your service', "/users/#{@user.id}/services/new", class: 'nav-link'
+            - if has_role?(:admin)
+              = link_to 'Check dashboard', "/admin/dashboard", class: 'nav-link'

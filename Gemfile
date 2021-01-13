@@ -26,6 +26,8 @@ gem 'rubocop', '~> 1.2'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'activeadmin', '~> 2.9'
+
 gem 'cancancan', '~> 3.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'rolify', '~> 5.3'

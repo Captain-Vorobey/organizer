@@ -29,3 +29,5 @@ service = Service.create(name: 'Test Service',
                  user_id: user.id)
 
 time_limit.service_id = service.id
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'admin666@mail.ru', password: 'admin666', password_confirmation: 'admin666') if Rails.env.development?
