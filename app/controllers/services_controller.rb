@@ -30,6 +30,12 @@ class ServicesController < ApplicationController
     end
   end
 
+  def search
+    query = params[:search_services].presence && params[:search_services][:query]
+
+    @services = Service.search(query) if query
+  end
+
   private
 
   def set_service
@@ -38,11 +44,5 @@ class ServicesController < ApplicationController
 
   def service_params
     params.require(:service).permit(:name, :description, :company_id, :user_id)
-  end
-
-  def search
-    query = params[:search_services].presence && params[:search_services][:query]
-
-    @services = Service.search(query) if query
   end
 end
