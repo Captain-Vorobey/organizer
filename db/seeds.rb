@@ -23,11 +23,17 @@ time_limit = TimeLimit.create(start_time: '2020-12-10 10:00:00',
                               end_time: '2020-12-30 18:00:00', user_id: user.id, length: 45)
 
 service = Service.create(name: 'Test Service',
-                 description: Faker::Food.description,
-                 company_id: company.id,
-                 time_limit_id: time_limit.id,
-                 user_id: user.id)
+                         description: Faker::Food.description,
+                         company_id: company.id,
+                         time_limit_id: time_limit.id,
+                         user_id: user.id)
 
 time_limit.service_id = service.id
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-AdminUser.create!(email: 'admin666@mail.ru', password: 'admin666', password_confirmation: 'admin666') if Rails.env.development?
+
+if Rails.env.development?
+  AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+end
+
+if Rails.env.development?
+  AdminUser.create!(email: 'admin666@mail.ru', password: 'admin666', password_confirmation: 'admin666')
+end
