@@ -10,6 +10,10 @@
 # There are not working seeds
 # -----------
 
+Role.create(name: "customer")
+Role.create(name: "owner")
+Role.create(name: "admin")
+
 user = User.create(email: 'dima@mail.ru', password: 'password', name: 'Dima').add_role "admin"
 
 
@@ -36,13 +40,5 @@ service = Service.create(name: 'Test Service',
 time_limit.service_id = service.id
 
 if Rails.env.development?
-  AdminUser.create!(email: 'dima@mail.ru', password: 'password', password_confirmation: 'password')
-end
-
-if Rails.env.development?
   AdminUser.create!(email: 'admin666@mail.ru', password: 'admin666', password_confirmation: 'admin666')
 end
-
-Role.create(name: "customer")
-Role.create(name: "owner")
-Role.create(name: "admin")
