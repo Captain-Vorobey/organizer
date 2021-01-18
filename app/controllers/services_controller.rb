@@ -8,10 +8,15 @@ class ServicesController < ApplicationController
 
   def destroy
     @service.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { render layout: false}
+    end 
   end
 
   def new
-    @service = Service.new  
+    @service = Service.new
+    authorize! :new, Service
   end
 
   def create

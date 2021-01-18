@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_order, only: [:show]
 
   include Orderable
@@ -38,7 +37,10 @@ class OrdersController < ApplicationController
 
   def destroy
     set_order.destroy
-    flash.alert = 'Order was successfully destroyed.'
+    respond_to do |format|
+      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   private

@@ -1,22 +1,25 @@
-%p#notice= notice
-%h1 Time Limits
-%table
-  %thead
-    %tr
-      %th Start time
-      %th End time
-      %th User
-      %th Service
-      %th{:colspan => "3"}
-  %tbody
-    - @time_limits.each do |time_limit|
+.black.text-left
+  %p.title#notice= notice
+  %h1.title Time Limits
+  %table
+    %thead
       %tr
-        %td= time_limit.start_time
-        %td= time_limit.end_time
-        %td= time_limit.user_id
-        %td= time_limit.service_id
-        %td= link_to 'Show', time_limit
-        %td= link_to 'Edit', edit_time_limit_path(time_limit)
-        %td= link_to 'Destroy', time_limit, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Time Limit', new_time_limit_path
+        %th.title Start time
+        %th.title End time
+        %th.title User
+        %th.title Service
+        %th.title{:colspan => "3"}
+    %tbody
+      - @time_limits.each do |time_limit|
+        %tr
+          %td.title= time_limit.start_time
+          %td.title= time_limit.end_time
+          %td.title= time_limit.user_id
+          %td.title= time_limit.service_id
+          %td.title= link_to 'Show', time_limit
+          %td.title= link_to 'Edit', edit_time_limit_path(time_limit)
+          %td.title= link_to 'Destroy', time_limit, method: :delete, data: { confirm: 'Are you sure?' }
+  %br/
+  = link_to 'New Time Limit', new_time_limit_path, class: "btn btn-primary"
+
+  

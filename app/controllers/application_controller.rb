@@ -9,10 +9,6 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, roles: []) }
-  end
-
   private
 
   def set_time_zone

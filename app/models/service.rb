@@ -4,6 +4,6 @@ class Service < ApplicationRecord
   belongs_to :company
   has_many :orders
   has_many :users, through: :orders
-  has_one :time_limit
+  has_one :time_limit,  dependent: :destroy 
   resourcify
 end
