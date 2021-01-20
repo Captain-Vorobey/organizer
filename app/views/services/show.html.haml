@@ -1,15 +1,12 @@
 #service-section
   .container
   %body.all-color
-    %h3.font-weight-bold= @service.name
+    %h3.title= @service.name
     .container
       %body
         .row.attributes-list
           .col-4
-            .img{ src: @service.avatar, alt: @service.name }
-          .col-8
-            %div.embed-responsive-embed-responsive-16by9
-              %img{ src: @service.avatar, alt: @service.name }
+            = image_tag(@service.avatar_thumbnail) if @service.avatar.attached?
         .row
           .col-4
             %br
@@ -18,10 +15,11 @@
                 .attribute-name Company
                 = link_to "#{@service.company&.name}", company_path(@service.company), class: 'attribute-link'
               %li
-                .attribute-name Description
+                .attribute-name Service Description
                 .text-justify= @service.description
           .col-8
             %br
+            .attribute-name Company Description
             .text-justify= @service.company.description
             %br
               - if @service.user_id == @user.id

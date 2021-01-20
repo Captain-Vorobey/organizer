@@ -6,3 +6,15 @@
 */ 
 @import "bootstrap";
 @import "simple_calendar";
+
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets

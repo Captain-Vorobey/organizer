@@ -4,6 +4,7 @@
   .form-inputs.title
     = f.input :name, :placeholder => "Введите название вашего сервиса"
     = f.input :description, :placeholder => "Распишите, чем вы занимаетесь"
+    = f.file_field :avatar
     = f.association :company
     = f.button :submit, 'Create service'
       

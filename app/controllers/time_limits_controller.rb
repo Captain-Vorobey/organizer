@@ -9,7 +9,7 @@ class TimeLimitsController < ApplicationController
 
   def new
     @time_limit = TimeLimit.new
-    authorize! :new, TimeLimit
+    #authorize! :new, TimeLimit
   end
 
   def edit; end

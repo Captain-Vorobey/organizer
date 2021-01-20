@@ -9,31 +9,37 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show', as: 'user'
 
-  get '/users/:id/companies/new', to: 'companies#new'
+  get '/companies/new', to: 'companies#new'
 
-  post '/users/:id/companies/new', to: 'companies#create', as: :user_company
+  post '/companies/new', to: 'companies#create', as: :user_company
 
-  get '/users/:id/services/new', to: 'services#new'
+  get '/services/new', to: 'services#new'
 
-  post '/users/:id/services/new', to: 'services#create', as: :user_services
+  post '/services/new', to: 'services#create', as: :user_services
 
   get '/services/:id/orders/new', to: 'orders#new'
 
   post '/services/:service_id/orders/new', to: 'orders#create', as: :service_order
 
-  get '/services/:id/time_limits/new', to: 'time_limits#new'
+  get '/time_limits/new', to: 'time_limits#new'
 
-  post '/services/:service_id/time_limits/new', to: 'time_limits#create'
+  post '/time_limits/new', to: 'time_limits#create'
 
   resources :start_time
+  
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
-  resources :users
+  resources :users do
+    resources :services, shallow: true
+    resources :companies, shallow: true
+  end
+
   resources :orders
   resources :time_limits
 
   resources :services do
-    resource :order
+    resource :orders, shallow: true
+    resources :time_limits
 
     collection do
       get :search

@@ -3,7 +3,7 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   .form-inputs.title
     = f.input :name, :placeholder => "Введите название вашего заказа"
-    = f.select :start_time, @beginArray
+    = f.select :start_time, @time_arr
     = f.label "Duration of your order is #{@time.length / 60} hour : #{@time.length % 60} min"
     = f.association :user
     = f.association :service

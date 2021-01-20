@@ -3,10 +3,9 @@
     .row
       .col-md-3
         .d-flex.flex-column.align-items-center.text-center.p-3.py-5
-          %img.rounded-circle.mt-5{:src => "sparrow.jpeg"}/
-          = image_tag 'sparrow.jpeg'
-          %span.font-weight-bold=@user.name
-          %span.text-black-50=@user.email
+          = image_tag(@user.avatar_thumbnail) if @user.avatar.attached?
+          %span.label.title="Your name: #{@user.name}"
+          %span.label.title="Your Email: #{@user.email}"
           %span
       .col-md-5
         .p-3.py-5
@@ -14,6 +13,8 @@
             %h4.text-right Profile Settings
           .row.mt-2
           = simple_form_for(@user) do |f|
+            .col-md-6.title
+              = f.file_field :avatar
             .col-md-6.title
               = f.input :name, :placeholder => "Write your name"
             .col-md-6.title

@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show]
 
-  include Orderable
+  include Duration
 
   def index
     @orders = current_user.orders.all
@@ -13,10 +13,10 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @order.service = Service.find(params[:id])
-    @beginArray = get_begin_time
+    @service = Service.find(params[:id])
+    @order.service = @service
+    @time_arr = snakecase(@service)
     @order.user_id = current_user.id
-    @order.service = Service.find(params[:id])
   end
 
   def create
@@ -49,8 +49,8 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def set_time_limit
-    @time_limit = Service.find(params[:id]).time_limit
+  def time_limit
+    @time_limit ||= Service.find(params[:id]).time_limit
   end
 
   def order_params
