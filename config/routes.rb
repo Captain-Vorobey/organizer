@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   post '/time_limits/new', to: 'time_limits#create'
 
   resources :start_time
-  
+
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
   resources :users do

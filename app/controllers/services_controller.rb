@@ -10,8 +10,8 @@ class ServicesController < ApplicationController
     @service.destroy
     respond_to do |format|
       format.html { redirect_to root_path }
-      format.js { render layout: false}
-    end 
+      format.js { render layout: false }
+    end
   end
 
   def new
@@ -23,7 +23,7 @@ class ServicesController < ApplicationController
     allowed_params = service_params
     @service = Service.new(allowed_params)
     @service.user_id = current_user.id
-    
+
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'company was successfully created.' }

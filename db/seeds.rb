@@ -10,14 +10,13 @@
 # There are not working seeds
 # -----------
 
-Role.create(name: "customer")
-Role.create(name: "admin")
-Role.create(name: "owner")
+Role.create(name: 'customer')
+Role.create(name: 'admin')
+Role.create(name: 'owner')
 
-user = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role "admin"
-user = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor').add_role "owner"
-user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita').add_role "customer"
-
+user = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role 'admin'
+user = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor').add_role 'owner'
+user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita').add_role 'customer'
 
 if Rails.env.development?
   AdminUser.create!(email: 'dima@mail.ru', password: 'password', password_confirmation: 'password')

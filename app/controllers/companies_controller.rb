@@ -8,8 +8,8 @@ class CompaniesController < ApplicationController
     @company.destroy
     respond_to do |format|
       format.html { redirect_to root_path }
-      format.js { render layout: false}
-    end 
+      format.js { render layout: false }
+    end
   end
 
   def new

@@ -17,7 +17,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   def avatar_thumbnail
-    avatar.variant(resize: "150x150!").processed if avatar.attached?
+    avatar.variant(resize: '150x150!').processed if avatar.attached?
   end
 
   has_many :orders
