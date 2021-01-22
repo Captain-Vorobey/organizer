@@ -13,10 +13,8 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @service = Service.find(params[:id])
-    @order.service = @service
-    @time_arr = snakecase(@service)
-    @order.user_id = current_user.id
+    @order.service = Service.find(params[:id])
+    @time_arr = order_slots
   end
 
   def create

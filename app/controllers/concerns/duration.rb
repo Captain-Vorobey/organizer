@@ -6,7 +6,7 @@ module Duration
     length * 60
   end
 
-  def snakecase(service)
+  def order_slots
     time = time_limit
     @time = time_limit
     result = []
@@ -44,4 +44,10 @@ module Duration
       res
     end
   end
+
+  def service
+    @service = Service.find(params[:id])
+  end
 end
+
+

@@ -400,6 +400,7 @@ DEPENDENCIES
   html2haml (~> 2.2)
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
+  kaminari (~> 1.2, >= 1.2.1)
   listen (~> 3.2)
   omniauth (~> 1.9, >= 1.9.1)
   omniauth-facebook (~> 8.0)

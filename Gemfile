@@ -66,6 +66,8 @@ gem 'simple_calendar', '~> 2.4', '>= 2.4.1'
 
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

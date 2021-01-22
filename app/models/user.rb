@@ -1,8 +1,11 @@
 class User < ApplicationRecord
+  devise :registerable
+  include Avatar
+
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, 
          :recoverable, :rememberable, :validatable
 
   def self.find_or_create_from_auth_hash(auth)
@@ -15,10 +18,6 @@ class User < ApplicationRecord
   end
 
   has_one_attached :avatar
-
-  def avatar_thumbnail
-    avatar.variant(resize: '150x150!').processed if avatar.attached?
-  end
 
   has_many :orders
   has_many :services, through: :orders

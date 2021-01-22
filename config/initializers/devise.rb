@@ -14,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '493805bdd7f736f767d58dd095a08d0b050580d2aa0f6264884d31d11e18dbb4768e9968a97e5bd730016ef6b265430ba06a2e9c731c9d7c31f5e7a44dd804e7'
+  # config.secret_key = 'cd278fed26e1b997b58ec8032ecc4d6cfaef8863427cf8125570af1e27b2801ce936503d3e32c9d6fe9c2b09b5afd6d51543498fb0b464429ae914dff09601ed'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -24,7 +24,6 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.scoped_views = true
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
@@ -127,7 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'faa136beefae38a0a6f4720f173f747fa5b4bf483c27eefe6b8ef18e61042730be4be0b39c01085890037d78f983b0042e6a7a295662b76e07c37f2f501b79c0'
+  # config.pepper = '5c48de373c00e14b91b79b078f25b19d15c31007a4f0894c936cf4df2233523590f53af60207020920be9069c04ee1c5a3c0141a13424ac9d5be141b581c221c'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -268,9 +267,6 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
-
-  # config.omniauth :github, Rails.application.credentials.dig(:github, :github_client_id),
-  # Rails.application.credentials.dig(:github, :github_client_secret), scope: 'user,public_repo'
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

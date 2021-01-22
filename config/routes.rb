@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
   root to: 'home#index'
 
   devise_for :users, controllers: { registrations: 'registrations' }
+  {class_name: 'User'}.merge(ActiveAdmin::Devise.config)
+  ActiveAdmin.routes(self)
 
   get '/about', to: 'home#about'
 
@@ -19,19 +19,24 @@ Rails.application.routes.draw do
 
   get '/services/:id/orders/new', to: 'orders#new'
 
-  post '/services/:service_id/orders/new', to: 'orders#create', as: :service_order
+  post '/orders/new', to: 'orders#create', as: :service_order
 
   get '/time_limits/new', to: 'time_limits#new'
 
   post '/time_limits/new', to: 'time_limits#create'
 
   resources :start_time
-
+  
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
   resources :users do
     resources :services, shallow: true
     resources :companies, shallow: true
+  end
+
+  resources :services do
+    resources :orders, shallow: true
+    resources :comments
   end
 
   resources :orders

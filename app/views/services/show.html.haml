@@ -31,3 +31,13 @@
               = link_to 'Make order', "/services/#{@service.id}/orders/new" if @service.time_limit != nil
             %br
               %label="Unfortunately this service has not started working yet" if @service.time_limit == nil
+            .container
+              %h2.subtitle.is-5
+              %hr.new5
+                %strong= @service.comments.count
+                Comments
+              = render @service.comments  
+              .comment-form
+                %hr.new5
+                %h3.subtitle.is-3 Leave a reply
+                = render 'comments/form'
