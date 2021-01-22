@@ -12,6 +12,7 @@ class Ability
     elsif user.has_role? :owner
       can :manage, Company, user_id: user.id
       can :manage, Service, user_id: user.id
+      can :manage, TimeLimit, user_id: user.id
     end
   end
 end

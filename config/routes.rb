@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   post '/services/new', to: 'services#create', as: :user_services
 
+  get '/services/:id/edit', to: 'services#edit', as: :edit_admin_service_path
+
   get '/services/:id/orders/new', to: 'orders#new'
 
   post '/orders/new', to: 'orders#create', as: :service_order

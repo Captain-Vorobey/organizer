@@ -13,15 +13,15 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
-    @order.service = Service.find(params[:id])
     @time_arr = order_slots
   end
 
   def create
     allowed_params = order_params
     @order = Order.new(allowed_params)
+    @order.user = current_user
     @order = start_time_validate(@order)
-
+     
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }

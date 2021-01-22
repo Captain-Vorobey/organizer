@@ -7,7 +7,7 @@
     = link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view
   %table.table.table-striped
     %thead
-      %tr
+      %tr.day-color
         - date_range.slice(0, 7).each do |day|
           %th= t('date.abbr_day_names')[day.wday]
     %tbody

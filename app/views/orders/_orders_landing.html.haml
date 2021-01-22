@@ -8,10 +8,13 @@
             .flex-1.flex.justify-between
               %div
                 = link_to order.name, order, class: "link mr-4"
+                |
+                = "Service which you have chosen — #{order.service.name}"
               %div
                 = readable_time(order.start_time)
           = link_to "Cancel Order", order, method: :delete, data: { confirm: "Are you sure? There are no refunds." }, class: "btn btn-primary"
       #calendar.tab-panel.active
+      %hr.new5
         %h2 Order Calendar
         #order-calendar
           = render "calendar", orders: orders

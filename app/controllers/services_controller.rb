@@ -1,5 +1,7 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: %i[show destroy]
+  before_action :set_service, only: %i[show edit update destroy]
+
+  #load_and_authorize_resource
 
   def show
     @user = current_user
@@ -11,6 +13,23 @@ class ServicesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js { render layout: false }
+    end
+  end
+
+  def edit
+    authorize! :edit, Service
+  end
+
+  def update
+    authorize! :update, Service
+    respond_to do |format|
+      if @service.update(service_params)
+        format.html { redirect_to @service, notice: 'Service was successfully updated.' }
+        format.json { render :show, status: :ok, location: @service }
+      else
+        format.html { render :edit }
+        format.json { render json: @service.errors, status: :unprocessable_entity }
+      end
     end
   end
 
