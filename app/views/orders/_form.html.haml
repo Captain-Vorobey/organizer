@@ -4,5 +4,6 @@
   .form-inputs.title
     = f.input :name, :placeholder => "Введите название вашего заказа"
     = f.select :start_time, @time_arr
+    = f.association :service
     = f.button :submit, class: "btn btn-primary"
     
