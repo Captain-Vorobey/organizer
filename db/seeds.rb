@@ -16,7 +16,6 @@ Role.create(name: 'admin')
 Role.create(name: 'owner')
 
 # users
-
 admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role 'admin'
 owner = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor').add_role 'owner'
 user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita').add_role 'customer'

@@ -68,6 +68,8 @@ gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 
+gem 'bullet', group: 'development'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
