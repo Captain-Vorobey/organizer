@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
-	allowed_params = comment_params.merge(service: set_service, user: current_user)
-	comment = Comment.create(allowed_params)
+    allowed_params = comment_params.merge(service: set_service, user: current_user)
+    comment = Comment.create(allowed_params)
     redirect_to service_path(set_service)
   end
 
@@ -19,6 +19,6 @@ class CommentsController < ApplicationController
   end
 
   def set_service
-	service = Service.find(params[:service_id])
+    service = Service.find(params[:service_id])
   end
 end

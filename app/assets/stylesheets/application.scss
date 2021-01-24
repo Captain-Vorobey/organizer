@@ -14,3 +14,23 @@
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
+
+.paginator-block {
+  background-color: #211f24;
+}
+
+.paginate-button {
+  color: #cc073c;
+  background-color: #111822;
+  width: 75px;
+  height: 35px;
+  border: solid 1px #cc073c;
+}
+
+.current-paginate-button {
+  color: #111822;
+  background-color: #cc073c;
+  border: solid 1px #111822;
+  width: 75px;
+  height: 35px;
+}

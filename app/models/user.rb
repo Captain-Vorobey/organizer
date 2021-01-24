@@ -5,7 +5,7 @@ class User < ApplicationRecord
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, 
+  devise :database_authenticatable,
          :recoverable, :rememberable, :validatable
 
   def self.find_or_create_from_auth_hash(auth)
@@ -15,6 +15,12 @@ class User < ApplicationRecord
       user.email = auth&.info&.email
       user.password = Devise.friendly_token[0, 20]
     end
+  end
+
+  after_create :welcome_send
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver
   end
 
   has_one_attached :avatar

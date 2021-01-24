@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @services = Service.all
+    @services = Service.page params[:page]
   end
 
   def about; end

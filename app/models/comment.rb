@@ -1,5 +1,4 @@
 class Comment < ApplicationRecord
-
   include Avatar
 
   belongs_to :user

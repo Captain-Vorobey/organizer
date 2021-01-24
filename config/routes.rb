@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   devise_for :users, controllers: { registrations: 'registrations' }
-  {class_name: 'User'}.merge(ActiveAdmin::Devise.config)
+  { class_name: 'User' }.merge(ActiveAdmin::Devise.config)
   ActiveAdmin.routes(self)
 
   get '/about', to: 'home#about'
@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get '/services/:id/orders/new', to: 'orders#new'
 
+  get '/services/search', to: 'services#search', as: :search
+
   post '/orders/new', to: 'orders#create', as: :service_order
 
   get '/time_limits/new', to: 'time_limits#new'
@@ -28,7 +30,7 @@ Rails.application.routes.draw do
   post '/time_limits/new', to: 'time_limits#create'
 
   resources :start_time
-  
+
   post 'start_time/validate', to: 'start_time#validate', as: :start_time_validation
 
   resources :users do

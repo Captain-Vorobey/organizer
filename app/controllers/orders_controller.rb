@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     @order = Order.new(allowed_params)
     @order.user = current_user
     @order = start_time_validate(@order)
-     
+
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }

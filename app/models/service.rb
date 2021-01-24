@@ -2,6 +2,8 @@ class Service < ApplicationRecord
   include Searchable
   include Avatar
 
+  paginates_per 3
+
   has_one_attached :avatar
 
   belongs_to :company
@@ -9,6 +11,6 @@ class Service < ApplicationRecord
   has_many :users, through: :orders, dependent: :destroy
   has_one :time_limit, dependent: :destroy
   has_many :comments, dependent: :destroy
-  
+
   resourcify
 end
