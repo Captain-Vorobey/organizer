@@ -14,9 +14,8 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
-  
-  def default_url_options(options = {})
-    {locale: I18n.locale}
+  def default_url_options(_options = {})
+    { locale: I18n.locale }
   end
 
   private

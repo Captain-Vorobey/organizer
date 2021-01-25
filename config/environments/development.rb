@@ -4,15 +4,15 @@ Rails.application.configure do
     Bullet.alert         = true
     Bullet.bullet_logger = true
     Bullet.console       = true
-  # Bullet.growl         = true
+    # Bullet.growl         = true
     Bullet.rails_logger  = true
     Bullet.add_footer    = true
   end
 
   config.active_job.queue_adapter = :sidekiq
 
-  config.active_job.queue_name_prefix = "mysite"
-  config.active_job.queue_name_delimiter = "_"
+  config.active_job.queue_name_prefix = 'mysite'
+  config.active_job.queue_name_delimiter = '_'
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -51,13 +51,13 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+  config.action_mailer.smtp_settings = { address: '127.0.0.1', port: 1025 }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
-  
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000, :locale => I18n.locale }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000, locale: I18n.locale }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

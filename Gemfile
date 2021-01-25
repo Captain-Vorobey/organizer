@@ -74,6 +74,8 @@ gem 'sidekiq', '~> 6.1', '>= 6.1.3'
 
 gem 'i18n'
 
+gem 'rails_12factor', '~> 0.0.3', group: :production
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -105,3 +107,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
+
+ruby '2.7.0'

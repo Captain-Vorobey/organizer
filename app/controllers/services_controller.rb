@@ -19,7 +19,7 @@ class ServicesController < ApplicationController
     allowed_params = service_params
     @service = Service.new(allowed_params)
     @service.user_id = current_user.id
-    
+
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'Service was successfully created.' }

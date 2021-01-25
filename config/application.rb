@@ -19,7 +19,7 @@ module Organizer
     config.middleware.use ActionDispatch::Cookies # Required for all session management
     config.middleware.use ActionDispatch::Session::CookieStore, config.session_options
 
-    config.i18n.available_locales = [:en, :ru]
+    config.i18n.available_locales = %i[en ru]
     I18n.locale = :ru
     config.i18n.default_locale = :en
     config.i18n.fallbacks = true
