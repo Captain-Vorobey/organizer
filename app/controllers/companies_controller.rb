@@ -20,6 +20,7 @@ class CompaniesController < ApplicationController
   def create
     allowed_params = company_params
     company = Company.new(allowed_params)
+    company.user_id = current_user.id
 
     respond_to do |format|
       if company.save
@@ -35,6 +36,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:name, :description)
+    params.require(:company).permit(:name, :description, :user_id)
   end
 end

@@ -1,11 +1,34 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[show edit update destroy]
 
+  include ServicesHelper
   # load_and_authorize_resource
 
   def show
     @user = current_user
     @company = Company.find(set_service.company_id)
+  end
+
+  def new
+    @service = Service.new
+    @user_companies = current_user_companies
+    authorize! :new, Service
+  end
+
+  def create
+    allowed_params = service_params
+    @service = Service.new(allowed_params)
+    @service.user_id = current_user.id
+    
+    respond_to do |format|
+      if @service.save
+        format.html { redirect_to @service, notice: 'Service was successfully created.' }
+        format.json { render :show, status: :created, location: @service }
+      else
+        format.html { render :new, location: @service }
+        format.json { render json: @service.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
@@ -17,6 +40,7 @@ class ServicesController < ApplicationController
   end
 
   def edit
+    @user_companies = current_user_companies
     authorize! :edit, Service
   end
 
@@ -28,27 +52,6 @@ class ServicesController < ApplicationController
         format.json { render :show, status: :ok, location: @service }
       else
         format.html { render :edit }
-        format.json { render json: @service.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def new
-    @service = Service.new
-    authorize! :new, Service
-  end
-
-  def create
-    allowed_params = service_params
-    @service = Service.new(allowed_params)
-    @service.user_id = current_user.id
-
-    respond_to do |format|
-      if @service.save
-        format.html { redirect_to @service, notice: 'company was successfully created.' }
-        format.json { render :show, status: :created, location: @service }
-      else
-        format.html { render :new, location: @service }
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end

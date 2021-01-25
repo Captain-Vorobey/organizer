@@ -5,6 +5,6 @@
     = f.input :name, :placeholder => "Введите название вашего сервиса"
     = f.input :description, :placeholder => "Распишите, чем вы занимаетесь"
     = f.file_field :avatar
-    = f.association :company
+    = f.select :company_id, @user_companies.map {|el| [el.name, el.id] }
     = f.button :submit, 'Create service', class: "btn btn-primary"
       
