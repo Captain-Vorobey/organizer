@@ -70,6 +70,10 @@ gem 'kaminari', '~> 1.2', '>= 1.2.1'
 
 gem 'bullet', group: 'development'
 
+gem 'sidekiq', '~> 6.1', '>= 6.1.3'
+
+gem 'i18n'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

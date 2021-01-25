@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/  do
+    root to: 'home#index'
+  end
 
   devise_for :users, controllers: { registrations: 'registrations' }
   { class_name: 'User' }.merge(ActiveAdmin::Devise.config)

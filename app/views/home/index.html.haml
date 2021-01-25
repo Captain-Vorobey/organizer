@@ -7,7 +7,7 @@
         .row.justify-content-center.text-center
           .col-md-10.col-lg-8
             .header-section
-              %h1 Elastic search for services
+              %h1= t(".welcome", name: "#{current_user.name}")
               = form_for :search_services, url: search_services_path, method: :get do |form|
                 = form.text_field :query, value: params[:search_services].presence && params[:search_services][:query]
                 = form.submit 'Search'
