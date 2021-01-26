@@ -25,12 +25,12 @@
             .attribute-name Company Description:
             %h8.text-justify= @service.company.description
             %br
-              - if can? :manage, Service && @service.user_id == current_user.id
+              - if @service.user_id == current_user.id || current_user.has_role?(:admin)
                 = link_to 'Destroy', @service, method: :delete, class: "btn btn-primary"
-              - if can? :manage, Service && @service.user_id == current_user.id
+              - if @service.user_id == current_user.id || current_user.has_role?(:admin)
                 = link_to 'Edit', "/services/#{@service.id}/edit", class: "btn btn-primary"
             %br 
-              - if @service.user_id == current_user.id || current_user.has_role?(:admin)
+              - if (@service.user_id == current_user.id || current_user.has_role?(:admin)) && @service.time_limit.nil?
                 = link_to 'Create limit for service', "/services/#{@service.id}/time_limits/new", class: "btn btn-primary"
             %br
               = link_to 'Make order', "/services/#{@service.id}/orders/new", class: "btn btn-primary" if @service.time_limit != nil

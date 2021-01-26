@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[show edit update destroy]
-  load_and_authorize_resource :only => [:new, :destroy, :edit, :update]
+  load_and_authorize_resource only: %i[new destroy edit update]
 
   include ServicesHelper
 
@@ -8,7 +8,6 @@ class ServicesController < ApplicationController
     @user = current_user
     @company = Company.find(set_service.company_id)
   end
-
 
   def new
     @service = Service.new
