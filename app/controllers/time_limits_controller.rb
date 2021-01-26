@@ -1,6 +1,5 @@
 class TimeLimitsController < ApplicationController
   before_action :set_time_limit, only: %i[show edit update destroy]
-
   load_and_authorize_resource
 
   def index

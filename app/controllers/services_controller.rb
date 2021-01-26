@@ -1,18 +1,18 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[show edit update destroy]
+  load_and_authorize_resource :only => [:new, :destroy, :edit, :update]
 
   include ServicesHelper
-  # load_and_authorize_resource
 
   def show
     @user = current_user
     @company = Company.find(set_service.company_id)
   end
 
+
   def new
     @service = Service.new
     @user_companies = current_user_companies
-    authorize! :new, Service
   end
 
   def create
@@ -32,6 +32,7 @@ class ServicesController < ApplicationController
   end
 
   def destroy
+    authorize! :destroy, Service
     @service.destroy
     respond_to do |format|
       format.html { redirect_to root_path }
@@ -41,11 +42,9 @@ class ServicesController < ApplicationController
 
   def edit
     @user_companies = current_user_companies
-    authorize! :edit, Service
   end
 
   def update
-    authorize! :update, Service
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to @service, notice: 'Service was successfully updated.' }

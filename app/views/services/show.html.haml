@@ -25,9 +25,9 @@
             .attribute-name Company Description:
             %h8.text-justify= @service.company.description
             %br
-              - if can? :manage, Service || current_user.has_role?(:admin)
+              - if can? :manage, Service && @service.user_id == current_user.id
                 = link_to 'Destroy', @service, method: :delete, class: "btn btn-primary"
-              - if can? :manage, Service || current_user.has_role?(:admin)
+              - if can? :manage, Service && @service.user_id == current_user.id
                 = link_to 'Edit', "/services/#{@service.id}/edit", class: "btn btn-primary"
             %br 
               - if @service.user_id == current_user.id || current_user.has_role?(:admin)

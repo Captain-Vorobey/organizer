@@ -22,6 +22,8 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order = start_time_validate(@order)
 
+    OrderMailer.order_email(current_user).deliver_now
+
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
@@ -35,6 +37,8 @@ class OrdersController < ApplicationController
 
   def destroy
     set_order.destroy
+    OrderMailer.destroy_order(current_user).deliver_now
+
     respond_to do |format|
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
