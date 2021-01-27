@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
 
   def create
     allowed_params = order_params
-    
+
     @order = Order.new(allowed_params)
     @order.user = current_user
     @order.service_id = params[:service_id]
