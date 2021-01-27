@@ -31,7 +31,6 @@ class ServicesController < ApplicationController
   end
 
   def destroy
-    authorize! :destroy, Service
     @service.destroy
     respond_to do |format|
       format.html { redirect_to root_path }
@@ -69,5 +68,9 @@ class ServicesController < ApplicationController
 
   def service_params
     params.require(:service).permit(:name, :description, :avatar, :company_id, :user_id)
+  end
+
+  def get_comments
+    @comments = @service.comments
   end
 end

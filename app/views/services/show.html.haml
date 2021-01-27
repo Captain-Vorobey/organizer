@@ -16,7 +16,7 @@
             %ul.attributes-list
               %li
                 .attribute-name Company:
-                = link_to "#{@service.company&.name}", company_path(@service.company), class: 'attribute-link'
+                = link_to "#{@service.company&.name}", "/users/#{current_user.id}/companies/#{@service.company.id}", class: 'attribute-link'
               %li
                 .attribute-name Service Description:
                 %h8.text-justify= @service.description
@@ -25,9 +25,9 @@
             .attribute-name Company Description:
             %h8.text-justify= @service.company.description
             %br
-              - if @service.user_id == current_user.id || current_user.has_role?(:admin)
+              - if can? :manage, @service || current_user.has_role?(:admin)
                 = link_to 'Destroy', @service, method: :delete, class: "btn btn-primary"
-              - if @service.user_id == current_user.id || current_user.has_role?(:admin)
+              - if can? :manage, @service || current_user.has_role?(:admin)
                 = link_to 'Edit', "/services/#{@service.id}/edit", class: "btn btn-primary"
             %br 
               - if (@service.user_id == current_user.id || current_user.has_role?(:admin)) && @service.time_limit.nil?
@@ -45,4 +45,6 @@
               .comment-form
                 %hr.new5
                 %h3.subtitle.is-3 Leave a reply
-                = render 'comments/form'
+                -if !current_user.nil?
+                  =render("comments/create", commentable: @service)
+        

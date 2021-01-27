@@ -11,9 +11,11 @@
 # -----------
 
 # roles
-Role.create(name: 'customer')
-Role.create(name: 'admin')
-Role.create(name: 'owner')
+if Roles.empty?
+  Role.create(name: 'customer')
+  Role.create(name: 'admin')
+  Role.create(name: 'owner')
+end
 
 # users
 admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role 'admin'

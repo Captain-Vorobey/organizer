@@ -3,5 +3,5 @@
   - default
   - mailers
 
-  - mysite_default
-  - mysite_mailers
+  - organizer_default
+  - organizer_mailers

@@ -11,7 +11,7 @@ Rails.application.configure do
 
   config.active_job.queue_adapter = :sidekiq
 
-  config.active_job.queue_name_prefix = 'mysite'
+  config.active_job.queue_name_prefix = 'organizer'
   config.active_job.queue_name_delimiter = '_'
 
   # Settings specified here will take precedence over those in config/application.rb.
@@ -53,7 +53,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: '127.0.0.1', port: 1025 }
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

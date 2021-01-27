@@ -1,7 +1,9 @@
 class TimeLimitsController < ApplicationController
-  before_action :set_time_limit, only: %i[show edit update destroy]
+  before_action :time_limit, only: %i[show edit update destroy]
 
   load_and_authorize_resource
+
+  include Duration
 
   def index
     @time_limits = TimeLimit.all
@@ -11,8 +13,10 @@ class TimeLimitsController < ApplicationController
 
   def new
     @time_limit = TimeLimit.new
-    authorize! :new, TimeLimit do |time_limit|
-      time_limit.user_id == current_user.id
+    @service = Service.find(params[:service_id])
+
+    authorize! :new, TimeLimit do |_time_limit|
+      @service.user_id == current_user.id
     end
   end
 
@@ -20,9 +24,9 @@ class TimeLimitsController < ApplicationController
 
   def create
     allowed_params = time_limit_params
-
     @time_limit = TimeLimit.new(allowed_params)
     @time_limit.user = current_user
+    @time_limit.service_id = params[:service_id]
 
     respond_to do |format|
       if @time_limit.save
@@ -57,11 +61,11 @@ class TimeLimitsController < ApplicationController
 
   private
 
-  def set_time_limit
+  def time_limit
     @time_limit = TimeLimit.find(params[:id])
   end
 
   def time_limit_params
-    params.require(:time_limit).permit(:start_time, :end_time, :length, :user_id, :service_id)
+    params.require(:time_limit).permit(:start_time, :end_time, :length, :service_id, :user_id)
   end
 end

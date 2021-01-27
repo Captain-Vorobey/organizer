@@ -13,6 +13,3 @@
               = image_tag("undefigned.png", class: "rounded-circle")
             \:
           = comment.comment
-      - if comment.user == current_user 
-        = link_to 'Delete', [comment.service, comment],                                     
-      method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } 

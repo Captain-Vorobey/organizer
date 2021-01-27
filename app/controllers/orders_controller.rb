@@ -13,16 +13,18 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @service = service
     @time_arr = order_slots
   end
 
   def create
     allowed_params = order_params
+    
     @order = Order.new(allowed_params)
     @order.user = current_user
+    @order.service_id = params[:service_id]
     @order = start_time_validate(@order)
-
-    OrderMailer.order_email(current_user).deliver_now
+    OrderMailer.order_email(current_user).deliver_later!
 
     respond_to do |format|
       if @order.save
@@ -37,12 +39,12 @@ class OrdersController < ApplicationController
 
   def destroy
     set_order.destroy
-    OrderMailer.destroy_order(current_user).deliver_now
 
     respond_to do |format|
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
+    OrderMailer.destroy_order(@user).deliver_now
   end
 
   private

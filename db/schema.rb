@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_125_112_447) do
+ActiveRecord::Schema.define(version: 20_210_127_152_937) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -63,12 +63,11 @@ ActiveRecord::Schema.define(version: 20_210_125_112_447) do
   create_table 'comments', force: :cascade do |t|
     t.string 'name'
     t.string 'comment'
-    t.bigint 'user_id', null: false
-    t.bigint 'service_id', null: false
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
-    t.index ['service_id'], name: 'index_comments_on_service_id'
-    t.index ['user_id'], name: 'index_comments_on_user_id'
+    t.string 'commentable_type'
+    t.integer 'commentable_id'
+    t.integer 'user_id'
   end
 
   create_table 'companies', force: :cascade do |t|
@@ -123,9 +122,8 @@ ActiveRecord::Schema.define(version: 20_210_125_112_447) do
     t.datetime 'start_time', null: false
     t.datetime 'end_time', null: false
     t.bigint 'user_id', null: false
-    t.bigint 'service_id', null: false
     t.integer 'length'
-    t.index ['service_id'], name: 'index_time_limits_on_service_id'
+    t.integer 'service_id'
     t.index ['user_id'], name: 'index_time_limits_on_user_id'
   end
 
@@ -156,8 +154,6 @@ ActiveRecord::Schema.define(version: 20_210_125_112_447) do
   end
 
   add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
-  add_foreign_key 'comments', 'services'
-  add_foreign_key 'comments', 'users'
   add_foreign_key 'companies', 'addresses'
   add_foreign_key 'companies', 'users'
   add_foreign_key 'orders', 'services'
@@ -165,6 +161,5 @@ ActiveRecord::Schema.define(version: 20_210_125_112_447) do
   add_foreign_key 'services', 'companies'
   add_foreign_key 'services', 'time_limits'
   add_foreign_key 'services', 'users'
-  add_foreign_key 'time_limits', 'services'
   add_foreign_key 'time_limits', 'users'
 end
