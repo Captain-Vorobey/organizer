@@ -24,7 +24,7 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.service_id = params[:service_id]
     @order = start_time_validate(@order)
-    OrderMailer.order_email(current_user).deliver_later!
+    OrderMailer.order_email(current_user).deliver_later
 
     respond_to do |format|
       if @order.save
