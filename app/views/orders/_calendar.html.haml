@@ -1,6 +1,6 @@
-.black
-  = month_calendar events: orders do |date, orders|
+= month_calendar events: orders do |date, orders|
+  .title
     = date
-    - orders.each do |order|
-      %div
-        = link_to order.name, order, class: "link"
+  - orders.each do |order|
+    %div
+      = link_to order.name, order, class: "link"

@@ -1,8 +1,7 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_order, only: [:show]
 
-  include Orderable
+  include Duration
 
   def index
     @orders = current_user.orders.all
@@ -13,35 +12,39 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @beginArray = get_begin_time
     @order = Order.new
-    @order.user_id = current_user.id
-    @order.service = Service.find(params[:id])
+    @service = service
+    @time_arr = order_slots
   end
 
   def create
     allowed_params = order_params
-    @order = Order.new(allowed_params)
-    @order = start_time_validate(@order)
 
-    if @order.start_time.nil?
-      flash.alert = 'This time is already taken for this service. Please choose a different time'
-    else
-      respond_to do |format|
-        if @order.save
-          format.html { redirect_to @order, notice: 'Order was successfully created.' }
-          format.json { render :show, status: :created, location: @order }
-        else
-          format.html { render :new, location: @order }
-          format.json { render json: @order.errors, status: :unprocessable_entity }
-        end
+    @order = Order.new(allowed_params)
+    @order.user = current_user
+    @order.service_id = params[:service_id]
+    @order = start_time_validate(@order)
+    OrderMailer.order_email(current_user).deliver_later
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.json { render :show, status: :created, location: @order }
+      else
+        format.html { render :new, location: @order }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
     set_order.destroy
-    flash.alert = 'Order was successfully destroyed.'
+
+    respond_to do |format|
+      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+    OrderMailer.destroy_order(@user).deliver_later
   end
 
   private
@@ -50,12 +53,8 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def set_service
-    @service ||= set_order.service
-  end
-
-  def set_time_limit
-    @time_limit = Service.find(params[:id]).time_limit
+  def time_limit
+    @time_limit ||= Service.find(params[:id]).time_limit
   end
 
   def order_params

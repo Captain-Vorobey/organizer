@@ -23,13 +23,12 @@
   line-height: 1.8em;
 }
 
-.black {
+.company-create {
   background-color: #211f24;
+  padding: 270px;
 }
 
-@media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0;
-  }
+.company-block {
+  background-color: #211f24;
+  padding: 100px;
 }

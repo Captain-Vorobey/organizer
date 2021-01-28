@@ -1,13 +1,27 @@
-.black
+.profile-block
   .container
     .row
       .col-md-3
         .d-flex.flex-column.align-items-center.text-center.p-3.py-5
-          %img.rounded-circle.mt-5{:src => "sparrow.jpeg"}/
-          = image_tag 'sparrow.jpeg'
-          %span.font-weight-bold=@user.name
-          %span.text-black-50=@user.email
+          - if @user.avatar.attached?
+            .rounded-circle
+            = image_tag(@user.profile_avatar_thumbnail, class: "rounded-circle") 
+          - else
+            = image_tag("undefigned.png", class: "rounded-circle") 
+          %span.label.title="Your name: #{@user.name}"
+          %span.label.title="Your Email: #{@user.email}"
           %span
+          .mt-5.text-right
+          .field
+            = link_to 'Check Basket', '/orders', class: "btn btn-primary"
+          - if can? :manage, Company
+            .field
+            = link_to 'Create your company', "/users/#{@user.id}/companies/new", class: "btn btn-primary"
+            .field
+            = link_to 'Create your service', "/users/#{@user.id}/services/new", class: "btn btn-primary"
+          - if can? :manage, :all
+            .field
+            = link_to 'Check dashboard', "/admin/dashboard", class: "btn btn-primary"
       .col-md-5
         .p-3.py-5
           .d-flex.justify-content-between.align-items-center.mb-3
@@ -15,12 +29,10 @@
           .row.mt-2
           = simple_form_for(@user) do |f|
             .col-md-6.title
-              = f.input :name, :placeholder => "Введите ваше имя"
+              = f.file_field :avatar
             .col-md-6.title
-              = f.input :surname, :placeholder => "Введите вашу фамилию"
-              = f.button :submit, 'Update profile'
-          .mt-5.text-center
-            = link_to 'Check Basket', '/orders', class: 'nav-link'
-            - if has_role?(:admin) || has_role?(:owner)
-              = link_to 'Create your company', "/users/#{@user.id}/companies/new", class: 'nav-link'
-              = link_to 'Create your service', "/users/#{@user.id}/services/new", class: 'nav-link'
+              = f.input :name, :placeholder => "Write your name"
+            .col-md-6.title
+              = f.input :surname, :placeholder => "Write your surname"
+            .col-md-6.title
+              = f.button :submit, 'Update profile', class: "btn btn-primary"

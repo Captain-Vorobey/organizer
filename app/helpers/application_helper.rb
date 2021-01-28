@@ -1,10 +1,6 @@
 module ApplicationHelper
-  def has_role?(role)
-    current_user && current_user.has_role?(role)
-  end
-
   def readable_time(time)
-    time.strftime('%b %d, %I:%M%P')
+    time
   end
 
   def author_of(record)

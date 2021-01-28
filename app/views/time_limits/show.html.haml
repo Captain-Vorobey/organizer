@@ -1,16 +1,16 @@
-%p#notice= notice
-%p
-  %strong Start time:
-  = @time_limit.start_time
-%p
-  %strong End time:
-  = @time_limit.end_time
-%p
-  %strong User:
-  = @time_limit.user_id
-%p
-  %strong Service:
-  = @time_limit.service_id
-= link_to 'Edit', edit_time_limit_path(@time_limit)
-|
-= link_to 'Back', time_limits_path
+.black.text-center
+  %p.title#notice= notice
+  %p.title
+    %strong Start time:
+    = @time_limit.start_time
+  %p.title
+    %strong End time:
+    = @time_limit.end_time
+  %p.title
+    %strong User:
+    = @time_limit.user_id
+  %p.title
+    %strong Service:
+    = @time_limit.service_id
+  = link_to 'Edit', edit_time_limit_path(@time_limit), class: "btn btn-primary"
+  |

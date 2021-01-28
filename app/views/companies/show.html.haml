@@ -2,7 +2,7 @@
   .container-fluid.text-center
     %h1=@company.name
     %p=@company.description
-  .container-fluid.text-center.black
+  .container-fluid.text-center.company-block
     %h2.title SERVICES
     %h4.title What we offer
     %br/
@@ -14,5 +14,3 @@
         %i.fas.fa-arrow-circle-right>
         %a.card-link{:href => "/services/#{service.id}"} Read More
         %br
-          - if has_role?(:admin) || (has_role?(:owner) && @company.user_id == @user.id)
-            = link_to 'Destroy', @company, method: :delete

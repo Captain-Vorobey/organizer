@@ -1,11 +1,10 @@
-= simple_form_for(@time_limit) do |f|
+= simple_form_for([@service, @time_limit]) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-  .form-inputs
+  .form-inputs.title
     = f.input :start_time
     = f.input :end_time
     = f.input :length
-    = f.association :user
-    = f.association :service
+    = f.label "Owner is #{current_user.name}"
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: "btn btn-primary"

@@ -1,0 +1,5 @@
+ru:
+  hello:
+  home:
+    index:
+      welcome: "Добро пожаловать, %{name}!"
