@@ -19,13 +19,12 @@ class OrdersController < ApplicationController
 
   def create
     allowed_params = order_params
-
     @order = Order.new(allowed_params)
     @order.user = current_user
     @order.service_id = params[:service_id]
     @order = start_time_validate(@order)
-    OrderMailer.order_email(current_user).deliver_later
-
+    reminder(current_user.reminder_time, @order)
+    
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }

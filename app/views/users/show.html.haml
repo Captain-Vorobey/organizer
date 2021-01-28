@@ -35,4 +35,7 @@
             .col-md-6.title
               = f.input :surname, :placeholder => "Write your surname"
             .col-md-6.title
+              = f.label "In hours"
+              = f.input :reminder_time, :placeholder => "Write how long does it take to remind about orders"
+            .col-md-6.title
               = f.button :submit, 'Update profile', class: "btn btn-primary"

@@ -45,6 +45,26 @@ module Duration
     end
   end
 
+  def reminder(length, order)
+    # p '+++++++++++'
+    # p arr = order.start_time.to_a
+    # p '----------------------'
+    # p hourrr = arr[2] - length
+    # p arr[2] = hourrr
+    # p '+++++++++++'
+    # p order.start_time.to_datetime.hour - length
+ 
+    # p 'time at time at time at'
+    # p Time.at(order.start_time.to_datetime.hour - length).utc
+    # p 'time at time at time at'
+
+    OrderMailer.order_email(current_user).deliver_later(wait_until: order.start_time)
+  end
+
+  def valid_time(length)
+    
+  end
+
   def service
     @service = Service.find(params[:id])
   end
