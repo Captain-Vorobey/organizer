@@ -18,13 +18,15 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'rubocop', '~> 1.2'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
+
+gem 'activeadmin', '~> 2.9'
 
 gem 'cancancan', '~> 3.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
@@ -64,6 +66,19 @@ gem 'simple_calendar', '~> 2.4', '>= 2.4.1'
 
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
+
+gem 'bullet', group: 'development'
+
+gem 'sidekiq', '~> 6.1', '>= 6.1.3'
+
+gem 'i18n'
+
+gem 'rails_12factor', '~> 0.0.3', group: :production
+
+gem 'redis-namespace'
+gem 'redis-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -95,3 +110,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
+
+ruby '2.7.0'

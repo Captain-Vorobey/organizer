@@ -1,5 +1,6 @@
-%h1 Editing Time Limit
-= render 'form', time_limit: @time_limit
-= link_to 'Show', @time_limit
-|
-= link_to 'Back', time_limits_path
+.black.text-center
+  %h1.title Editing Time Limit
+  = render 'form', time_limit: @time_limit
+  = link_to 'Show', @time_limit, class: "btn btn-primary"
+  |
+  = link_to 'Back', time_limit_path, class: "btn btn-primary"

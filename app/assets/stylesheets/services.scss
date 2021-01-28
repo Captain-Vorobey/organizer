@@ -2,9 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+hr.new5 {
+  border: 1px solid rgb(108, 31, 116);
+  border-radius: 5px;
+}
+
+.service-block {
+  background-color: #211f24;
+  padding: 260px;
+}
+
 #service-section {
   background-color: #211f24;
-  padding: 300px;
+  padding: 120px;
 } 
 
 .all-color {
@@ -24,7 +34,7 @@
 }
 
 .attribute-name {
-  color: #cc073c;
+  color: #6c4daf;
 }
 
 .attribute-link {

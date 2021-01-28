@@ -13,7 +13,7 @@
           .field
             .control.title
               = f.input :remember_me, wrapper: false, as: :boolean if devise_mapping.rememberable?
-            = f.button :submit, "Log in", class:"button is-outlined is-medium"
+            = f.button :submit, "Log in", class:"button is-outlined is-medium", class:"btn btn-primary"
         %br/
         = link_to 'Sign in with facebook', '/auth/facebook', method: :post
         = render "devise/shared/links"

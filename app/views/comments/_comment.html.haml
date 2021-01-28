@@ -1,0 +1,15 @@
+.box
+  %article.media
+    .media-content
+      .content
+        %p
+          %strong
+            = comment.user.name # avatar.variant(resize: '150x150!')
+            - if comment.user.avatar.attached?
+              .rounded-circle
+              = image_tag(comment.user.comment_avatar_thumbnail, class: "rounded-circle") 
+            - else
+              .comment-circle
+              = image_tag("undefigned.png", class: "rounded-circle")
+            \:
+          = comment.comment

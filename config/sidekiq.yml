@@ -1,0 +1,7 @@
+:concurrency: 1
+:queues:
+  - default
+  - mailers
+
+  - organizer_default
+  - organizer_mailers

@@ -1,35 +1,50 @@
 #service-section
   .container
   %body.all-color
-    %h3.font-weight-bold= @service.name
+    %h3.title= @service.name
     .container
       %body
         .row.attributes-list
           .col-4
-            .img{ src: @service.avatar, alt: @service.name }
-          .col-8
-            %div.embed-responsive-embed-responsive-16by9
-              %img{ src: @service.avatar, alt: @service.name }
+          - if @service.avatar.attached?
+            = image_tag(@service.avatar_thumbnail, class: "rounded-circle") 
+          - else 
+            = image_tag("undefigned.png", class: "rounded-circle") 
         .row
           .col-4
             %br
             %ul.attributes-list
               %li
-                .attribute-name Company
-                = link_to "#{@service.company&.name}", company_path(@service.company), class: 'attribute-link'
+                .attribute-name Company:
+                = link_to "#{@service.company&.name}", "/users/#{current_user.id}/companies/#{@service.company.id}", class: 'attribute-link'
               %li
-                .attribute-name Description
-                .text-justify= @service.description
+                .attribute-name Service Description:
+                %h8.text-justify= @service.description
           .col-8
             %br
-            .text-justify= @service.company.description
+            .attribute-name Company Description:
+            %h8.text-justify= @service.company.description
             %br
-              - if has_role?(:admin) || (has_role?(:owner) && @service.user_id == @user.id)
-                = link_to 'Destroy', @service, method: :delete
+              - if can? :manage, @service || current_user.has_role?(:admin)
+                = link_to 'Destroy', @service, method: :delete, class: "btn btn-primary"
+              - if can? :manage, @service || current_user.has_role?(:admin)
+                = link_to 'Edit', "/services/#{@service.id}/edit", class: "btn btn-primary"
             %br 
-              - if has_role?(:admin) || (has_role?(:owner) && @service.user_id == @user.id)
-                = link_to 'Create limit for service', "/services/#{@service.id}/time_limits/new"
+              - if (@service.user_id == current_user.id || current_user.has_role?(:admin)) && @service.time_limit.nil?
+                = link_to 'Create limit for service', "/services/#{@service.id}/time_limits/new", class: "btn btn-primary"
             %br
-              = link_to 'Make order', "/services/#{@service.id}/orders/new" if @service.time_limit != nil
+              = link_to 'Make order', "/services/#{@service.id}/orders/new", class: "btn btn-primary" if @service.time_limit != nil
             %br
               %label="Unfortunately this service has not started working yet" if @service.time_limit == nil
+            .container
+              %h2.subtitle.is-5
+              %hr.new5
+                %strong= @service.comments.count
+                Comments
+              = render @service.comments  
+              .comment-form
+                %hr.new5
+                %h3.subtitle.is-3 Leave a reply
+                -if !current_user.nil?
+                  =render("comments/create", commentable: @service)
+        

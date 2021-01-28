@@ -1,4 +1,4 @@
-class RemoveCardBrandFromUsers < ActiveRecord::Migration[6.0]
+class RemoveStripeIdFromUsers < ActiveRecord::Migration[6.0]
   def change
     remove_column :users, :stripe_id, :string
     remove_column :users, :card_brand, :string

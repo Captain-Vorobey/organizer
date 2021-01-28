@@ -13,7 +13,7 @@
 # To use a different locale, set it with `I18n.locale`:
 #
 #     I18n.locale = :es
-#
+# 
 # This would use the information in config/locales/es.yml.
 #
 # The following keys must be escaped otherwise they will not be retrieved by
@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello:
+  home:
+    index:
+      welcome: "Welcome, %{name}!"

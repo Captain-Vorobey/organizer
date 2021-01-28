@@ -1,0 +1,13 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Welcome to example.com, #{@user.name}
+    %p
+      Sorry, but you or owner of service which you have chosen deleted your order.
+      With respect from admin to #{@user.name}.
+      %br/
+    %p
+      To login to the site, just follow this link: #{@url}.
+    %p Thanks for order and have a great day!

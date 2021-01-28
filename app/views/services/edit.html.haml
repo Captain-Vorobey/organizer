@@ -1,0 +1,7 @@
+.service-block.text-left
+  %h1.title Editing Your Service
+  = render 'form', service: @service
+  = link_to 'Show', @service, class: "btn btn-primary"
+  |
+  = link_to 'Back', root_path, class: "btn btn-primary"
+  = link_to 'Edit Time Limit', edit_time_limit_path(@service.time_limit), class: "btn btn-primary"

@@ -8,10 +8,16 @@
 
 .section {
   background-color: #322f3a;
-  padding: 300px;
+  padding: 200px;
 } 
 
 .password-section {
   background-color: #322f3a;
   padding: 400px;
 } 
+
+.error-message {
+  color:#dc3545;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+}

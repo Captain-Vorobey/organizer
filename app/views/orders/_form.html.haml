@@ -1,11 +1,8 @@
-= simple_form_for(@order) do |f|
+= simple_form_for([@service, @order]) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
   .form-inputs.title
     = f.input :name, :placeholder => "Введите название вашего заказа"
-    = f.select :start_time, @beginArray
-    = f.label "Duration of your order is #{@time.length / 60} hour : #{@time.length % 60} min"
-    = f.association :user
-    = f.association :service
-    = f.button :submit, 'Create time'
+    = f.select :start_time, @time_arr
+    = f.button :submit, class: "btn btn-primary"
     
