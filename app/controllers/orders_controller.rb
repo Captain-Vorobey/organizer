@@ -44,7 +44,7 @@ class OrdersController < ApplicationController
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
-    OrderMailer.destroy_order(@user).deliver_now
+    OrderMailer.destroy_order(@user).deliver_later
   end
 
   private
