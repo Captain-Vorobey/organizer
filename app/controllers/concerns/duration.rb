@@ -52,23 +52,15 @@ module Duration
   end
 
   def convert(length, interval)
-    # length = current_user.reminder_time — 1 day || 3 hours || 15 min
-    # interval = current_user.interval — ['days', 'hours', 'minutes']
+    length = length || 60
+    interval = interval || 'minutes' 
 
-    if interval.nil? || length.nil?
-      length = 60
-      interval = 'minutes'
-    end
-
-    case interval
-    when interval['minutes']
+    if interval == 'minutes'
       length
-    when interval['hours']
+    elsif interval == 'hours'
       length * 60
-    when interval['days']
+    elsif interval == 'days'
       (length * 24) * 60
-    else
-      default_length = 60
     end
   end
 
