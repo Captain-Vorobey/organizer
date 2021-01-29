@@ -45,6 +45,25 @@ module Duration
     end
   end
 
+  def reminder(length, interval, order)
+    length = convert(length, interval)
+    wait_till_date = order.start_time.to_time - length * 60
+    OrderMailer.order_email(current_user).deliver_later(wait_until: wait_till_date)
+  end
+
+  def convert(length, interval)
+    length = length || 60
+    interval = interval || 'minutes' 
+
+    if interval == 'minutes'
+      length
+    elsif interval == 'hours'
+      length * 60
+    elsif interval == 'days'
+      (length * 24) * 60
+    end
+  end
+
   def service
     @service = Service.find(params[:id])
   end

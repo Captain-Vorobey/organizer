@@ -17,12 +17,6 @@ class User < ApplicationRecord
     end
   end
 
-  after_create :welcome_send
-
-  def welcome_send
-    UserMailer.welcome_email(self).deliver
-  end
-
   has_one_attached :avatar
 
   has_many :orders
