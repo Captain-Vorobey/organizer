@@ -45,24 +45,31 @@ module Duration
     end
   end
 
-  def reminder(length, order)
-    # p '+++++++++++'
-    # p arr = order.start_time.to_a
-    # p '----------------------'
-    # p hourrr = arr[2] - length
-    # p arr[2] = hourrr
-    # p '+++++++++++'
-    # p order.start_time.to_datetime.hour - length
- 
-    # p 'time at time at time at'
-    # p Time.at(order.start_time.to_datetime.hour - length).utc
-    # p 'time at time at time at'
-
-    OrderMailer.order_email(current_user).deliver_later(wait_until: order.start_time)
+  def reminder(length, interval, order)
+    length = convert(length, interval)
+    wait_till_date = order.start_time.to_time - length * 60
+    OrderMailer.order_email(current_user).deliver_later(wait_until: wait_till_date)
   end
 
-  def valid_time(length)
-    
+  def convert(length, interval)
+    # length = current_user.reminder_time — 1 day || 3 hours || 15 min
+    # interval = current_user.interval — ['days', 'hours', 'minutes']
+
+    if interval.nil? || length.nil?
+      length = 60
+      interval = 'minutes'
+    end
+
+    case interval
+    when interval['minutes']
+      length
+    when interval['hours']
+      length * 60
+    when interval['days']
+      (length * 24) * 60
+    else
+      default_length = 60
+    end
   end
 
   def service

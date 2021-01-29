@@ -23,8 +23,9 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.service_id = params[:service_id]
     @order = start_time_validate(@order)
-    reminder(current_user.reminder_time, @order)
-    
+
+    reminder(current_user.reminder_time, current_user.interval, @order)
+
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }

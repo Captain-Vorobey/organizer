@@ -35,7 +35,9 @@
             .col-md-6.title
               = f.input :surname, :placeholder => "Write your surname"
             .col-md-6.title
-              = f.label "In hours"
+              = f.label "Choose for what period of time to notify you about orders"
+              = f.select :interval, ['days', 'hours', 'minutes']
               = f.input :reminder_time, :placeholder => "Write how long does it take to remind about orders"
+              = f.label "but if you dont select time that default time will be 60 minutes"
             .col-md-6.title
               = f.button :submit, 'Update profile', class: "btn btn-primary"
