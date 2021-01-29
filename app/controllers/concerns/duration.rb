@@ -67,8 +67,6 @@ module Duration
       length * 60
     when interval['days']
       (length * 24) * 60
-    else
-      default_length = 60
     end
   end
 
