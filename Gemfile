@@ -112,5 +112,3 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 
 ruby '2.7.0'
-
-gem 'noticed', '~> 1.2'
