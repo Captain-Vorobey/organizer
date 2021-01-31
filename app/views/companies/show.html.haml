@@ -1,7 +1,38 @@
-%body
-  .container-fluid.text-center
-    %h1=@company.name
-    %p=@company.description
+#company-section
+  .container
+  %body.all-color
+    %h3.title= @company.name
+    .container
+      %body
+        .row.attributes-list
+          .col-4
+          - if @company.avatar.attached?
+            = image_tag(@company.avatar_thumbnail, class: "rounded-circle") 
+          - else 
+            = image_tag("undefigned.png", class: "rounded-circle") 
+        .row
+          .col-8
+            %br
+            .attribute-name Company Description:
+            %h8.text-justify= @company.description
+            %br
+              - if can? :manage, @company || current_user.has_role?(:admin)
+                .field
+                  = link_to 'Destroy', @service, method: :delete, class: "btn btn-primary"
+              - if can? :manage, @company
+                .field
+                  = link_to 'Create your service', "/users/#{current_user.id}/services/new", class: "btn btn-primary"
+            .container
+              %h2.subtitle.is-5
+              %hr.new5
+                %strong= @company.comments.count
+                Comments
+              = render @company.comments  
+              .comment-form
+                %hr.new5
+                %h3.subtitle.is-3 Leave a reply
+                -if !current_user.nil?
+                  =render("comments/create", commentable: @company)
   .container-fluid.text-center.company-block
     %h2.title SERVICES
     %h4.title What we offer
@@ -13,4 +44,4 @@
         %a{:href => "#"}
         %i.fas.fa-arrow-circle-right>
         %a.card-link{:href => "/services/#{service.id}"} Read More
-        %br
+        %br      

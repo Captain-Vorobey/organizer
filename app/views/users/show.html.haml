@@ -1,40 +1,42 @@
 .profile-block
-  .container
-    .row
+  .container.text-left
+    .user-row
       .col-md-3
-        .d-flex.flex-column.align-items-center.text-center.p-3.py-5
+        .d-flex.flex-column.align-items-center.text-center.p-3.py-5.border-right.border-left
           - if @user.avatar.attached?
             .rounded-circle
             = image_tag(@user.profile_avatar_thumbnail, class: "rounded-circle") 
           - else
             = image_tag("undefigned.png", class: "rounded-circle") 
-          %span.label.title="Your name: #{@user.name}"
-          %span.label.title="Your Email: #{@user.email}"
+          .ul
+            %li.label.user-title="Your name: #{@user.name}"
+            %li.label.user-title="Your name: #{@user.surname}"
+            %li.label.user-title="Your Email: #{@user.email}"
           %span
           .mt-5.text-right
           .field
-            = link_to 'Check Basket', '/orders', class: "btn btn-primary"
+            = link_to 'Check Basket', '/orders', class: "btn btn-light"
           - if can? :manage, Company
             .field
-            = link_to 'Create your company', "/users/#{@user.id}/companies/new", class: "btn btn-primary"
+            = link_to 'Create your company', "/users/#{@user.id}/companies/new", class: "btn btn-light"
             .field
-            = link_to 'Create your service', "/users/#{@user.id}/services/new", class: "btn btn-primary"
+            = link_to 'Create your service', "/users/#{@user.id}/services/new", class: "btn btn-light"
           - if can? :manage, :all
             .field
-            = link_to 'Check dashboard', "/admin/dashboard", class: "btn btn-primary"
+            = link_to 'Check dashboard', "/admin/dashboard", class: "btn btn-light"
       .col-md-5
         .p-3.py-5
           .d-flex.justify-content-between.align-items-center.mb-3
             %h4.text-right Profile Settings
-          .row.mt-2
+          .user-row.mt-2
           = simple_form_for(@user) do |f|
-            .col-md-6.title
+            .col-md-6.user-title
               = f.file_field :avatar
-            .col-md-6.title
+            .col-md-6.user-title
               = f.input :name, :placeholder => "Write your name"
-            .col-md-6.title
+            .col-md-6.user-title
               = f.input :surname, :placeholder => "Write your surname"
-            .col-md-6.title
+            .col-md-6.user-title
               = f.label "Choose for what period of time to notify you about orders"
               = f.select :interval, ['days', 'hours', 'minutes']
               = f.input :reminder_time, :placeholder => "Write how long does it take to remind about orders"

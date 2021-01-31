@@ -1,19 +1,18 @@
-%section.section
-  .container
-    .columns.is-centered
-      .column.is-4
-        %h2.title.is-2 Log in
-        = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          .field
-            .control.title
-              = f.input :email, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
-          .field
-            .control.title
-              = f.input :password, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
-          .field
-            .control.title
-              = f.input :remember_me, wrapper: false, as: :boolean if devise_mapping.rememberable?
-            = f.button :submit, "Log in", class:"button is-outlined is-medium", class:"btn btn-primary"
-        %br/
-        = link_to 'Sign in with facebook', '/auth/facebook', method: :post
-        = render "devise/shared/links"
+%section.log-in-section
+  .columns.is-centered.session-container
+    .column.is-4
+      %h2.title.is-2 Log in
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field.session-title
+          .control
+            = f.input :email, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
+        .field.session-title
+          .control
+            = f.input :password, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
+        .field
+          .control.session-title
+            = f.input :remember_me, wrapper: false, as: :boolean if devise_mapping.rememberable?
+          = f.button :submit, "Log in", class:"button is-outlined is-medium", class:"btn btn-primary"
+      %br/
+      = link_to 'Sign in with facebook', '/auth/facebook', method: :post
+      = render "devise/shared/links"

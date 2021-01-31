@@ -2,6 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.service-create {
+  background-color: #211f24;
+  padding: 232.5px;
+}
+
+.service-container {
+  position: relative;
+  left: 17%;  
+}
+
+.service-title {
+  position: relative;
+  margin-bottom: 40px;
+  color: #6f6f71;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+.service-statistics {
+  width: 70%;
+  float: left;
+}
+
+.diagrams {
+  text-align: center;
+  margin: 50px;
+  width: 300px;
+}
+
+.diagrams-item {
+  display: inline-block;
+}
+
 hr.new5 {
   border: 1px solid rgb(108, 31, 116);
   border-radius: 5px;

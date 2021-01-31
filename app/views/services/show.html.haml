@@ -47,4 +47,13 @@
                 %h3.subtitle.is-3 Leave a reply
                 -if !current_user.nil?
                   =render("comments/create", commentable: @service)
-        
+            #service-section
+            .container
+            %body.all-color
+              .service-statistics
+              %h3.profile-title Order Statistic
+              .diagrams
+                .diagrams-item
+                  = pie_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
+                  .count=@service.orders.count
+                  .panel-label Orders

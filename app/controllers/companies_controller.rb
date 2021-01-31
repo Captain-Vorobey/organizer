@@ -1,15 +1,9 @@
 class CompaniesController < ApplicationController
+  before_action :company, only: %i[show edit destroy]
+
   def show
     @company = Company.find(params[:id])
-    @services = @company.service
-  end
-
-  def destroy
-    @company.destroy
-    respond_to do |format|
-      format.html { redirect_to root_path }
-      format.js { render layout: false }
-    end
+    @services = @company.services
   end
 
   def new
@@ -20,6 +14,7 @@ class CompaniesController < ApplicationController
   def create
     allowed_params = company_params
     company = Company.new(allowed_params)
+    company.user_id = params[:user_id]
 
     respond_to do |format|
       if company.save
@@ -31,9 +26,27 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def destroy
+    @company.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { render layout: false }
+    end
+  end
+
   private
 
   def company_params
-    params.require(:company).permit(:name, :description, :user_id)
+    params.require(:company).permit(:name, :description, :avatar, :user_id)
+  end
+  
+  def company
+    @company = Company.find(params[:id])
+  end
+
+  def get_comments
+    @comments = @company.comments
   end
 end

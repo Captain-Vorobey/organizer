@@ -3,3 +3,4 @@ ru:
   home:
     index:
       welcome: "Добро пожаловать, %{name}!"
+      Read more: "Читать больше"

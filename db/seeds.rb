@@ -11,11 +11,9 @@
 # -----------
 
 # roles
-if Roles.empty?
-  Role.create(name: 'customer')
-  Role.create(name: 'admin')
-  Role.create(name: 'owner')
-end
+Role.create(name: 'customer')
+Role.create(name: 'admin')
+Role.create(name: 'owner')
 
 # users
 admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role 'admin'
@@ -44,17 +42,17 @@ diploms = Service.create(name: 'Test Service',
                          user_id: owner.id)
 
 # comments
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, service_id: courses.id)
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, service_id: courses.id)
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, service_id: courses.id)
+comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
+comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
+comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
 
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, service_id: soft.id)
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, service_id: soft.id)
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, service_id: soft.id)
+comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
+comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
+comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
 
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, service_id: diploms.id)
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, service_id: diploms.id)
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, service_id: diploms.id)
+comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
+comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
+comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
 
 # time_limits
 first_service_time_limit = TimeLimit.create(start_time: '2021-01-22 10:15:00', end_time: '2021-03-22 18:00:00', user_id: owner.id, service_id: courses.id, length: 15)

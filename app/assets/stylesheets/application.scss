@@ -15,6 +15,13 @@
   border-radius: 0.25rem;
 }
 
+.pagination {
+  display: flex;
+  padding-top: 20;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
 .paginator-block {
   background-color: #211f24;
 }

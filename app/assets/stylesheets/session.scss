@@ -6,10 +6,28 @@
   background-color: #6c4daf;
 }
 
-.section {
+.log-in-section {
   background-color: #322f3a;
-  padding: 200px;
+  padding: 274px;
+}
+
+.sign-up-section {
+  background-color: #322f3a;
+  padding: 110.73px;
+  overflow-x:hidden;
 } 
+
+.session-container {
+  position: relative;
+  left: 21%; 
+}
+
+.session-title {
+  position: center;
+  margin-bottom: 4px;
+  color: #c6c6c9;
+  padding-bottom: 5px;
+}
 
 .password-section {
   background-color: #322f3a;
@@ -20,4 +38,8 @@
   color:#dc3545;
   margin-bottom: 40px;
   padding-bottom: 25px;
+}
+
+.control {
+  width: 30%;
 }

@@ -1,8 +1,10 @@
 = simple_form_for([current_user, @company]) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-  .form-inputs.title
-    = f.input :name, :placeholder => "Введите название вашей компании"
-    = f.input :description, :placeholder => "Распишите, чем вы занимаетесь"
-    = f.button :submit, 'Create company', class: "btn btn-primary"
-      
+  .company-container
+    %h1.company-title Your Company
+    .form-inputs.control.title
+      = f.input :name, :placeholder => "Введите название вашей компании"
+      = f.input :description, :placeholder => "Распишите, чем вы занимаетесь"
+      = f.file_field :avatar
+      = f.button :submit, 'Create company', class: "btn btn-primary"

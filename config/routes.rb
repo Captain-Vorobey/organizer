@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     resources :companies
   end
 
+  resources :companies do
+    resources :comments
+  end
+
   resources :orders
 
   resources :services do

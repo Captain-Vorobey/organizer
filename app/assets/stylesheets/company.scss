@@ -7,13 +7,18 @@
   padding: 200px 50px;
 }
 
-.title {
+.company-container {
+  position: relative;
+  left: 17%; 
+}
+
+.company-title {
   position: relative;
   margin-bottom: 40px;
   color: #6f6f71;
-  padding-bottom: 25px;
-  text-transform: uppercase;
+  padding-bottom: 15px;
   font-weight: 700;
+  
 }
 
 .description {
@@ -25,10 +30,15 @@
 
 .company-create {
   background-color: #211f24;
-  padding: 270px;
+  padding: 248.5px;
 }
 
 .company-block {
   background-color: #211f24;
   padding: 100px;
 }
+
+#company-section {
+  background-color: #211f24;
+  padding: 120px;
+} 

@@ -74,6 +74,8 @@ gem 'sidekiq', '~> 6.1', '>= 6.1.3'
 
 gem 'i18n'
 
+gem 'chartkick', '~> 3.4', '>= 3.4.2'
+
 gem 'rails_12factor', '~> 0.0.3', group: :production
 
 gem 'redis-namespace'

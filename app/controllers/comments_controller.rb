@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     comment = Comment.create(allowed_params)
 
     respond_to do |format|
-      format.html { redirect_to service_path(service) }
+      format.html { redirect_to company_path(company) }
       format.js { render layout: false }
     end
   end
@@ -15,13 +15,13 @@ class CommentsController < ApplicationController
     service = service
     comment = service.comments.find(params[:id])
     comment.destroy
-    redirect_to service_path(service)
+    redirect_to company_path(service)
   end
 
   private
 
   def set_commentable
-    @commentable = Service.find(params[:service_id]) unless params[:service_id].nil?
+    #@commentable = Service.find(params[:service_id]) unless params[:service_id].nil?
     @commentable = Company.find(params[:company_id]) unless params[:company_id].nil?
     @commentable
   end
@@ -30,7 +30,7 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:name, :comment)
   end
 
-  def service
-    service = Service.find(params[:service_id])
+  def company
+    service = Company.find(params[:company_id])
   end
 end
