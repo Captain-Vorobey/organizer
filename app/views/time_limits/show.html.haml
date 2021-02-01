@@ -8,9 +8,9 @@
     = @time_limit.end_time
   %p.title
     %strong User:
-    = @time_limit.user_id
+    = @time_limit.user.name
   %p.title
     %strong Service:
-    = @time_limit.service_id
+    = @time_limit.service.name
   = link_to 'Edit', edit_time_limit_path(@time_limit), class: "btn btn-primary"
   |

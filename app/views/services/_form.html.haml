@@ -1,12 +1,11 @@
 = simple_form_for(@service) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
-  .service-container
-    %h1.service-title Your Service
-    .form-inputs.control.title
-      = f.input :name, :placeholder => "Write name of your service"
-      = f.input :description, :placeholder => "Tell us what you do"
-      = f.file_field :avatar
-      = f.label "Select one your company:"
-      = f.select :company_id, @user_companies.map {|el| [el.name, el.id] }
-      = f.button :submit, 'Create service', class: "btn btn-primary"
+  .service-form-control.title
+    = f.input :name, :placeholder => "Write name of your service"
+    = f.input :description, :placeholder => "Tell us what you do"
+    = f.file_field :avatar
+    = f.label "Select one your company:"
+    = f.select :company_id, @user_companies.map {|el| [el.name, el.id] }
+  .form-actions
+    = f.button :submit, 'Create service', class: "btn btn-primary"

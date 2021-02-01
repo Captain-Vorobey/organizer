@@ -5,7 +5,7 @@ module Searchable
   include Elasticsearch::Model::Callbacks
 
   settings do
-    mappings dynamic: false do
+    mappings dynamic: true do
       indexes :name, type: :text, analyzer: :english
       indexes :description, type: :text, analyzer: :english
     end

@@ -9,7 +9,14 @@
 
 .service-container {
   position: relative;
-  left: 17%;  
+  text-align: center;
+}
+
+.service-form-control {
+  width: 40%;
+  position: relative;
+  left: 30%;
+  text-align: center;
 }
 
 .service-title {
@@ -27,6 +34,7 @@
 
 .diagrams {
   text-align: center;
+  color: #c6c6c9;
   margin: 50px;
   width: 300px;
 }
@@ -42,7 +50,7 @@ hr.new5 {
 
 .service-block {
   background-color: #211f24;
-  padding: 260px;
+  padding-bottom: 575px;
 }
 
 #service-section {

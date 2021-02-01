@@ -2,6 +2,9 @@ class Service < ApplicationRecord
   include Searchable
   include Avatar
 
+  after_save    { logger.debug ['Updating document... ', index_document].join }
+  after_destroy { logger.debug ['Deleting document... ', delete_document].join }
+
   paginates_per 3
 
   has_one_attached :avatar

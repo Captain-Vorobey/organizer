@@ -1,8 +1,7 @@
-.service-block.text-left
-  %h1.title Editing Your Service
+.black.text-center
+  %h1.title Editing Service
   = render 'form', service: @service
-  .control.text-center.title
-    = link_to 'Show', @service, class: "btn btn-primary"
-    |
-    = link_to 'Back', root_path, class: "btn btn-primary"
-    = link_to 'Edit Time Limit', edit_time_limit_path(@service.time_limit), class: "btn btn-primary"
+  = link_to 'Show', @service, class: "btn btn-primary"
+  |
+  = link_to 'Back', root_path, class: "btn btn-primary"
+  = link_to 'Edit Time Limit', edit_time_limit_path(@service.time_limit), class: "btn btn-primary"

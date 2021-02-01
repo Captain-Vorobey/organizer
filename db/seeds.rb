@@ -16,14 +16,17 @@ Role.create(name: 'admin')
 Role.create(name: 'owner')
 
 # users
-admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima', avatar: Faker::Avatar.image).add_role 'admin'
-owner = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor', avatar: Faker::Avatar.image).add_role 'owner'
-user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita', avatar: Faker::Avatar.image).add_role 'customer'
+admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role 'admin'
+owner = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor').add_role 'owner'
+user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita').add_role 'customer'
 
 # companies
-english = Company.create(name: '2English', description: 'Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder.')
-itechArt = Company.create(name: 'ItechArt', description: '28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides.')
-course_works = Company.create(name: 'Diploms', description: 'We offer you course works and diploms on good price and the best quantity')
+english = Company.create(name: '2English',
+                         description: 'Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder.')
+itechArt = Company.create(name: 'ItechArt',
+                          description: '28-day aged 300g USDA Certified Prime Ribeye, rosemary-thyme garlic butter, with choice of two sides.')
+course_works = Company.create(name: 'Diploms',
+                              description: 'We offer you course works and diploms on good price and the best quantity')
 
 # services
 courses = Service.create(name: 'Diploms',
@@ -41,11 +44,13 @@ diploms = Service.create(name: 'Hospital',
                          company_id: course_works.id,
                          user_id: owner.id)
 
-
 # time_limits
-first_service_time_limit = TimeLimit.create(start_time: '2021-01-22 10:15:00', end_time: '2021-03-22 18:00:00', user_id: owner.id, service_id: courses.id, length: 15)
-second_service_time_limit = TimeLimit.create(start_time: '2021-01-20 10:00:00', end_time: '2021-02-15 19:00:00', user_id: owner.id, service_id: soft, length: 30)
-third_service_time_limit = TimeLimit.create(start_time: '2021-01-22 11:00:00', end_time: '2021-02-25 20:00:00', user_id: owner.id, service_id: diploms, length: 45)
+first_service_time_limit = TimeLimit.create(start_time: '2021-01-22 10:15:00', end_time: '2021-03-22 18:00:00',
+                                            user_id: owner.id, service_id: courses.id, length: 15)
+second_service_time_limit = TimeLimit.create(start_time: '2021-01-20 10:00:00', end_time: '2021-02-15 19:00:00',
+                                             user_id: owner.id, service_id: soft, length: 30)
+third_service_time_limit = TimeLimit.create(start_time: '2021-01-22 11:00:00', end_time: '2021-02-25 20:00:00',
+                                            user_id: owner.id, service_id: diploms, length: 45)
 
 courses.time_limit = first_service_time_limit
 soft.time_limit = second_service_time_limit

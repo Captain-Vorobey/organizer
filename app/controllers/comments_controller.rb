@@ -21,7 +21,6 @@ class CommentsController < ApplicationController
   private
 
   def set_commentable
-    #@commentable = Service.find(params[:service_id]) unless params[:service_id].nil?
     @commentable = Company.find(params[:company_id]) unless params[:company_id].nil?
     @commentable
   end

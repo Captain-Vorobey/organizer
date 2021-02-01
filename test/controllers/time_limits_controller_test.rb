@@ -17,7 +17,9 @@ class TimeLimitsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create time_limit' do
     assert_difference('TimeLimit.count') do
-      post time_limits_url, params: { time_limit: { end_time: @time_limit.end_time, service_id: @time_limit.service_id, start_time: @time_limit.start_time, user_id: @time_limit.user_id } }
+      post time_limits_url,
+           params: { time_limit: { end_time: @time_limit.end_time, service_id: @time_limit.service_id,
+                                   start_time: @time_limit.start_time, user_id: @time_limit.user_id } }
     end
 
     assert_redirected_to time_limit_url(TimeLimit.last)
@@ -34,7 +36,9 @@ class TimeLimitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update time_limit' do
-    patch time_limit_url(@time_limit), params: { time_limit: { end_time: @time_limit.end_time, service_id: @time_limit.service_id, start_time: @time_limit.start_time, user_id: @time_limit.user_id } }
+    patch time_limit_url(@time_limit),
+          params: { time_limit: { end_time: @time_limit.end_time, service_id: @time_limit.service_id,
+                                  start_time: @time_limit.start_time, user_id: @time_limit.user_id } }
     assert_redirected_to time_limit_url(@time_limit)
   end
 

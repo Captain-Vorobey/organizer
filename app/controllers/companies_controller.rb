@@ -18,7 +18,9 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if company.save
-        format.html { redirect_to "/users/#{current_user.id}/companies/#{company.id}", notice: 'company was successfully created.' }
+        format.html do
+          redirect_to "/users/#{current_user.id}/companies/#{company.id}", notice: 'company was successfully created.'
+        end
         format.json { render :show, status: :created, location: company }
       else
         format.json { render json: company.errors, status: :unprocessable_entity }
@@ -41,7 +43,7 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company).permit(:name, :description, :avatar, :user_id)
   end
-  
+
   def company
     @company = Company.find(params[:id])
   end

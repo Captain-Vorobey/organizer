@@ -7,7 +7,7 @@
             .rounded-circle
             = image_tag(@user.profile_avatar_thumbnail, class: "rounded-circle") 
           - else
-            = image_tag("undefigned.png", class: "image rounded-circle") 
+            = image_tag("undefigned.jpg", class: "image rounded-circle") 
           .ul
             %li.label.user-title="Your name: #{@user.name}"
             %li.label.user-title="Your name: #{@user.surname}"

@@ -52,8 +52,8 @@ module Duration
   end
 
   def convert(length, interval)
-    length = length || 60
-    interval = interval || 'minutes' 
+    length ||= 60
+    interval ||= 'minutes'
 
     if interval == 'minutes'
       length

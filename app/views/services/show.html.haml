@@ -9,7 +9,7 @@
           - if @service.avatar.attached?
             = image_tag(@service.avatar_thumbnail, class: "rounded-circle") 
           - else 
-            = image_tag("undefigned.png", class: "rounded-circle") 
+            = image_tag("undefigned.jpg", class: "rounded-circle") 
         .row
           .col-4
             %br
@@ -19,19 +19,23 @@
                 = link_to "#{@service.company&.name}", "/users/#{current_user.id}/companies/#{@service.company.id}", class: 'attribute-link'
               %li
                 .attribute-name Service Description:
-                %h8.text-justify= @service.description
+              %h8.text-justify= @service.description
               %li
+              %hr.new5
                 .service-statistics
                 %h3.profile-title Order Statistic
                 .diagrams
                   .diagrams-item
-                    = pie_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
+                    %hr.new5
+                    = column_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
                     .count=@service.orders.count
                     .panel-label Orders
           .col-8
             %br
             .attribute-name Company Description:
             %h8.text-justify= @service.company.description
+            %br
+            %br
             %br
               - if can? :manage, @service || current_user.has_role?(:admin)
                 = link_to 'Destroy', @service, method: :delete, class: "btn btn-primary"
@@ -44,3 +48,4 @@
               = link_to 'Make order', "/services/#{@service.id}/orders/new", class: "btn btn-primary" if @service.time_limit != nil
             %br
               %label="Unfortunately this service has not started working yet" if @service.time_limit == nil
+        

@@ -9,12 +9,14 @@
           - if @company.avatar.attached?
             = image_tag(@company.avatar_thumbnail, class: "rounded-circle") 
           - else 
-            = image_tag("undefigned.png", class: "rounded-circle") 
+            = image_tag("undefigned.jpg", class: "rounded-circle") 
         .row
           .col-8
             %br
             .attribute-name Company Description:
             %h8.text-justify= @company.description
+            %br
+            %br
             %br
               - if can? :manage, @company || current_user.has_role?(:admin)
                 .field
@@ -27,7 +29,7 @@
               %hr.new5
                 %strong= @company.comments.count
                 Comments
-              = render @company.comments  
+              = render @company.comments.includes(:user)    
               .comment-form
                 %hr.new5
                 %h3.subtitle.is-3 Leave a reply

@@ -14,8 +14,8 @@
         %tr
           %td.title= time_limit.start_time
           %td.title= time_limit.end_time
-          %td.title= time_limit.user_id
-          %td.title= time_limit.service_id
+          %td.title= time_limit.user.name
+          %td.title= time_limit.service.name
           %td.title= link_to 'Show', time_limit
           %td.title= link_to 'Edit', edit_time_limit_path(time_limit)
           %td.title= link_to 'Destroy', time_limit, method: :delete, data: { confirm: 'Are you sure?' }
