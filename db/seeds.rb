@@ -41,19 +41,6 @@ diploms = Service.create(name: 'Test Service',
                          company_id: course_works.id,
                          user_id: owner.id)
 
-# comments
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
-
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
-
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
-
 # time_limits
 first_service_time_limit = TimeLimit.create(start_time: '2021-01-22 10:15:00', end_time: '2021-03-22 18:00:00', user_id: owner.id, service_id: courses.id, length: 15)
 second_service_time_limit = TimeLimit.create(start_time: '2021-01-20 10:00:00', end_time: '2021-02-15 19:00:00', user_id: owner.id, service_id: soft, length: 30)
