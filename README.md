@@ -23,4 +23,3 @@ Things you may want to cover:
     - rails db:migrate
     - rails db:seed
     - rails s
-  And enjoy.
