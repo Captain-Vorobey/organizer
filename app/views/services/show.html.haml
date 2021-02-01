@@ -1,7 +1,7 @@
 #service-section
   .container
   %body.all-color
-    %h3.title= @service.name
+    %h3.service-title.text-center= @service.name
     .container
       %body
         .row.attributes-list
@@ -21,15 +21,16 @@
                 .attribute-name Service Description:
               %h8.text-justify= @service.description
               %li
-              %hr.new5
-                .service-statistics
-                %h3.profile-title Order Statistic
-                .diagrams
-                  .diagrams-item
-                    %hr.new5
-                    = column_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
-                    .count=@service.orders.count
-                    .panel-label Orders
+              - if can? :manage, @service || current_user.has_role?(:admin)
+                %hr.new5
+                  .service-statistics
+                  %h3.profile-title Order Statistic
+                  .diagrams
+                    .diagrams-item
+                      %hr.new5
+                      = column_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
+                      .count=@service.orders.count
+                      .panel-label Orders
           .col-8
             %br
             .attribute-name Company Description:

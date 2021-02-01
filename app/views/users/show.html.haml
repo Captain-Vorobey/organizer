@@ -43,3 +43,7 @@
               = f.label "but if you dont select time that default time will be 60 minutes"
             .col-md-6.title
               = f.button :submit, 'Update profile', class: "btn btn-primary"
+            .field
+              = link_to 'Русский', root_path(locale: :ru)
+            .field
+              = link_to 'English', root_path(locale: :en)

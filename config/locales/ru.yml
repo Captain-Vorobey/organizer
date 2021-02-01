@@ -4,3 +4,18 @@ ru:
     index:
       welcome: "Добро пожаловать, %{name}!"
       Read more: "Читать больше"
+  layouts:
+    header:
+      Home: "Главная"
+      About us: "О нас"
+      Log out: "Выйти"
+      Profile: "Профиль"
+  kaminari:
+    first_page:
+      First: "Первая"
+    next_page:
+      Next: "Следующая"
+    last_page:
+      Last: "Последняя"
+    prev_page:
+      Prev: "Предыдущая"
