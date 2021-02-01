@@ -4,21 +4,22 @@
       .row.justify-content-center.text-center
         .col-md-10.col-lg-8
           .header-section
-            %h1 Elastic search for services
+            %h1= t(".welcome", name: "#{current_user.name}")
             = form_for :search_services, url: search_services_path, method: :get do |form|
               = form.text_field :query, value: params[:search_services].presence && params[:search_services][:query]
               = form.submit 'Search'
               .row
-                - @services.each do |service|
-                  .single-service
-                    .part-1
-                      %i.fab.fa-500px
-                      %h3.title 
-                        = service.name
-                    .part-2
-                      %p.description 
-                        = service.description
-                      %a{:href => "#"}
-                        %i.fas.fa-arrow-circle-right>
-                        %a.card-link{:href => "/services/#{service.id}"} Read More
-    .bottom-part
+              - @services.each do |service|
+                .single-service
+                  .part-1
+                    %i.fab.fa-500px
+                    %h3.title 
+                      = service.name
+                  .part-2
+                    %p.description 
+                      = service.description
+                    %a{:href => "#"}
+                      %i.fas.fa-arrow-circle-right>
+                      %a.card-link{:href => "/services/#{service.id}"}= t(".Read more")
+              .paginator-block
+                = paginate @services

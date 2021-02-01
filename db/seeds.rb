@@ -16,9 +16,9 @@ Role.create(name: 'admin')
 Role.create(name: 'owner')
 
 # users
-admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima').add_role 'admin'
-owner = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor').add_role 'owner'
-user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita').add_role 'customer'
+admin = User.create(email: 'admin@mail.ru', password: 'password', name: 'Dima', avatar: Faker::Avatar.image).add_role 'admin'
+owner = User.create(email: 'owner@mail.ru', password: 'password', name: 'Egor', avatar: Faker::Avatar.image).add_role 'owner'
+user = User.create(email: 'user@mail.ru', password: 'password', name: 'Nikita', avatar: Faker::Avatar.image).add_role 'customer'
 
 # companies
 english = Company.create(name: '2English', description: 'Creamy mascarpone cheese and custard layered between espresso and rum soaked house-made ladyfingers, topped with Valrhona cocoa powder.')
@@ -26,33 +26,21 @@ itechArt = Company.create(name: 'ItechArt', description: '28-day aged 300g USDA 
 course_works = Company.create(name: 'Diploms', description: 'We offer you course works and diploms on good price and the best quantity')
 
 # services
-courses = Service.create(name: 'Test Service',
+courses = Service.create(name: 'Diploms',
                          description: Faker::Food.description,
                          company_id: english.id,
                          user_id: owner.id)
 
-soft = Service.create(name: 'Test Service',
+soft = Service.create(name: 'Driving School',
                       description: Faker::Food.description,
                       company_id: itechArt.id,
                       user_id: owner.id)
 
-diploms = Service.create(name: 'Test Service',
+diploms = Service.create(name: 'Hospital',
                          description: Faker::Food.description,
                          company_id: course_works.id,
                          user_id: owner.id)
 
-# comments
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
-
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
-
-comment = Comment.create(comment: 'bla bla bla', user_id: admin.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: owner.id, commentable_type: 'Company')
-comment = Comment.create(comment: 'bla bla bla', user_id: user.id, commentable_type: 'Company')
 
 # time_limits
 first_service_time_limit = TimeLimit.create(start_time: '2021-01-22 10:15:00', end_time: '2021-03-22 18:00:00', user_id: owner.id, service_id: courses.id, length: 15)

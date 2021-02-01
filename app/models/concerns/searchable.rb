@@ -6,7 +6,7 @@ module Searchable
 
   settings do
     mappings dynamic: false do
-      indexes :name, type: :text
+      indexes :name, type: :text, analyzer: :english
       indexes :description, type: :text, analyzer: :english
     end
   end

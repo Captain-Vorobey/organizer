@@ -20,6 +20,14 @@
               %li
                 .attribute-name Service Description:
                 %h8.text-justify= @service.description
+              %li
+                .service-statistics
+                %h3.profile-title Order Statistic
+                .diagrams
+                  .diagrams-item
+                    = pie_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
+                    .count=@service.orders.count
+                    .panel-label Orders
           .col-8
             %br
             .attribute-name Company Description:
@@ -36,24 +44,3 @@
               = link_to 'Make order', "/services/#{@service.id}/orders/new", class: "btn btn-primary" if @service.time_limit != nil
             %br
               %label="Unfortunately this service has not started working yet" if @service.time_limit == nil
-            .container
-              %h2.subtitle.is-5
-              %hr.new5
-                %strong= @service.comments.count
-                Comments
-              = render @service.comments  
-              .comment-form
-                %hr.new5
-                %h3.subtitle.is-3 Leave a reply
-                -if !current_user.nil?
-                  =render("comments/create", commentable: @service)
-            #service-section
-            .container
-            %body.all-color
-              .service-statistics
-              %h3.profile-title Order Statistic
-              .diagrams
-                .diagrams-item
-                  = pie_chart @service.orders.group(:user).count.map { |item| [item[0].name, item[1]] }, donut: true
-                  .count=@service.orders.count
-                  .panel-label Orders

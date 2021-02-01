@@ -5,10 +5,10 @@
       = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field.session-title
           .control
-            = f.input :email, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
+            = f.input :email, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }, :placeholder => "Write your email"
         .field.session-title
           .control
-            = f.input :password, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }
+            = f.input :password, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" }, :placeholder => "Write your password"
         .field
           .control.session-title
             = f.input :remember_me, wrapper: false, as: :boolean if devise_mapping.rememberable?
