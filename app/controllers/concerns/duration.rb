@@ -13,10 +13,13 @@ module Duration
 
     st = time.start_time.to_i
     en = time.end_time.to_i
+    
+    st_hour = time_limit.start_time.to_a
+    en_hour = time_limit.end_time.to_a
 
     length = get_length
     (st..en).step(length) do |el|
-      result.push(Time.at(el).utc)
+      result.push(Time.at(el).utc) if st_hour[2] <= Time.at(el).utc.hour && en_hour[2] >= Time.at(el).utc.hour
     end
 
     result - service.orders.pluck(:start_time)
